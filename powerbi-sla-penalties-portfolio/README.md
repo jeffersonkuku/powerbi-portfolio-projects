@@ -24,6 +24,27 @@ It demonstrates the type of service-performance, backlog, contractual-risk and m
 
 > This is **not an official ENGIE deliverable**. The data, organizations, thresholds, contractual assumptions and operational identifiers are synthetic, anonymized or recreated for public demonstration.
 
+## Dashboard gallery / Galerie du dashboard
+
+<table>
+<tr>
+<td width="50%"><b>SLA performance / Performance SLA</b><br><img src="./assets/performance-sla-intervention-red.webp" alt="SLA performance – intervention and restoration"></td>
+<td width="50%"><b>SLA exposure / Exposition SLA</b><br><img src="./assets/exposition-sla-intervention-red.webp" alt="SLA exposure – intervention and restoration"></td>
+</tr>
+<tr>
+<td><b>Intervention distribution / Distribution intervention</b><br><img src="./assets/distribution-intervention.webp" alt="Intervention delay distribution"></td>
+<td><b>Restoration distribution / Distribution RED</b><br><img src="./assets/distribution-red.webp" alt="Restoration and resolution delay distribution"></td>
+</tr>
+<tr>
+<td><b>Sites & teams benchmark / Benchmark sites & équipes</b><br><img src="./assets/benchmark-sla-sites-equipes.webp" alt="SLA benchmark by site and team"></td>
+<td><b>Intervention volume by site / Volumétrie DI par site</b><br><img src="./assets/volume-di-par-site.webp" alt="Intervention request volume by site"></td>
+</tr>
+<tr>
+<td><b>Preventive maintenance / Suivi du préventif</b><br><img src="./assets/preventif-site-par-site.webp" alt="Preventive maintenance by site"></td>
+<td><b>Intervention trends / Évolution des temps d’intervention</b><br><img src="./assets/evolution-temps-intervention.webp" alt="Median and average intervention time trends"></td>
+</tr>
+</table>
+
 ## Project objective
 
 This project simulates the monitoring of a large multi-site maintenance operation. It focuses on **service-level agreements (SLA)** and the operational / financial consequences of missed commitments.
