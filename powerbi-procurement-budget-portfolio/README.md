@@ -15,6 +15,14 @@
 ![DAX](https://img.shields.io/badge/DAX-KPIs-0078D4)
 ![Portfolio](https://img.shields.io/badge/Data-Anonymized-6C63FF)
 
+## Professional context
+
+This project is an **anonymized portfolio reconstruction inspired by procurement and budget-monitoring solutions I developed during my professional experience at ENGIE**.
+
+It is designed to demonstrate real-world business analysis, KPI design and Power BI reporting skills while protecting confidential information.
+
+> This is **not an official ENGIE deliverable**. Supplier names, business identifiers, datasets and sensitive operational details have been anonymized, modified or recreated for public presentation.
+
 ## Project
 
 ➡️ **[Open the Power BI project](./dashboard/Procurement_Budget_Dashboard.pbix)**
@@ -125,6 +133,14 @@ This repository is a public portfolio version. Supplier names and business ident
 # 🇫🇷 Français
 
 > **Tableau de bord Achats & Budget conçu pour rendre le suivi des commandes, de la consommation budgétaire et des achats récurrents immédiatement compréhensible.**
+
+## Contexte professionnel
+
+Ce projet est une **reconstruction portfolio anonymisée inspirée de solutions de suivi achats et budgétaire que j'ai développées dans le cadre de mon expérience professionnelle chez ENGIE**.
+
+Il permet de démontrer des compétences réellement mobilisées en environnement professionnel : analyse métier, conception de KPI et reporting Power BI, tout en préservant la confidentialité des données.
+
+> Il ne s'agit **pas d'un livrable officiel ENGIE**. Les noms de fournisseurs, identifiants, jeux de données et informations opérationnelles sensibles ont été anonymisés, modifiés ou recréés pour une présentation publique.
 
 ## Projet
 
