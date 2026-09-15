@@ -1,0 +1,67 @@
+table Parametres_SLA
+
+	column Criticite
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Criticite
+
+	column Seuil_INT_min
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Seuil_INT_min
+
+	column Seuil_RED_j_ouvres
+		dataType: double
+		formatString: 0.0
+		summarizeBy: none
+		sourceColumn: Seuil_RED_j_ouvres
+
+	column Seuil_Acquittement_min
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Seuil_Acquittement_min
+
+	column Penalite_INT_EUR
+		dataType: int64
+		formatString: #,0\ "€"
+		summarizeBy: none
+		sourceColumn: Penalite_INT_EUR
+
+	measure _SLA_INT_C1VIP_MIN = CALCULATE(MAX(Parametres_SLA[Seuil_INT_min]), Parametres_SLA[Criticite] = "C1")
+		formatString: 0
+
+	measure _SLA_INT_C2_MIN = CALCULATE(MAX(Parametres_SLA[Seuil_INT_min]), Parametres_SLA[Criticite] = "C2")
+		formatString: 0
+
+	measure _SLA_RED_C1VIP_J = CALCULATE(MAX(Parametres_SLA[Seuil_RED_j_ouvres]), Parametres_SLA[Criticite] = "C1")
+		formatString: 0.0
+
+	measure _SLA_RED_C2_J = CALCULATE(MAX(Parametres_SLA[Seuil_RED_j_ouvres]), Parametres_SLA[Criticite] = "C2")
+		formatString: 0.0
+
+	measure _SLA_ACK_C1_MIN = CALCULATE(MAX(Parametres_SLA[Seuil_Acquittement_min]), Parametres_SLA[Criticite] = "C1")
+		formatString: 0
+
+	measure _SLA_ACK_VIP_MIN = CALCULATE(MAX(Parametres_SLA[Seuil_Acquittement_min]), Parametres_SLA[Criticite] = "VIP")
+		formatString: 0
+
+	measure _SLA_ACK_C2_MIN = CALCULATE(MAX(Parametres_SLA[Seuil_Acquittement_min]), Parametres_SLA[Criticite] = "C2")
+		formatString: 0
+
+	measure _Version_regles_SLA = "Référentiel SLA maintenance – v2026.09"
+
+	measure _TARIF_INT_C1VIP_EUR = CALCULATE(MAX(Parametres_SLA[Penalite_INT_EUR]), Parametres_SLA[Criticite] = "C1")
+		formatString: #,0\ "€"
+
+	measure _TARIF_INT_C2_EUR = CALCULATE(MAX(Parametres_SLA[Penalite_INT_EUR]), Parametres_SLA[Criticite] = "C2")
+		formatString: #,0\ "€"
+
+	partition Parametres_SLA = m
+		mode: import
+		source =
+				#table(
+				    type table [Criticite = text, Seuil_INT_min = Int64.Type, Seuil_RED_j_ouvres = number, Seuil_Acquittement_min = Int64.Type, Penalite_INT_EUR = Int64.Type],
+				    { {"C1", 30, 2, 60, 1500}, {"VIP", 30, 2, 30, 1500}, {"C2", 120, 8, 120, 500} }
+				)
