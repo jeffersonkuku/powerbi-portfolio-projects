@@ -65,6 +65,10 @@ All datasets and business identifiers used here are **anonymized or fictitious**
 
 **Objective:** turn purchasing and budget data into an easy-to-read operational dashboard.
 
+![Procurement & Budget Dashboard](./powerbi-procurement-budget-portfolio/assets/procurement-budget-consumables.jpg)
+
+> **Visual portfolio:** budget consumption, remaining budget, monthly purchasing trends and procurement KPIs are visible directly in the repository.
+
 ### Key analysis areas
 
 - Procurement activity
@@ -240,6 +244,10 @@ Toutes les données et tous les identifiants métier présents dans ce portfolio
 ## 02 — Portfolio Achats & Budget
 
 **Objectif :** transformer des données achats et budgétaires en un tableau de bord opérationnel simple à lire.
+
+![Dashboard Achats & Budget](./powerbi-procurement-budget-portfolio/assets/procurement-budget-consumables.jpg)
+
+> **Aperçu visuel :** consommation budgétaire, budget restant, tendances mensuelles et KPI achats sont visibles directement depuis le dépôt.
 
 ### Principaux axes d'analyse
 
