@@ -15,6 +15,20 @@
 ![DAX](https://img.shields.io/badge/DAX-KPIs-0078D4)
 ![Portfolio](https://img.shields.io/badge/Data-Anonymized-6C63FF)
 
+## Project
+
+➡️ **[Open the Power BI project](./dashboard/Procurement_Budget_Dashboard.pbix)**
+
+## Dashboard preview
+
+<p align="center">
+  <img src="./assets/procurement-budget-consumables.jpg" alt="Procurement & Budget Dashboard preview" width="100%">
+</p>
+
+> **Main view:** monthly procurement activity, annual budget comparison, remaining budget and budget consumption ratio.
+
+---
+
 ## Business objective
 
 The goal of this project is to transform purchasing data into a practical management tool for operational and budget decision-making.
@@ -111,6 +125,20 @@ This repository is a public portfolio version. Supplier names and business ident
 # 🇫🇷 Français
 
 > **Tableau de bord Achats & Budget conçu pour rendre le suivi des commandes, de la consommation budgétaire et des achats récurrents immédiatement compréhensible.**
+
+## Projet
+
+➡️ **[Ouvrir le projet Power BI](./dashboard/Procurement_Budget_Dashboard.pbix)**
+
+## Aperçu du dashboard
+
+<p align="center">
+  <img src="./assets/procurement-budget-consumables.jpg" alt="Aperçu du dashboard Achats et Budget" width="100%">
+</p>
+
+> **Vue principale :** activité achats mensuelle, comparaison au budget annuel, budget restant et taux de consommation.
+
+---
 
 ## Objectif métier
 
