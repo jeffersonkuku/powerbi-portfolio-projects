@@ -16,6 +16,14 @@
 ![PBIP](https://img.shields.io/badge/PBIP-Source%20Controlled-5C2D91)
 ![Portfolio](https://img.shields.io/badge/Data-Synthetic%20%26%20Anonymized-6C63FF)
 
+## Professional context
+
+This project is an **anonymized and synthetic portfolio reconstruction inspired by operational performance and SLA-monitoring work I carried out during my professional experience at ENGIE**.
+
+It demonstrates the type of service-performance, backlog, contractual-risk and multi-site operational analysis I worked on in a professional environment.
+
+> This is **not an official ENGIE deliverable**. The data, organizations, thresholds, contractual assumptions and operational identifiers are synthetic, anonymized or recreated for public demonstration.
+
 ## Project objective
 
 This project simulates the monitoring of a large multi-site maintenance operation. It focuses on **service-level agreements (SLA)** and the operational / financial consequences of missed commitments.
@@ -140,6 +148,14 @@ The remaining dynamic validation step is opening and refreshing the report in Po
 # 🇫🇷 Français
 
 > **Tableau de bord Power BI opérationnel dédié au respect des SLA, aux délais d'intervention, à la remise en état, au backlog et à l'exposition aux pénalités contractuelles.**
+
+## Contexte professionnel
+
+Ce projet est une **reconstruction portfolio anonymisée et synthétique inspirée de travaux de pilotage opérationnel et de suivi des SLA réalisés dans le cadre de mon expérience professionnelle chez ENGIE**.
+
+Il illustre les problématiques de performance de service, backlog, risque contractuel et pilotage multi-sites sur lesquelles j'ai travaillé en environnement professionnel.
+
+> Il ne s'agit **pas d'un livrable officiel ENGIE**. Les données, organisations, seuils, hypothèses contractuelles et identifiants opérationnels sont synthétiques, anonymisés ou recréés pour une présentation publique.
 
 ## Objectif du projet
 
