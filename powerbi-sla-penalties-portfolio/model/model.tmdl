@@ -1,0 +1,21 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","TMDLView_Desktop","DevMode"]
+
+ref table Parametres_SLA
+ref table Export_SAMFM_Traitement
+ref table Export_SAMFM_Preventif
+ref table Export_SAMFM_Intervention
+ref table Mesure_C1_RED
+ref table Mesure_C2_RED
+ref table Mesure_C1_INT
+ref table Mesure_C2_INT
+ref table 'Alertes DI RED'
+ref cultureInfo fr-FR
