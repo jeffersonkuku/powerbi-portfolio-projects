@@ -20,9 +20,15 @@
 
 This repository showcases three end-to-end **Power BI portfolio projects** designed to transform operational and financial data into clear, actionable dashboards.
 
-**Data preparation → Modeling → KPI design → Business analysis → Data visualization → Decision support**
+### Professional context
 
-All datasets and business identifiers used here are **anonymized or fictitious** for public demonstration.
+These portfolio projects are **anonymized reconstructions inspired by reporting, analytics and operational steering solutions I developed during my professional experience at ENGIE**.
+
+They are presented here to demonstrate the business problems I worked on, the analytical methods I used and the Power BI skills I applied in a real professional environment.
+
+> These are **portfolio adaptations, not official ENGIE deliverables**. Business names, datasets, suppliers, identifiers, thresholds and operational details have been anonymized, modified or recreated for public presentation. No confidential production information is intentionally disclosed.
+
+**Data preparation → Modeling → KPI design → Business analysis → Data visualization → Decision support**
 
 ## Featured projects
 
@@ -156,9 +162,15 @@ These projects are portfolio versions created for public presentation.
 
 Ce dépôt présente trois projets **Power BI de bout en bout** conçus pour transformer des données opérationnelles et financières en tableaux de bord clairs, exploitables et orientés décision.
 
-**Préparation des données → Modélisation → Conception des KPI → Analyse métier → Datavisualisation → Aide à la décision**
+### Contexte professionnel
 
-Toutes les données et tous les identifiants métier présents dans ce portfolio sont **anonymisés ou fictifs**.
+Ces projets portfolio sont des **reconstructions anonymisées inspirées de solutions de reporting, d'analyse et de pilotage opérationnel que j'ai développées dans le cadre de mon expérience professionnelle chez ENGIE**.
+
+Ils ont pour objectif de présenter les problématiques métier sur lesquelles j'ai travaillé, les méthodes d'analyse utilisées et les compétences Power BI mises en œuvre dans un environnement professionnel réel.
+
+> Il s'agit de **versions portfolio et non de livrables officiels ENGIE**. Les noms, jeux de données, fournisseurs, identifiants, seuils et informations opérationnelles ont été anonymisés, modifiés ou recréés pour permettre une présentation publique. Aucune donnée confidentielle de production n'est volontairement publiée.
+
+**Préparation des données → Modélisation → Conception des KPI → Analyse métier → Datavisualisation → Aide à la décision**
 
 ## Projets principaux
 
