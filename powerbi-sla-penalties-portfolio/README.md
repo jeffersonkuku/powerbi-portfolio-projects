@@ -18,46 +18,174 @@
 
 ## Professional context
 
-This project is an **anonymized and synthetic portfolio reconstruction inspired by operational performance and SLA-monitoring work I carried out during my professional experience at ENGIE**.
+This project is an **anonymized portfolio reconstruction based on operational monitoring and SLA-analysis work carried out during my professional experience at ENGIE**.
 
-It demonstrates the type of service-performance, backlog, contractual-risk and multi-site operational analysis I worked on in a professional environment.
+It reflects the type of multi-site maintenance reporting, service-performance monitoring, backlog analysis and contractual-risk dashboards I worked on in a professional environment.
 
-> This is **not an official ENGIE deliverable**. The data, organizations, thresholds, contractual assumptions and operational identifiers are synthetic, anonymized or recreated for public demonstration.
+The objective of this public version is to demonstrate the analytical logic, Power BI modeling approach and reporting design while protecting confidential information.
 
-## Dashboard gallery / Galerie du dashboard
+> This is **not an official ENGIE deliverable**. All organizations, sites, operational identifiers, datasets, contractual thresholds and financial assumptions shown here have been anonymized, modified or recreated for public presentation.
 
-<table>
-<tr>
-<td width="50%"><b>SLA performance / Performance SLA</b><br><img src="./assets/performance-sla-intervention-red.webp" alt="SLA performance – intervention and restoration"></td>
-<td width="50%"><b>SLA exposure / Exposition SLA</b><br><img src="./assets/exposition-sla-intervention-red.webp" alt="SLA exposure – intervention and restoration"></td>
-</tr>
-<tr>
-<td><b>Intervention distribution / Distribution intervention</b><br><img src="./assets/distribution-intervention.webp" alt="Intervention delay distribution"></td>
-<td><b>Restoration distribution / Distribution RED</b><br><img src="./assets/distribution-red.webp" alt="Restoration and resolution delay distribution"></td>
-</tr>
-<tr>
-<td><b>Sites & teams benchmark / Benchmark sites & équipes</b><br><img src="./assets/benchmark-sla-sites-equipes.webp" alt="SLA benchmark by site and team"></td>
-<td><b>Intervention volume by site / Volumétrie DI par site</b><br><img src="./assets/volume-di-par-site.webp" alt="Intervention request volume by site"></td>
-</tr>
-<tr>
-<td><b>Preventive maintenance / Suivi du préventif</b><br><img src="./assets/preventif-site-par-site.webp" alt="Preventive maintenance by site"></td>
-<td><b>Intervention trends / Évolution des temps d’intervention</b><br><img src="./assets/evolution-temps-intervention.webp" alt="Median and average intervention time trends"></td>
-</tr>
-</table>
+## Project
 
-## Project objective
+➡️ **[Open the Power BI project](./dashboard/Portfolio_Penalites.pbip)**
 
-This project simulates the monitoring of a large multi-site maintenance operation. It focuses on **service-level agreements (SLA)** and the operational / financial consequences of missed commitments.
+## Dashboard preview
 
-The report separates:
+<p align="center">
+  <img src="./assets/performance-sla-intervention-red.jpg" alt="SLA performance dashboard preview" width="100%">
+</p>
 
-- historical performance from open backlog;
-- intervention response time from restoration / resolution time;
-- compliant, late and non-evaluable work orders;
-- raw contractual exposure from cases requiring investigation;
-- operational causes such as suspension, quotation workflow or parts waiting.
+> **Main view:** operational SLA performance with intervention and restoration compliance, P95, backlog indicators and risk-oriented reading.
 
-The dataset is fully synthetic and designed for portfolio demonstration.
+---
+
+## Business objective
+
+The goal of this project is to turn high-volume maintenance data into a decision-support tool for operational managers.
+
+The dashboard helps answer questions such as:
+
+- Are intervention and restoration commitments being met?
+- Which criticality levels are generating the most SLA failures?
+- Which sites or service teams are underperforming?
+- How large is the current open backlog?
+- Which late work orders may create contractual exposure?
+- Are the delays isolated events or part of a recurring trend?
+- Is preventive maintenance being delivered consistently across sites?
+- How do average, median and P95 performance evolve over time?
+
+---
+
+## Dashboard walkthrough
+
+### 1. SLA performance — intervention & restoration
+
+![SLA performance](./assets/performance-sla-intervention-red.jpg)
+
+**What a recruiter should notice**
+
+- Clear separation between intervention SLA and restoration / resolution SLA
+- Compliance indicators by criticality
+- P95 used alongside average and median to avoid hiding long-tail delays
+- Historical performance separated from work orders that are still open
+- KPI hierarchy designed for rapid management reading
+
+This page provides an executive view of service performance while preserving enough detail to identify where the risk is coming from.
+
+---
+
+### 2. Contractual exposure — intervention & restoration
+
+![SLA exposure](./assets/exposition-sla-intervention-red.jpg)
+
+**What a recruiter should notice**
+
+- Identification of work orders outside SLA
+- Potential financial exposure by criticality
+- Separation between raw delay and cases requiring investigation
+- Operational exceptions such as suspension, quotation workflow or parts waiting
+- Risk-oriented dashboard design rather than simple compliance counting
+
+This page demonstrates the ability to move from operational performance to **contractual and financial impact**.
+
+---
+
+### 3. Intervention delay distribution
+
+![Intervention delay distribution](./assets/distribution-delais-intervention.jpg)
+
+**What a recruiter should notice**
+
+- Distribution analysis rather than relying only on averages
+- Clear visibility of extreme intervention delays
+- Segmentation by criticality
+- Consistent SLA thresholds
+- Ability to identify whether poor performance comes from a broad shift or a small number of outliers
+
+This view is designed to make the statistical shape of intervention performance understandable to both technical and non-technical users.
+
+---
+
+### 4. Restoration / resolution delay distribution
+
+![Restoration delay distribution](./assets/distribution-delais-red.jpg)
+
+**What a recruiter should notice**
+
+- Dedicated analysis of restoration / resolution lead time
+- Long-tail performance visibility
+- Criticality-based comparison
+- Separation of completed work from open backlog
+- Consistent median / average / P95 logic
+
+This page is useful for understanding whether delayed restoration is systemic or concentrated on a limited number of difficult cases.
+
+---
+
+### 5. SLA benchmark — sites & teams
+
+![SLA benchmark by site and team](./assets/benchmark-sla-sites-equipes.jpg)
+
+**What a recruiter should notice**
+
+- Comparison of sites using a consistent compliance-rate definition
+- Comparison of operational teams / service providers
+- 95% management target
+- 100% maximum gauge logic
+- Fast identification of underperforming areas
+
+This benchmark turns SLA monitoring into an actionable management tool by showing where performance gaps are located.
+
+---
+
+### 6. Work-order volume by site
+
+![Work-order volume by site](./assets/volumetrie-di-par-site.jpg)
+
+**What a recruiter should notice**
+
+- Multi-site workload analysis
+- Volume split by criticality
+- Identification of the busiest sites
+- Ability to distinguish high workload from poor performance
+- Operational context for interpreting SLA results
+
+A high number of SLA failures does not necessarily mean poor performance if one site is handling substantially more work. This page provides the workload context needed for fair comparison.
+
+---
+
+### 7. Preventive maintenance by site
+
+![Preventive maintenance by site](./assets/suivi-preventif-par-site.jpg)
+
+**What a recruiter should notice**
+
+- Preventive-maintenance completion monitoring
+- Site-by-site workload and compliance view
+- Detection of execution gaps
+- Complementary reading between reactive maintenance and preventive activity
+- Operational follow-up beyond penalty-only reporting
+
+This page extends the report from SLA monitoring into broader maintenance-management performance.
+
+---
+
+### 8. Intervention-time trend
+
+![Intervention-time evolution](./assets/evolution-temps-intervention.jpg)
+
+**What a recruiter should notice**
+
+- Time-series monitoring of operational performance
+- Median and average tracked together
+- Trend detection instead of one-period snapshots
+- Ability to identify deterioration or improvement over time
+- Management-friendly reading of technical service data
+
+This view helps determine whether performance problems are temporary events or a sustained operational trend.
+
+---
 
 ## Main dashboard areas
 
@@ -68,17 +196,19 @@ The dataset is fully synthetic and designed for portfolio demonstration.
 | **Contractual risk** | Potential penalties and files requiring review |
 | **Intervention performance** | Distribution, P95, median, average and SLA overruns |
 | **Restoration / resolution performance** | Distribution, P95 and long-tail analysis |
-| **Benchmark** | Compare sites and service providers |
+| **Benchmark** | Compare sites and service teams |
 | **Workload** | Volume, seasonality and criticality mix |
 | **Backlog** | Open work orders and overdue items |
 | **Preventive maintenance** | Compliance and workload |
 | **Technician analysis** | Workload, efficiency and quality |
 
-The Power BI report contains **11 main business pages** plus drill-through, detailed analysis and tooltip pages.
+The Power BI report contains **11 main business pages** plus detailed analysis, drill-through and tooltip pages.
+
+---
 
 ## SLA logic
 
-A central parameter table is used to avoid scattering business thresholds across measures.
+A central parameter table is used so that business thresholds are not scattered across multiple measures.
 
 | Criticality | Intervention SLA | Restoration SLA | Acknowledgement SLA | Potential intervention penalty |
 |---|---:|---:|---:|---:|
@@ -86,14 +216,14 @@ A central parameter table is used to avoid scattering business thresholds across
 | **VIP** | 30 min | 2 business days | 30 min | €1,500 |
 | **C2** | 120 min | 8 business days | 120 min | €500 |
 
-> These thresholds are fictitious portfolio assumptions, not contractual values from a real organization.
+> These thresholds are fictitious portfolio assumptions and do not represent confidential ENGIE contractual values.
 
 ## Core business rules
 
 - A work order that has **not started** is excluded from historical intervention-performance statistics and remains in backlog / open risk.
 - A work order that is **not resolved** is excluded from historical restoration-performance statistics.
 - Cancelled work orders are excluded from operational SLA populations.
-- Average, median, P95 and compliance use homogeneous evaluable populations.
+- Average, median, P95 and compliance use consistent evaluable populations.
 - Cases involving suspension, quotation workflow or parts waiting are classified **for investigation** instead of being automatically considered chargeable.
 - Benchmark gauges use a real compliance percentage, with a 100% maximum and a 95% target.
 
@@ -109,58 +239,35 @@ flowchart LR
     E --> F[Executive cockpit]
     E --> G[SLA analysis]
     E --> H[Backlog & risk]
-    E --> I[Site / provider benchmark]
+    E --> I[Site / team benchmark]
 ```
 
-## Selected source files
+## Key capabilities demonstrated
 
-The repository exposes the most relevant PBIP / semantic-model files for code review:
+| Area | Demonstrated capability |
+|---|---|
+| **Data preparation** | Transforming and structuring maintenance data with Power Query |
+| **Data modeling** | Building an operational model for SLA, site, criticality and time analysis |
+| **DAX** | Compliance rates, P95, median, averages, open-risk and exposure calculations |
+| **Operational analytics** | Intervention, restoration, backlog and preventive-maintenance monitoring |
+| **Contractual analysis** | Potential penalty exposure and investigation cases |
+| **Benchmarking** | Site and service-team comparison using consistent KPI populations |
+| **UX / reporting** | Executive KPIs, detailed analysis, drill-through and tooltips |
+| **PBIP / TMDL** | Source-controlled Power BI development |
+| **Data privacy** | Synthetic and anonymized portfolio-safe data |
 
-```text
-powerbi-sla-penalties-portfolio/
-├── dashboard/
-│   └── Portfolio_Penalites.pbip
-├── model/
-│   ├── model.tmdl
-│   └── Parametres_SLA.tmdl
-├── docs/
-│   ├── SLA_LOGIC.md
-│   └── VALIDATION.md
-└── README.md
-```
+## Files
 
-The complete working report was built in Power BI Desktop using PBIP format. The public repository focuses on the portfolio presentation and the most relevant model logic.
+- **Power BI project:** `dashboard/Portfolio_Penalites.pbip`
+- **Semantic model:** `model/`
+- **Business logic documentation:** `docs/SLA_LOGIC.md`
+- **Validation:** `docs/VALIDATION.md`
+- **Dashboard screenshots:** `assets/`
+- **Integrity checks:** `SHA256SUMS.txt`
 
-## What this project demonstrates
+## Tech stack
 
-- Advanced DAX KPI design
-- SLA population design and denominator control
-- P95 / median / average analysis
-- Backlog and open-risk separation
-- Contractual penalty exposure
-- Multi-site and provider benchmarking
-- Drill-through / tooltip design
-- Power Query transformation
-- PBIP / TMDL source-controlled Power BI development
-- Business-oriented data storytelling
-
-## Static validation
-
-Before packaging, the project was statically checked:
-
-- 553 / 553 JSON files valid
-- 37 report pages
-- 11 visible business pages
-- 26 hidden / tooltip / drill-through pages
-- 500 visuals
-- 0 report references to missing fields or measures
-- 0 orphan bookmarks
-- 0 missing declared image resources
-- 0 external web sources
-- 0 user-specific local paths
-- 0 targeted sensitive organization references
-
-The remaining dynamic validation step is opening and refreshing the report in Power BI Desktop.
+**Power BI Desktop · Power Query · DAX · PBIP · TMDL · Microsoft Excel**
 
 ---
 
@@ -172,25 +279,174 @@ The remaining dynamic validation step is opening and refreshing the report in Po
 
 ## Contexte professionnel
 
-Ce projet est une **reconstruction portfolio anonymisée et synthétique inspirée de travaux de pilotage opérationnel et de suivi des SLA réalisés dans le cadre de mon expérience professionnelle chez ENGIE**.
+Ce projet est une **reconstruction portfolio anonymisée basée sur des travaux de pilotage opérationnel et d'analyse des SLA réalisés dans le cadre de mon expérience professionnelle chez ENGIE**.
 
-Il illustre les problématiques de performance de service, backlog, risque contractuel et pilotage multi-sites sur lesquelles j'ai travaillé en environnement professionnel.
+Il reflète le type de reporting multi-sites, de suivi de performance de service, d'analyse du backlog et de risque contractuel sur lequel j'ai travaillé en environnement professionnel.
 
-> Il ne s'agit **pas d'un livrable officiel ENGIE**. Les données, organisations, seuils, hypothèses contractuelles et identifiants opérationnels sont synthétiques, anonymisés ou recréés pour une présentation publique.
+L'objectif de cette version publique est de présenter la logique analytique, la modélisation Power BI et l'approche de reporting tout en protégeant les informations confidentielles.
 
-## Objectif du projet
+> Il ne s'agit **pas d'un livrable officiel ENGIE**. Les organisations, sites, identifiants opérationnels, jeux de données, seuils contractuels et hypothèses financières ont été anonymisés, modifiés ou recréés pour une présentation publique.
 
-Ce projet simule le pilotage d'une **exploitation de maintenance multi-sites à forte volumétrie**. Il est centré sur la lecture des engagements de service et sur les conséquences opérationnelles et financières des dépassements.
+## Projet
 
-Le rapport distingue notamment :
+➡️ **[Ouvrir le projet Power BI](./dashboard/Portfolio_Penalites.pbip)**
 
-- la performance historique du backlog encore ouvert ;
-- le délai d'intervention du délai de remise en état / résolution ;
-- les DI conformes, hors SLA et non évaluables ;
-- l'exposition contractuelle brute des dossiers nécessitant une instruction ;
-- les causes opérationnelles : suspension, devis, attente de pièces, etc.
+## Aperçu du dashboard
 
-Toutes les données sont **synthétiques et anonymisées** pour un usage portfolio public.
+<p align="center">
+  <img src="./assets/performance-sla-intervention-red.jpg" alt="Aperçu performance SLA" width="100%">
+</p>
+
+> **Vue principale :** performance opérationnelle des SLA avec conformité intervention / remise en état, P95, backlog et lecture orientée risque.
+
+---
+
+## Objectif métier
+
+L'objectif est de transformer une volumétrie importante de données de maintenance en un véritable outil d'aide à la décision pour l'exploitation.
+
+Le rapport permet notamment de répondre rapidement aux questions suivantes :
+
+- Les engagements d'intervention et de remise en état sont-ils respectés ?
+- Quelles criticités génèrent le plus de dépassements SLA ?
+- Quels sites ou équipes opérationnelles sous-performent ?
+- Quelle est la taille du backlog encore ouvert ?
+- Quelles DI hors délai peuvent créer une exposition contractuelle ?
+- Les retards sont-ils ponctuels ou récurrents ?
+- Le préventif est-il correctement réalisé sur l'ensemble des sites ?
+- Comment évoluent la moyenne, la médiane et le P95 dans le temps ?
+
+---
+
+## Présentation des principales vues
+
+### 1. Performance SLA — intervention & remise en état
+
+![Performance SLA](./assets/performance-sla-intervention-red.jpg)
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Séparation claire entre SLA d'intervention et SLA de remise en état / résolution
+- Taux de conformité par criticité
+- Utilisation du P95 en complément de la moyenne et de la médiane
+- Séparation entre performance historique et DI encore ouvertes
+- Hiérarchie KPI conçue pour une lecture rapide par le management
+
+Cette page apporte une vision exécutive de la performance tout en permettant d'identifier immédiatement l'origine du risque.
+
+---
+
+### 2. Exposition contractuelle — intervention & remise en état
+
+![Exposition SLA](./assets/exposition-sla-intervention-red.jpg)
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Identification des DI hors SLA
+- Estimation de l'exposition financière potentielle
+- Séparation entre simple dépassement et dossier nécessitant une instruction
+- Prise en compte des suspensions, devis et attentes de pièces
+- Lecture orientée risque plutôt qu'un simple comptage des non-conformités
+
+Cette page montre la capacité à transformer une donnée opérationnelle en **lecture contractuelle et financière**.
+
+---
+
+### 3. Distribution des délais d'intervention
+
+![Distribution des délais d'intervention](./assets/distribution-delais-intervention.jpg)
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Analyse de distribution plutôt qu'une simple moyenne
+- Visibilité des délais extrêmes
+- Lecture par criticité
+- Seuils SLA cohérents
+- Distinction entre dérive générale et quelques valeurs atypiques
+
+Cette vue rend une donnée technique complexe compréhensible rapidement pour un utilisateur métier.
+
+---
+
+### 4. Distribution des délais RED / résolution
+
+![Distribution des délais RED](./assets/distribution-delais-red.jpg)
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Analyse spécifique du délai de remise en état
+- Mise en évidence de la longue traîne
+- Comparaison par criticité
+- Exclusion du backlog non résolu de la performance historique
+- Cohérence moyenne / médiane / P95
+
+Cette page permet d'identifier si les problèmes de remise en état sont structurels ou concentrés sur quelques dossiers complexes.
+
+---
+
+### 5. Benchmark SLA — sites & équipes
+
+![Benchmark SLA sites et équipes](./assets/benchmark-sla-sites-equipes.jpg)
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Comparaison homogène des sites
+- Benchmark des équipes opérationnelles / prestataires
+- Cible de pilotage à 95 %
+- Jauges basées sur un véritable taux de conformité
+- Identification rapide des périmètres à risque
+
+Cette vue transforme le suivi SLA en outil de management permettant de localiser les écarts de performance.
+
+---
+
+### 6. Volumétrie des DI par site
+
+![Volumétrie DI par site](./assets/volumetrie-di-par-site.jpg)
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Charge de travail multi-sites
+- Répartition par criticité
+- Identification des sites les plus sollicités
+- Mise en contexte des performances SLA
+- Distinction entre forte volumétrie et mauvaise performance
+
+Cette page évite d'interpréter un nombre élevé d'incidents sans tenir compte du niveau réel d'activité.
+
+---
+
+### 7. Suivi du préventif par site
+
+![Suivi du préventif](./assets/suivi-preventif-par-site.jpg)
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Suivi de réalisation du préventif
+- Comparaison site par site
+- Identification des écarts d'exécution
+- Lecture complémentaire entre maintenance corrective et préventive
+- Pilotage opérationnel au-delà des seules pénalités
+
+Cette page élargit le rapport à une vision plus complète de la performance maintenance.
+
+---
+
+### 8. Évolution des temps d'intervention
+
+![Évolution des temps d'intervention](./assets/evolution-temps-intervention.jpg)
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Suivi temporel de la performance
+- Moyenne et médiane analysées ensemble
+- Détection des tendances
+- Identification d'une amélioration ou dégradation dans le temps
+- Data storytelling adapté à des données techniques
+
+Cette vue permet de distinguer un incident ponctuel d'une dérive durable de la performance.
+
+---
 
 ## Principales vues métier
 
@@ -201,13 +457,15 @@ Toutes les données sont **synthétiques et anonymisées** pour un usage portfol
 | **Risque contractuel** | Pénalités potentielles et dossiers à instruire |
 | **Performance intervention** | Distribution, P95, médiane, moyenne et dépassements |
 | **Performance RED** | Distribution, P95 et analyse des dérives |
-| **Benchmark** | Comparaison sites et prestataires |
+| **Benchmark** | Comparaison sites et équipes |
 | **Charge DI** | Volumétrie, saisonnalité et criticité |
 | **Backlog** | DI ouvertes et hors SLA |
 | **Préventif** | Conformité et charge |
 | **Intervenants** | Charge, efficacité et qualité |
 
 Le rapport contient **11 pages métier principales** complétées par des pages détaillées, drill-through et info-bulles.
+
+---
 
 ## Référentiel SLA
 
@@ -219,14 +477,14 @@ Les seuils métier sont centralisés dans une table dédiée afin d'éviter de d
 | **VIP** | 30 min | 2 jours ouvrés | 30 min | 1 500 € |
 | **C2** | 120 min | 8 jours ouvrés | 120 min | 500 € |
 
-> Les seuils et montants sont des hypothèses fictives de portfolio et ne correspondent pas à un contrat réel.
+> Les seuils et montants sont des hypothèses fictives de portfolio et ne correspondent pas à des valeurs contractuelles confidentielles ENGIE.
 
 ## Logique métier principale
 
 - Une DI **non démarrée** n'entre pas dans la performance historique d'intervention : elle reste dans le backlog / risque ouvert.
 - Une DI **non résolue** n'entre pas dans la performance historique RED.
 - Les annulations sont exclues des populations SLA.
-- Moyenne, médiane, P95 et conformité utilisent des populations évaluables homogènes.
+- Moyenne, médiane, P95 et conformité utilisent des populations évaluables cohérentes.
 - Les dossiers avec suspension, devis ou attente de pièces sont classés **à instruire**, et non automatiquement comme pénalisables.
 - Les jauges de benchmark utilisent un véritable taux de conformité, avec maximum 100 % et cible 95 %.
 
@@ -242,36 +500,36 @@ flowchart LR
     E --> F[Cockpit exécutif]
     E --> G[Analyse SLA]
     E --> H[Backlog & risque]
-    E --> I[Benchmark sites / prestataires]
+    E --> I[Benchmark sites / équipes]
 ```
 
 ## Compétences démontrées
 
-- Conception avancée de KPI DAX
-- Construction correcte des populations SLA et des dénominateurs
-- Analyse moyenne / médiane / P95
-- Séparation performance historique / backlog ouvert
-- Analyse de l'exposition aux pénalités
-- Benchmark multi-sites et prestataires
-- Drill-through et info-bulles
-- Transformation Power Query
-- Développement Power BI versionnable via PBIP / TMDL
-- Data storytelling orienté métier
+| Domaine | Compétence démontrée |
+|---|---|
+| **Préparation des données** | Transformation et structuration avec Power Query |
+| **Modélisation** | Modèle opérationnel pour SLA, sites, criticités et temps |
+| **DAX** | Taux de conformité, P95, médiane, moyenne, risque ouvert et exposition |
+| **Analyse opérationnelle** | Intervention, RED, backlog et préventif |
+| **Analyse contractuelle** | Exposition potentielle aux pénalités et dossiers à instruire |
+| **Benchmark** | Comparaison sites et équipes avec populations KPI homogènes |
+| **UX / Reporting** | KPI exécutifs, analyses détaillées, drill-through et info-bulles |
+| **PBIP / TMDL** | Développement Power BI versionnable |
+| **Confidentialité** | Données synthétiques et anonymisées adaptées à un portfolio public |
 
-## Validation statique
+## Fichiers
 
-Avant packaging :
+- **Projet Power BI :** `dashboard/Portfolio_Penalites.pbip`
+- **Modèle sémantique :** `model/`
+- **Documentation métier :** `docs/SLA_LOGIC.md`
+- **Validation :** `docs/VALIDATION.md`
+- **Captures du dashboard :** `assets/`
+- **Contrôles d'intégrité :** `SHA256SUMS.txt`
 
-- 553 / 553 JSON valides
-- 37 pages
-- 11 pages métier visibles
-- 26 pages cachées / info-bulles / drill-through
-- 500 visuels
-- 0 champ ou mesure manquant référencé par le rapport
-- 0 bookmark orphelin
-- 0 ressource graphique déclarée manquante
-- 0 source web externe
-- 0 chemin utilisateur spécifique
-- 0 référence sensible ciblée restante
+## Stack technique
 
-La dernière validation dynamique reste l'ouverture et l'actualisation dans Power BI Desktop.
+**Power BI Desktop · Power Query · DAX · PBIP · TMDL · Microsoft Excel**
+
+## Confidentialité
+
+Ce dépôt est une version portfolio publique. Toutes les données, noms de sites, organisations et hypothèses contractuelles ont été anonymisés, modifiés ou recréés.
