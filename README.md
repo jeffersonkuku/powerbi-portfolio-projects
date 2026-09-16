@@ -100,7 +100,7 @@ The report was engineered in **PBIP / TMDL** format and includes a centralized S
 
 The project includes five pages — Executive Overview, Financial Control, Procurement Analytics, Supplier Performance and Commitments & Exceptions — with synthetic 2023–2026 data, shared Year / Site / Category filtering, financial and procurement KPIs, supplier risk analysis, OTIF, late purchase orders and overdue commitment exposure.
 
-The public source is provided in **PBIP / PBIR / TMDL** format with an embedded synthetic semantic model.
+The public source is provided in **PBIP / PBIR / TMDL** format with a portable deterministic synthetic semantic model.
 
 **[Explore the Procurement & Financial Control Tower project →](./powerbi-procurement-financial-control-tower/)**
 
@@ -264,7 +264,7 @@ Le modèle utilise le format **PBIP / TMDL** et centralise les règles SLA dans 
 
 Le projet comprend cinq vues — Executive Overview, Financial Control, Procurement Analytics, Supplier Performance et Commitments & Exceptions — avec des données synthétiques 2023–2026, des filtres communs Année / Site / Catégorie, des KPI financiers et achats, le suivi du risque fournisseurs, l’OTIF, les commandes en retard et l’exposition des engagements échus.
 
-La source publique est fournie au format **PBIP / PBIR / TMDL** avec un modèle sémantique synthétique intégré.
+La source publique est fournie au format **PBIP / PBIR / TMDL** avec un modèle sémantique synthétique portable et déterministe.
 
 **[Découvrir Procurement & Financial Control Tower →](./powerbi-procurement-financial-control-tower/)**
 
