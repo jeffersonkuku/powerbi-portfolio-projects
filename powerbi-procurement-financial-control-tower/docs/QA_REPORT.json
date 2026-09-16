@@ -1,26 +1,76 @@
 {
-  "status": "PASS_STATIC_V2",
+  "status": "PASS_STATIC_PUBLIC_SOURCE",
   "pages": 5,
   "visuals": 62,
   "tables": 7,
   "relationships": 7,
-  "embedded_data": true,
+  "embedded_data": false,
+  "deterministic_synthetic_data": true,
   "external_file_paths": false,
   "calculated_partitions": false,
   "json_parse": "PASS",
-  "embedded_payload_decode": "PASS",
   "visual_field_reference_check": "PASS",
-  "measure_reference_fix": ["Late Open POs","Overdue Value","Prior Year Spend","Spend YoY %"],
+  "measure_reference_fix": [
+    "Late Open POs",
+    "Overdue Value",
+    "Prior Year Spend",
+    "Spend YoY %"
+  ],
   "blank_guard_measures": "COALESCE/alternate-result applied to headline KPI measures",
-  "currency_format_fix": "Removed hard-coded million scaling to avoid Power BI auto-unit double scaling ($0.0MM)",
-  "data_integrity": {"closed_open_amount_zero":true,"cancelled_open_amount_zero":true,"open_partial_commitments_only":true,"historical_open_commitments_available_2023_2026":true},
+  "currency_format_fix": "Removed hard-coded million scaling to avoid duplicated MM display",
+  "data_integrity": {
+    "closed_open_amount_zero": true,
+    "cancelled_open_amount_zero": true,
+    "open_partial_commitments_only": true,
+    "historical_open_commitments_available_2023_2026": true
+  },
   "kpi_by_year": {
-    "2023": {"po_count":1087,"invoiced_spend":22759016.49,"open_commitments":616004.3,"budget":27381016.86,"budget_utilisation":0.8312,"committed_utilisation":0.8537,"late_open_pos":42,"overdue_value":400045.77,"otif":0.851485},
-    "2024": {"po_count":1251,"invoiced_spend":27072266.71,"open_commitments":1020544.91,"budget":31822452.13,"budget_utilisation":0.8507,"committed_utilisation":0.8828,"late_open_pos":47,"overdue_value":819689.63,"otif":0.862425},
-    "2025": {"po_count":1443,"invoiced_spend":32225561.6,"open_commitments":897900.03,"budget":36679933.48,"budget_utilisation":0.8786,"committed_utilisation":0.903,"late_open_pos":58,"overdue_value":682438.21,"otif":0.831595},
-    "2026": {"po_count":1419,"invoiced_spend":31044887.45,"open_commitments":1752190.3,"budget":34729374.38,"budget_utilisation":0.8939,"committed_utilisation":0.9444,"late_open_pos":101,"overdue_value":1299508.6,"otif":0.856685}
+    "2023": {
+      "po_count": 1087,
+      "invoiced_spend": 22860131.92,
+      "open_commitments": 1113546.68,
+      "budget": 27381016.86,
+      "budget_utilisation": 0.83489,
+      "committed_utilisation": 0.875558,
+      "late_open_pos": 64,
+      "overdue_value": 1046181.18,
+      "otif": 0.856713
+    },
+    "2024": {
+      "po_count": 1251,
+      "invoiced_spend": 26309885.37,
+      "open_commitments": 1297252.73,
+      "budget": 31822452.13,
+      "budget_utilisation": 0.826771,
+      "committed_utilisation": 0.867536,
+      "late_open_pos": 66,
+      "overdue_value": 1127194.43,
+      "otif": 0.857267
+    },
+    "2025": {
+      "po_count": 1443,
+      "invoiced_spend": 30291333.88,
+      "open_commitments": 1491497.12,
+      "budget": 36679933.48,
+      "budget_utilisation": 0.825828,
+      "committed_utilisation": 0.866491,
+      "late_open_pos": 81,
+      "overdue_value": 1348711.72,
+      "otif": 0.857251
+    },
+    "2026": {
+      "po_count": 1419,
+      "invoiced_spend": 29779464.3,
+      "open_commitments": 1491708,
+      "budget": 34729374.38,
+      "budget_utilisation": 0.857472,
+      "committed_utilisation": 0.900424,
+      "late_open_pos": 52,
+      "overdue_value": 893531.94,
+      "otif": 0.85802
+    }
   },
   "errors": [],
   "warnings": [],
-  "desktop_render_validation": "REQUIRES_FINAL_REFRESH_AND_VISUAL_CHECK_ON_WINDOWS_POWER_BI_DESKTOP"
+  "note": "The public GitHub source uses deterministic Power Query generators to keep the repository portable and free of local data dependencies."
 }
