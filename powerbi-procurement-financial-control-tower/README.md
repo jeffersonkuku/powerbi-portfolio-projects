@@ -1,4 +1,4 @@
-# Procurement & Financial Control Tower — Power BI
+# Power BI — Procurement & Financial Control Tower
 
 [English](#english) · [Français](#francais)
 
@@ -8,7 +8,7 @@
 
 # 🇬🇧 English
 
-> **Power BI decision-support project combining procurement activity, budget execution, supplier performance, open commitments and delivery reliability in a single executive control tower.**
+> **Executive Power BI control tower for procurement performance, budget execution, supplier monitoring, open commitments and operational exceptions.**
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-Data%20Visualization-F2C811?logo=powerbi&logoColor=000)
 ![DAX](https://img.shields.io/badge/DAX-Business%20Measures-0078D4)
@@ -30,15 +30,15 @@ It demonstrates the type of purchasing, supplier, commitment and budget-monitori
 
 ## Dashboard preview
 
-Screenshots will be added to [`assets/`](./assets/) after the final capture session.
+The final portfolio screenshots are organized around five management views:
 
-Planned views:
+1. **Executive Procurement Control Tower** — consolidated financial, procurement and supplier-performance overview.
+2. **Financial Control — Budget, Spend & Commitments** — budget execution, actual spend, commitments and forecast variance.
+3. **Procurement Analytics — Orders, Savings & Buyers** — purchasing volumes, category mix, buyers, savings and order status.
+4. **Supplier Performance — OTIF, Lead Time & Risk** — supplier reliability, commercial exposure and delivery performance.
+5. **Commitments & Exceptions — Overdue Exposure & Open POs** — outstanding commitments, overdue value and operational exceptions.
 
-1. **Executive Overview**
-2. **Financial Control**
-3. **Procurement Analytics**
-4. **Supplier Performance**
-5. **Commitments & Exceptions**
+Final screenshots are stored in [`assets/`](./assets/) once validated for portfolio publication.
 
 ---
 
@@ -62,71 +62,82 @@ The model is designed to connect **financial steering and procurement execution*
 
 ## Dashboard walkthrough
 
-### 1. Executive Overview
+### 1. Executive Procurement Control Tower
 
-Executive cockpit with:
+**What a recruiter should notice**
 
-- invoiced spend;
-- total budget;
-- committed utilisation;
-- negotiated savings;
-- OTIF;
-- monthly spend vs. budget;
-- category exposure;
-- site financial position;
-- supplier snapshot.
+- Executive KPI layer combining **Invoiced Spend, Budget, Committed Utilisation, Negotiated Savings and OTIF**
+- Monthly spend-versus-budget trajectory
+- Spend and open commitments by purchasing category
+- Site-level financial positioning
+- Supplier snapshot combining spend, commitments, risk and OTIF
+- Shared Year / Site / Category filtering for consistent analysis
 
-### 2. Financial Control
+This page acts as the **management cockpit** of the report. It brings financial, procurement and supplier indicators together so a decision-maker can understand the overall position before moving into specialist analysis.
 
-Dedicated budget and financial steering page covering:
+---
 
-- total budget;
-- actual/invoiced spend;
-- open commitments;
-- remaining budget;
-- forecast variance;
-- monthly actual vs. budget;
-- variance by category;
-- budget exposure by site;
-- detailed site/category financial position.
+### 2. Financial Control — Budget, Spend & Commitments
 
-### 3. Procurement Analytics
+**What a recruiter should notice**
 
-Purchasing-performance analysis including:
+- Total budget, actual spend, open commitments and remaining budget
+- Forecast variance for forward-looking financial steering
+- Monthly actual-versus-budget evolution
+- Budget variance analysis by purchasing category
+- Site-level exposure comparison
+- Detailed Site × Category financial table
+- Consistent filter propagation across finance visuals
 
-- PO volume;
-- open purchase orders;
-- average PO value;
-- savings rate;
-- active suppliers;
-- spend and savings by category;
-- PO status mix;
-- spend by buyer;
-- purchase-order detail.
+This view focuses on **budget execution and commitment control**. It helps management understand not only what has already been invoiced, but also what is still financially committed.
 
-### 4. Supplier Performance
+---
 
-Supplier-management page combining:
+### 3. Procurement Analytics — Orders, Savings & Buyers
 
-- OTIF;
-- average lead time;
-- high-risk spend;
-- supplier spend vs. OTIF;
-- exposure by supplier risk;
-- supplier scorecard.
+**What a recruiter should notice**
 
-### 5. Commitments & Exceptions
+- Purchase-order volume and open-order monitoring
+- Average purchase-order value
+- Savings rate and negotiated savings logic
+- Number of active suppliers
+- Spend and savings by category
+- Purchase-order status distribution
+- Spend analysis by buyer
+- Transaction-level purchase-order detail
 
-Operational exception cockpit covering:
+This page turns purchasing activity into a **procurement-performance view**, connecting operational PO volumes with savings, supplier activity and buyer-level analysis.
 
-- open commitments;
-- overdue value;
-- invoice coverage;
-- open PO count;
-- late open purchase orders;
-- commitment ageing / due buckets;
-- PO value by urgency;
-- commitment exception detail.
+---
+
+### 4. Supplier Performance — OTIF, Lead Time & Risk
+
+**What a recruiter should notice**
+
+- OTIF used as a core supplier-delivery KPI
+- Average lead-time monitoring
+- High-risk supplier spend
+- Supplier spend compared with delivery performance
+- Exposure segmented by supplier risk level
+- Supplier scorecard combining commercial and operational indicators
+
+This page supports **supplier-performance management** by combining spend concentration with delivery reliability and risk instead of evaluating suppliers only on purchasing volume.
+
+---
+
+### 5. Commitments & Exceptions — Overdue Exposure & Open POs
+
+**What a recruiter should notice**
+
+- Open financial commitments
+- Overdue commitment value
+- Invoice coverage ratio
+- Open and late purchase-order monitoring
+- Commitment ageing through due-date buckets
+- Purchase-order value by urgency
+- Detailed exception table for investigation
+
+This page converts outstanding purchasing activity into an **exception-management cockpit**, making it easier to identify overdue exposure and prioritize the purchase orders requiring action.
 
 ---
 
@@ -235,7 +246,7 @@ Detailed validation is available in [`docs/VALIDATION.md`](./docs/VALIDATION.md)
 
 # 🇫🇷 Français
 
-> **Projet Power BI d'aide à la décision réunissant activité achats, exécution budgétaire, performance fournisseurs, engagements ouverts et fiabilité des livraisons dans une seule Control Tower.**
+> **Control Tower Power BI de pilotage réunissant performance achats, exécution budgétaire, suivi fournisseurs, engagements ouverts et gestion des exceptions.**
 
 ## Contexte professionnel
 
@@ -251,15 +262,15 @@ Il présente le type de logique de suivi des commandes, fournisseurs, engagement
 
 ## Aperçu du dashboard
 
-Les captures seront ajoutées dans [`assets/`](./assets/) après la session finale de captures.
+La présentation portfolio s'organise autour de cinq vues de pilotage :
 
-Vues prévues :
+1. **Executive Procurement Control Tower** — synthèse financière, achats et performance fournisseurs.
+2. **Financial Control — Budget, Spend & Commitments** — budget, dépenses réelles, engagements et forecast.
+3. **Procurement Analytics — Orders, Savings & Buyers** — commandes, économies, catégories et acheteurs.
+4. **Supplier Performance — OTIF, Lead Time & Risk** — fiabilité fournisseurs, délais et exposition au risque.
+5. **Commitments & Exceptions — Overdue Exposure & Open POs** — engagements ouverts, retards et exceptions opérationnelles.
 
-1. **Executive Overview**
-2. **Financial Control**
-3. **Procurement Analytics**
-4. **Supplier Performance**
-5. **Commitments & Exceptions**
+Les captures finales validées pour le portfolio sont stockées dans [`assets/`](./assets/).
 
 ---
 
@@ -283,25 +294,82 @@ Le modèle rapproche **pilotage financier et exécution achats** dans une même 
 
 ## Présentation des vues
 
-### 1. Executive Overview
+### 1. Executive Procurement Control Tower
 
-Cockpit exécutif avec dépenses facturées, budget, utilisation engagée, économies, OTIF, évolution mensuelle, exposition par catégorie, position financière des sites et synthèse fournisseurs.
+**Ce qu'un recruteur peut identifier immédiatement**
 
-### 2. Financial Control
+- Couche KPI exécutive : **dépenses facturées, budget, utilisation engagée, économies négociées et OTIF**
+- Évolution mensuelle dépenses vs budget
+- Répartition dépenses / engagements par catégorie
+- Position financière par site
+- Synthèse fournisseurs avec dépenses, engagements, risque et OTIF
+- Filtres communs Année / Site / Catégorie
 
-Vue dédiée au pilotage du budget : budget total, dépenses réelles, engagements ouverts, budget restant, forecast, écarts par catégorie et détail site / catégorie.
+Cette page joue le rôle de **cockpit de management**. Elle rassemble finance, achats et fournisseurs dans une lecture unique avant de passer aux analyses spécialisées.
 
-### 3. Procurement Analytics
+---
 
-Analyse de l'activité achats : volumétrie PO, commandes ouvertes, valeur moyenne, taux d'économies, fournisseurs actifs, catégories, statuts, acheteurs et détail des commandes.
+### 2. Financial Control — Budget, Spend & Commitments
 
-### 4. Supplier Performance
+**Ce qu'un recruteur peut identifier immédiatement**
 
-Pilotage fournisseurs : OTIF, lead time moyen, dépenses à risque, comparaison dépenses / OTIF, exposition par niveau de risque et scorecard fournisseurs.
+- Budget total, dépenses réelles, engagements ouverts et budget restant
+- Écart au forecast pour anticiper la trajectoire financière
+- Évolution mensuelle réel vs budget
+- Analyse des écarts par catégorie d'achats
+- Comparaison de l'exposition financière entre sites
+- Tableau détaillé Site × Catégorie
+- Propagation cohérente des filtres sur les indicateurs financiers
 
-### 5. Commitments & Exceptions
+Cette vue est dédiée au **pilotage budgétaire et au contrôle des engagements**. Elle permet de distinguer ce qui est déjà facturé de ce qui reste financièrement engagé.
 
-Suivi des exceptions : engagements ouverts, valeur échue, couverture de facturation, commandes ouvertes, commandes en retard, ancienneté des engagements, urgence et détail des exceptions.
+---
+
+### 3. Procurement Analytics — Orders, Savings & Buyers
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Volumétrie des commandes et suivi des PO ouverts
+- Valeur moyenne des commandes
+- Taux et montant des économies négociées
+- Nombre de fournisseurs actifs
+- Dépenses et économies par catégorie
+- Répartition des statuts de commandes
+- Analyse des dépenses par acheteur
+- Détail transactionnel des commandes
+
+Cette page transforme l'activité achats en une **lecture de performance procurement**, en reliant volumes de commandes, économies, fournisseurs et activité des acheteurs.
+
+---
+
+### 4. Supplier Performance — OTIF, Lead Time & Risk
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- OTIF comme KPI principal de fiabilité fournisseur
+- Suivi du lead time moyen
+- Dépenses exposées aux fournisseurs à risque
+- Comparaison dépenses / performance de livraison
+- Exposition par niveau de risque fournisseur
+- Scorecard regroupant indicateurs commerciaux et opérationnels
+
+Cette vue permet de piloter la **performance fournisseurs** en croisant concentration des dépenses, qualité de livraison et niveau de risque.
+
+---
+
+### 5. Commitments & Exceptions — Overdue Exposure & Open POs
+
+**Ce qu'un recruteur peut identifier immédiatement**
+
+- Engagements financiers encore ouverts
+- Valeur des engagements échus
+- Taux de couverture de facturation
+- Commandes ouvertes et commandes en retard
+- Ancienneté des engagements par tranche d'échéance
+- Valeur des commandes par niveau d'urgence
+- Tableau détaillé des exceptions à traiter
+
+Cette page transforme les engagements non soldés en **cockpit de gestion des exceptions**, afin d'identifier rapidement les commandes nécessitant une action.
 
 ---
 
