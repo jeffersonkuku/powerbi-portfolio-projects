@@ -1,0 +1,34 @@
+table Site
+
+	column SiteID
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: SiteID
+		isHidden
+
+	column SiteName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SiteName
+
+	column State
+		dataType: string
+		summarizeBy: none
+		sourceColumn: State
+
+	column SiteType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SiteType
+
+	partition Site = m
+		mode: import
+		source =
+			let
+						Compressed = Binary.FromText("bY47C8MwDIT/StCspe+ufawtJRkymAwiFknAtcARtP73VadCHRBC3Hd3yLkVQpN95FxdzldAuDet7RtrEujQrREelBI9SZVKvEE4BX5T9GlawFtTJOlY1dlziXd209yLlmhvCr96mjX8gjUPk0QKX8MBoZUQJA42i46jvc4xTTr+13cf", BinaryEncoding.Base64),
+						Decompressed = Binary.Decompress(Compressed, Compression.Deflate),
+						Rows = Json.Document(Decompressed),
+						Source = Table.FromRows(Rows, {"SiteID", "SiteName", "State", "SiteType"}),
+						#"Changed Type" = Table.TransformColumnTypes(Source,{{"SiteID", Int64.Type}, {"SiteName", type text}, {"State", type text}, {"SiteType", type text}})
+					in
+						#"Changed Type"

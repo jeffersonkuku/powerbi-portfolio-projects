@@ -1,0 +1,62 @@
+table Date
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: Date
+
+	column Year
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: Year
+
+	column MonthNo
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: MonthNo
+
+	column MonthName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: MonthName
+		sortByColumn: MonthNo
+
+	column YearMonth
+		dataType: string
+		summarizeBy: none
+		sourceColumn: YearMonth
+		sortByColumn: YearMonthSort
+
+	column YearMonthSort
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: YearMonthSort
+
+	column Quarter
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Quarter
+
+	column Day
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: Day
+
+	partition Date = m
+		mode: import
+		source =
+			let
+				StartDate = #date(2023, 1, 1),
+				EndDate = #date(2026, 12, 31),
+				Dates = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
+				Source = Table.FromList(Dates, Splitter.SplitByNothing(), {"Date"}),
+				AddYear = Table.AddColumn(Source, "Year", each Date.Year([Date]), Int64.Type),
+				AddMonthNo = Table.AddColumn(AddYear, "MonthNo", each Date.Month([Date]), Int64.Type),
+				AddMonthName = Table.AddColumn(AddMonthNo, "MonthName", each Date.ToText([Date], "MMM", "en-AU"), type text),
+				AddYearMonth = Table.AddColumn(AddMonthName, "YearMonth", each Date.ToText([Date], "yyyy-MM"), type text),
+				AddYearMonthSort = Table.AddColumn(AddYearMonth, "YearMonthSort", each [Year] * 100 + [MonthNo], Int64.Type),
+				AddQuarter = Table.AddColumn(AddYearMonthSort, "Quarter", each "Q" & Text.From(Date.QuarterOfYear([Date])), type text),
+				AddDay = Table.AddColumn(AddQuarter, "Day", each Date.Day([Date]), Int64.Type)
+			in
+				AddDay

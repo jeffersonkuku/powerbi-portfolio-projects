@@ -1,0 +1,24 @@
+table Category
+
+	column CategoryID
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: CategoryID
+		isHidden
+
+	column CategoryName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CategoryName
+
+	partition Category = m
+		mode: import
+		source =
+			let
+						Compressed = Binary.FromText("NY69CsJAEIRfJWxhtY3/tiFEbIRAUISQYj1WXbncyWUj5O29S7Cc+WaGaZolwumaF9kiO7N5kRNDFlpsVgilZaPhb6wRjmTEio5ZzeErhvvkb2LQcXiOceKiicsMtgg1PVgTKHz3sULOcCI7hHxQ35GKdxN1GrydWnuEKPuho7uddw4IVfDv+KVP2bwqb9C2Pw==", BinaryEncoding.Base64),
+						Decompressed = Binary.Decompress(Compressed, Compression.Deflate),
+						Rows = Json.Document(Decompressed),
+						Source = Table.FromRows(Rows, {"CategoryID", "CategoryName"}),
+						#"Changed Type" = Table.TransformColumnTypes(Source,{{"CategoryID", Int64.Type}, {"CategoryName", type text}})
+					in
+						#"Changed Type"

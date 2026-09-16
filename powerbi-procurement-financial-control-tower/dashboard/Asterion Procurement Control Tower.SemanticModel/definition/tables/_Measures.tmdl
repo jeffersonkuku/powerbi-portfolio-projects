@@ -1,0 +1,119 @@
+table _Measures
+
+	/// Total negotiated purchase order value.
+	measure 'PO Value' = COALESCE(SUM(PurchaseOrders[POValue]), 0)
+		formatString: $#,##0
+
+	/// Amount invoiced against purchase orders.
+	measure 'Invoiced Spend' = COALESCE(SUM(PurchaseOrders[InvoicedAmount]), 0)
+		formatString: $#,##0
+
+	/// Remaining committed amount on open or partially invoiced purchase orders.
+	measure 'Open Commitments' = COALESCE(CALCULATE(SUM(PurchaseOrders[OpenAmount]), PurchaseOrders[Status] IN {"Open","Partial"}), 0)
+		formatString: $#,##0
+
+	/// Approved budget for the selected period.
+	measure 'Total Budget' = COALESCE(SUM(Budget[BudgetAmount]), 0)
+		formatString: $#,##0
+
+	/// Forecast spend for the selected period.
+	measure 'Forecast' = COALESCE(SUM(Budget[ForecastAmount]), 0)
+		formatString: $#,##0
+
+	/// Budget remaining after invoiced spend and open commitments.
+	measure 'Budget Remaining' = [Total Budget] - [Invoiced Spend] - [Open Commitments]
+		formatString: $#,##0
+
+	/// Budget less invoiced spend.
+	measure 'Budget Variance' = [Total Budget] - [Invoiced Spend]
+		formatString: $#,##0
+
+	/// Budget less current forecast.
+	measure 'Forecast Variance' = [Total Budget] - [Forecast]
+		formatString: $#,##0
+
+	/// Share of budget already invoiced.
+	measure 'Budget Utilisation %' = DIVIDE([Invoiced Spend], [Total Budget], 0)
+		formatString: 0.0%
+
+	/// Share of budget consumed by invoices and open commitments.
+	measure 'Committed Utilisation %' = DIVIDE([Invoiced Spend] + [Open Commitments], [Total Budget], 0)
+		formatString: 0.0%
+
+	/// Negotiated savings versus baseline price.
+	measure 'Savings' = COALESCE(SUM(PurchaseOrders[SavingsAmount]), 0)
+		formatString: $#,##0
+
+	/// Negotiated savings as a share of baseline value.
+	measure 'Savings %' = DIVIDE([Savings], COALESCE(SUM(PurchaseOrders[BaselineValue]), 0), 0)
+		formatString: 0.0%
+
+	/// Number of purchase orders.
+	measure 'PO Count' = COALESCE(COUNTROWS(PurchaseOrders), 0)
+		formatString: #,##0
+
+	/// Open or partially invoiced purchase orders.
+	measure 'Open POs' = COALESCE(CALCULATE([PO Count], PurchaseOrders[Status] IN {"Open","Partial"}), 0)
+		formatString: #,##0
+
+	/// Open purchase orders past due as of the selected period end, capped at today.
+	measure 'Late Open POs' = VAR ContextEnd = MAX('Date'[Date]) VAR AsOfDate = IF(ContextEnd > TODAY(), TODAY(), ContextEnd) RETURN COALESCE(COUNTROWS(FILTER(PurchaseOrders, PurchaseOrders[Status] IN {"Open","Partial"} && PurchaseOrders[DueDate] < AsOfDate)), 0)
+		formatString: #,##0
+
+	/// Open committed value past due as of the selected period end, capped at today.
+	measure 'Overdue Value' = VAR ContextEnd = MAX('Date'[Date]) VAR AsOfDate = IF(ContextEnd > TODAY(), TODAY(), ContextEnd) RETURN COALESCE(SUMX(FILTER(PurchaseOrders, PurchaseOrders[Status] IN {"Open","Partial"} && PurchaseOrders[DueDate] < AsOfDate), PurchaseOrders[OpenAmount]), 0)
+		formatString: $#,##0
+
+	/// Purchase orders with a delivery date.
+	measure 'Delivered POs' = COALESCE(COUNTROWS(FILTER(PurchaseOrders, NOT(ISBLANK(PurchaseOrders[DeliveryDate])))), 0)
+		formatString: #,##0
+
+	/// Delivered purchase orders received on or before due date.
+	measure 'On Time Delivered' = COALESCE(COUNTROWS(FILTER(PurchaseOrders, NOT(ISBLANK(PurchaseOrders[DeliveryDate])) && PurchaseOrders[DeliveryDate] <= PurchaseOrders[DueDate])), 0)
+		formatString: #,##0
+
+	/// On-time delivery rate.
+	measure 'OTIF %' = DIVIDE([On Time Delivered], [Delivered POs], 0)
+		formatString: 0.0%
+
+	/// Average order-to-delivery lead time in days.
+	measure 'Avg Lead Time Days' = COALESCE(AVERAGEX(FILTER(PurchaseOrders, NOT(ISBLANK(PurchaseOrders[DeliveryDate]))), DATEDIFF(PurchaseOrders[OrderDate], PurchaseOrders[DeliveryDate], DAY)), 0)
+		formatString: 0.0
+
+	/// Average purchase order value.
+	measure 'Avg PO Value' = DIVIDE([PO Value], [PO Count], 0)
+		formatString: $#,##0
+
+	/// Distinct suppliers used in the selected period.
+	measure 'Active Suppliers' = COALESCE(DISTINCTCOUNT(PurchaseOrders[SupplierID]), 0)
+		formatString: #,##0
+
+	/// Purchase order value placed with high-risk suppliers.
+	measure 'High Risk Spend' = COALESCE(CALCULATE([PO Value], Supplier[RiskLevel] = "High"), 0)
+		formatString: $#,##0
+
+	/// Share of PO value already invoiced.
+	measure 'Invoice Coverage %' = DIVIDE([Invoiced Spend], [PO Value], 0)
+		formatString: 0.0%
+
+	/// Invoiced spend for the corresponding prior-year period.
+	measure 'Prior Year Spend' = COALESCE(CALCULATE([Invoiced Spend], DATEADD('Date'[Date], -1, YEAR)), 0)
+		formatString: $#,##0
+
+	/// Year-over-year change in invoiced spend.
+	measure 'Spend YoY %' = DIVIDE([Invoiced Spend] - [Prior Year Spend], [Prior Year Spend], 0)
+		formatString: 0.0%
+
+	column Dummy
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: Dummy
+
+	partition _Measures = m
+		mode: import
+		source =
+			let
+				Source = #table(type table [Dummy = nullable text], {{null}})
+			in
+				Source

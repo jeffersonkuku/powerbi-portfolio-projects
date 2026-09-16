@@ -1,0 +1,26 @@
+{
+  "status": "PASS_STATIC_V2",
+  "pages": 5,
+  "visuals": 62,
+  "tables": 7,
+  "relationships": 7,
+  "embedded_data": true,
+  "external_file_paths": false,
+  "calculated_partitions": false,
+  "json_parse": "PASS",
+  "embedded_payload_decode": "PASS",
+  "visual_field_reference_check": "PASS",
+  "measure_reference_fix": ["Late Open POs","Overdue Value","Prior Year Spend","Spend YoY %"],
+  "blank_guard_measures": "COALESCE/alternate-result applied to headline KPI measures",
+  "currency_format_fix": "Removed hard-coded million scaling to avoid Power BI auto-unit double scaling ($0.0MM)",
+  "data_integrity": {"closed_open_amount_zero":true,"cancelled_open_amount_zero":true,"open_partial_commitments_only":true,"historical_open_commitments_available_2023_2026":true},
+  "kpi_by_year": {
+    "2023": {"po_count":1087,"invoiced_spend":22759016.49,"open_commitments":616004.3,"budget":27381016.86,"budget_utilisation":0.8312,"committed_utilisation":0.8537,"late_open_pos":42,"overdue_value":400045.77,"otif":0.851485},
+    "2024": {"po_count":1251,"invoiced_spend":27072266.71,"open_commitments":1020544.91,"budget":31822452.13,"budget_utilisation":0.8507,"committed_utilisation":0.8828,"late_open_pos":47,"overdue_value":819689.63,"otif":0.862425},
+    "2025": {"po_count":1443,"invoiced_spend":32225561.6,"open_commitments":897900.03,"budget":36679933.48,"budget_utilisation":0.8786,"committed_utilisation":0.903,"late_open_pos":58,"overdue_value":682438.21,"otif":0.831595},
+    "2026": {"po_count":1419,"invoiced_spend":31044887.45,"open_commitments":1752190.3,"budget":34729374.38,"budget_utilisation":0.8939,"committed_utilisation":0.9444,"late_open_pos":101,"overdue_value":1299508.6,"otif":0.856685}
+  },
+  "errors": [],
+  "warnings": [],
+  "desktop_render_validation": "REQUIRES_FINAL_REFRESH_AND_VISUAL_CHECK_ON_WINDOWS_POWER_BI_DESKTOP"
+}

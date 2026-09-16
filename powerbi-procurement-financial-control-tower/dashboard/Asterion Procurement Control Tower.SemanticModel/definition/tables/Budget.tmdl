@@ -1,0 +1,44 @@
+table Budget
+
+	column MonthStart
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+	column SiteID
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: SiteID
+		isHidden
+
+	column CategoryID
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: CategoryID
+		isHidden
+
+	column BudgetAmount
+		dataType: double
+		formatString: $#,##0
+		summarizeBy: sum
+		sourceColumn: BudgetAmount
+
+	column ForecastAmount
+		dataType: double
+		formatString: $#,##0
+		summarizeBy: sum
+		sourceColumn: ForecastAmount
+
+	partition Budget = m
+		mode: import
+		source =
+			let
+				Months = List.Generate(() => #date(2023,1,1), each _ <= #date(2026,12,1), each Date.AddMonths(_, 1)),
+				Sites = {1..8},
+				Categories = {1..8},
+				Rows = List.Combine(List.Transform(Months, (m) => List.Combine(List.Transform(Sites, (s) => List.Transform(Categories, (c) => [MonthStart=m, SiteID=s, CategoryID=c]))))),
+				Source = Table.FromRecords(Rows),
+				AddBudget = Table.AddColumn(Source, "BudgetAmount", each let y=Date.Year([MonthStart]), annual=if y=2023 then 27381016.86 else if y=2024 then 31822452.13 else if y=2025 then 36679933.48 else 34729374.38 in annual / 768, type number),
+				AddForecast = Table.AddColumn(AddBudget, "ForecastAmount", each [BudgetAmount] * (0.96 + Number.Mod([SiteID] * 7 + [CategoryID] * 11 + Date.Month([MonthStart]), 9) / 100), type number)
+			in
+				AddForecast

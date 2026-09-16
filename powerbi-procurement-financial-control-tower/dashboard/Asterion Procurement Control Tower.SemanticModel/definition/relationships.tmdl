@@ -1,0 +1,27 @@
+relationship PO_Date
+	fromColumn: PurchaseOrders.OrderDate
+	toColumn: Date.Date
+
+relationship PO_Supplier
+	fromColumn: PurchaseOrders.SupplierID
+	toColumn: Supplier.SupplierID
+
+relationship PO_Site
+	fromColumn: PurchaseOrders.SiteID
+	toColumn: Site.SiteID
+
+relationship PO_Category
+	fromColumn: PurchaseOrders.CategoryID
+	toColumn: Category.CategoryID
+
+relationship Budget_Date
+	fromColumn: Budget.MonthStart
+	toColumn: Date.Date
+
+relationship Budget_Site
+	fromColumn: Budget.SiteID
+	toColumn: Site.SiteID
+
+relationship Budget_Category
+	fromColumn: Budget.CategoryID
+	toColumn: Category.CategoryID

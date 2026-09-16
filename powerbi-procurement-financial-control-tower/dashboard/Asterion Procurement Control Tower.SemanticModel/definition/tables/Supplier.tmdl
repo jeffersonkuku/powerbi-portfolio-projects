@@ -1,0 +1,49 @@
+table Supplier
+
+	column SupplierID
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: SupplierID
+		isHidden
+
+	column SupplierName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SupplierName
+
+	column Country
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Country
+
+	column RiskLevel
+		dataType: string
+		summarizeBy: none
+		sourceColumn: RiskLevel
+
+	column PrimaryCategoryID
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: PrimaryCategoryID
+
+	column QualityScore
+		dataType: double
+		summarizeBy: none
+		sourceColumn: QualityScore
+
+	column Preferred
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Preferred
+
+	partition Supplier = m
+		mode: import
+		source =
+			let
+						Compressed = Binary.FromText("hVVdU9swEPwrGj97OrEdx85joUBp+UhrWqYwPAj7CCqylJFlIP31XRliJZk4vHnG2tvV3t7p9jYKg88LemVXVD4qUXLJCjLPoqQmwJ+2sYZLwfF9TpVo6yAch6NP+TQLgwsd3IW3cRgcyJZmxJ/YkZoLRWSEmg+AEwdOJytwEgaH+p5Ly455KaSwS3ZidLvYQp/plyCcADqNwPsH0oAdh8EXkpZfa/PUsPXju4hjR5wlK+I0DI54YyXkskOtrNGy2UUaOdI46Umh/Fi2r7gpmflyyKqvYv74blQyXVFC+YkR1UwLZdmRpNIaZ/cel6ejtCfOUZWbe90ado5OcfUBNk+jFTEUnGrFCv5A8LdYNpbqoea+mdyzRqMw+NYqzU5V5U6LD/ROPRJFvsNdK0p20ApZIRMfJSt1usd9OCJE66ytSaG5VtfcCq0GkK5N+aS/cZS4X2jqoTbEZkb/hds7+5s52cnEy0aqLuhVND6QhZato96Jd5Kn6djj0bFLg9NIVb3AQVXSgOaOehR7KFTMQPoAx2aSIyQDdnXESRfMNb8Rrx8tN/afn+QB4ryLx7g3C9H6SdWL1tWeAfaRznIPBX/R1rWwQ0O00SAfyRi5uiJjODvnGAdSe3x6S3M/RjGK/FKuMT6TrGgXC7ncF6s07QvA8t/IgzbvU7zL3ribA58LtwKuqbH3mOA57e1MtzLS3ENh1w1B8ePw5HbAboT8fos7xc/c5RdUzUYQL+iF3RBHTKrNfTPy94T6z1byhl0uyPDdyI1M5HGPzdxihjr0FWtyKxebJfyl/ZqMcf0ZCAFZe1hWq71AGb7AaG5Nw/qr4pJlyUi3NvpRnCHfaFmzVWPtefALMxm5NhuLp21jfZyQqbla9q65m2fZe6Tv/gM=", BinaryEncoding.Base64),
+						Decompressed = Binary.Decompress(Compressed, Compression.Deflate),
+						Rows = Json.Document(Decompressed),
+						Source = Table.FromRows(Rows, {"SupplierID", "SupplierName", "Country", "RiskLevel", "PrimaryCategoryID", "QualityScore", "Preferred"}),
+						#"Changed Type" = Table.TransformColumnTypes(Source,{{"SupplierID", Int64.Type}, {"SupplierName", type text}, {"Country", type text}, {"RiskLevel", type text}, {"PrimaryCategoryID", Int64.Type}, {"QualityScore", type number}, {"Preferred", type text}})
+					in
+						#"Changed Type"

@@ -1,0 +1,124 @@
+table PurchaseOrders
+
+	column PO_ID
+		dataType: string
+		summarizeBy: none
+		sourceColumn: PO_ID
+
+	column OrderDate
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+	column DueDate
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: DueDate
+
+	column DeliveryDate
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: DeliveryDate
+
+	column SupplierID
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: SupplierID
+		isHidden
+
+	column SiteID
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: SiteID
+		isHidden
+
+	column CategoryID
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: CategoryID
+		isHidden
+
+	column Buyer
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Buyer
+
+	column Status
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Status
+
+	column Urgency
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Urgency
+
+	column DueBucket
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DueBucket
+
+	column BaselineValue
+		dataType: double
+		formatString: $#,##0
+		summarizeBy: none
+		sourceColumn: BaselineValue
+
+	column POValue
+		dataType: double
+		formatString: $#,##0
+		summarizeBy: none
+		sourceColumn: POValue
+
+	column SavingsAmount
+		dataType: double
+		formatString: $#,##0
+		summarizeBy: none
+		sourceColumn: SavingsAmount
+
+	column InvoicedAmount
+		dataType: double
+		formatString: $#,##0
+		summarizeBy: none
+		sourceColumn: InvoicedAmount
+
+	column OpenAmount
+		dataType: double
+		formatString: $#,##0
+		summarizeBy: none
+		sourceColumn: OpenAmount
+
+	partition PurchaseOrders = m
+		mode: import
+		source =
+			let
+				Indices = {1..5200},
+				Buyers = {"Alex Martin", "Claire Dupont", "Jordan Lee", "Nina Patel", "Sam Wilson", "Taylor Brown"},
+				AsOfDate = #date(2026, 9, 16),
+				Records = List.Transform(Indices, (i) =>
+					let
+						Year = if i <= 1087 then 2023 else if i <= 2338 then 2024 else if i <= 3781 then 2025 else 2026,
+						YearStartIndex = if Year = 2023 then 1 else if Year = 2024 then 1088 else if Year = 2025 then 2339 else 3782,
+						WithinYear = i - YearStartIndex,
+						DaysInYear = if Year = 2024 then 366 else 365,
+						OrderDate = Date.AddDays(#date(Year, 1, 1), Number.Mod(WithinYear * 17 + Number.IntegerDivide(WithinYear, 5), DaysInYear)),
+						DueDate = Date.AddDays(OrderDate, 20 + Number.Mod(i * 7, 45)),
+						Status = if Number.Mod(i, 50) = 0 then "Cancelled" else if Number.Mod(i, 27) = 0 then "Open" else if Number.Mod(i, 37) = 0 then "Partial" else "Closed",
+						POValue = Number.Round(5000 + Number.Mod(i * 7919, 35000) + Number.Mod(i * 97, 500) / 10, 2),
+						SavingsPct = 0.02 + Number.Mod(i * 13, 45) / 1000,
+						BaselineValue = Number.Round(POValue / (1 - SavingsPct), 2),
+						SavingsAmount = Number.Round(BaselineValue - POValue, 2),
+						PartialPct = 0.45 + Number.Mod(i * 11, 36) / 100,
+						InvoicedAmount = if Status = "Closed" then POValue else if Status = "Partial" then Number.Round(POValue * PartialPct, 2) else 0,
+						OpenAmount = if Status = "Open" then POValue else if Status = "Partial" then Number.Round(POValue - InvoicedAmount, 2) else 0,
+						DelayDays = if Number.Mod(i, 7) = 0 then 2 + Number.Mod(i * 5, 18) else -Number.Mod(i * 3, 6),
+						DeliveryDate = if Status = "Closed" then Date.AddDays(DueDate, DelayDays) else null,
+						DaysToDue = Duration.Days(DueDate - AsOfDate),
+						DueBucket = if Status = "Cancelled" then "Cancelled" else if Status = "Closed" then "Closed" else if DaysToDue < -30 then "Overdue 30+" else if DaysToDue < 0 then "Overdue 1-30" else if DaysToDue <= 30 then "Due 0-30" else if DaysToDue <= 60 then "Due 31-60" else "Due 60+",
+						Urgency = if Number.Mod(i, 100) < 5 then "Critical" else if Number.Mod(i, 100) < 25 then "Priority" else "Standard"
+					in
+						[PO_ID="PO-" & Text.From(Year) & "-" & Text.PadStart(Text.From(WithinYear + 1), 4, "0"), OrderDate=OrderDate, DueDate=DueDate, DeliveryDate=DeliveryDate, SupplierID=1 + Number.Mod(i * 7, 30), SiteID=1 + Number.Mod(i * 5, 8), CategoryID=1 + Number.Mod(i * 3, 8), Buyer=Buyers{Number.Mod(i - 1, List.Count(Buyers))}, Status=Status, Urgency=Urgency, DueBucket=DueBucket, BaselineValue=BaselineValue, POValue=POValue, SavingsAmount=SavingsAmount, InvoicedAmount=InvoicedAmount, OpenAmount=OpenAmount]),
+				Source = Table.FromRecords(Records),
+				Typed = Table.TransformColumnTypes(Source, {{"PO_ID", type text}, {"OrderDate", type date}, {"DueDate", type date}, {"DeliveryDate", type date}, {"SupplierID", Int64.Type}, {"SiteID", Int64.Type}, {"CategoryID", Int64.Type}, {"Buyer", type text}, {"Status", type text}, {"Urgency", type text}, {"DueBucket", type text}, {"BaselineValue", type number}, {"POValue", type number}, {"SavingsAmount", type number}, {"InvoicedAmount", type number}, {"OpenAmount", type number}})
+			in
+				Typed
