@@ -177,7 +177,7 @@ Main model objects:
 - `Budget`
 - `_Measures`
 
-The public model uses **embedded synthetic data covering 2023–2026**, so no local production Excel/CSV source is required.
+The public model uses **deterministic synthetic Power Query data covering 2023–2026**, so no local production Excel/CSV source is required.
 
 ---
 
@@ -224,7 +224,6 @@ Detailed validation is available in [`docs/VALIDATION.md`](./docs/VALIDATION.md)
 - **Validation:** `docs/VALIDATION.md`
 - **Dashboard screenshots:** `assets/`
 - **Synthetic-data note:** `data/README.md`
-- **Integrity checks:** `SHA256SUMS.txt`
 
 ## Tech stack
 
@@ -340,7 +339,7 @@ Objets principaux :
 - `Budget`
 - `_Measures`
 
-Les données publiques sont **synthétiques et couvrent 2023–2026**. Aucun fichier de production externe n'est nécessaire pour présenter le projet.
+Les données publiques sont **synthétiques, générées de façon déterministe dans Power Query et couvrent 2023–2026**. Aucun fichier de production externe n'est nécessaire pour présenter le projet.
 
 ---
 
@@ -385,7 +384,6 @@ La validation détaillée se trouve dans [`docs/VALIDATION.md`](./docs/VALIDATIO
 - **Validation :** `docs/VALIDATION.md`
 - **Captures du dashboard :** `assets/`
 - **Note données synthétiques :** `data/README.md`
-- **Contrôles d'intégrité :** `SHA256SUMS.txt`
 
 ## Stack technique
 
