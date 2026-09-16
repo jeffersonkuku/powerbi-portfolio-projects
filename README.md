@@ -38,7 +38,7 @@ They are presented here to demonstrate the business problems I worked on, the an
 | **[Procurement & Budget Portfolio](./powerbi-procurement-budget-portfolio/)** | Procurement monitoring, consumables, budget consumption, purchase orders | Procurement analytics, purchasing follow-up, operational reporting, budget monitoring |
 | **[P2 Consumables Financial Monitoring](./powerbi-p2-consumables-financial-monitoring/)** | P2 procurement, subcontracting commitments, budget consumption and invoicing | Shared-calendar modeling, DAX, budget steering, invoicing follow-up, PBIP/TMDL |
 | **[SLA & Penalties Operations Portfolio](./powerbi-sla-penalties-portfolio/)** | Maintenance operations, SLA compliance, backlog, restoration performance, contractual risk | Advanced DAX, P95, SLA populations, penalty exposure, multi-site benchmarking, PBIP/TMDL |
-| **[Procurement & Financial Control Tower](./powerbi-procurement-financial-control-tower/)** | Procurement, financial control, supplier performance, commitments & exceptions | Budget steering, procurement analytics, supplier risk, OTIF, open commitments, PBIP/TMDL |
+| **[Procurement & Financial Control Tower](./powerbi-procurement-financial-control-tower/)** | Procurement performance, budget execution, supplier monitoring, commitments & exceptions | Executive KPIs, savings, OTIF, supplier risk, overdue exposure, PBIP/TMDL |
 
 ---
 
@@ -96,7 +96,7 @@ The report was engineered in **PBIP / TMDL** format and includes a centralized S
 
 ## 05 — Procurement & Financial Control Tower
 
-**Objective:** connect procurement execution, budget control, supplier performance and open commitments in one executive Power BI control tower.
+**Objective:** provide an executive Power BI control tower combining procurement performance, budget execution, supplier monitoring, open commitments and operational exceptions.
 
 The project includes five pages — Executive Overview, Financial Control, Procurement Analytics, Supplier Performance and Commitments & Exceptions — with synthetic 2023–2026 data, shared Year / Site / Category filtering, financial and procurement KPIs, supplier risk analysis, OTIF, late purchase orders and overdue commitment exposure.
 
@@ -206,7 +206,7 @@ Ils ont pour objectif de présenter les problématiques métier sur lesquelles j
 | **[Portfolio Achats & Budget](./powerbi-procurement-budget-portfolio/)** | Achats, consommables, budget, commandes | Analyse achats, reporting opérationnel, pilotage budgétaire |
 | **[P2 Consumables Financial Monitoring](./powerbi-p2-consumables-financial-monitoring/)** | Achats P2, sous-traitance, budget et facturation | Calendrier commun, DAX, pilotage budgétaire, suivi facturation, PBIP/TMDL |
 | **[Portfolio SLA & Pénalités](./powerbi-sla-penalties-portfolio/)** | Maintenance, respect des SLA, backlog, remise en état, risque contractuel | DAX avancé, P95, populations SLA, exposition pénalités, benchmark multi-sites, PBIP/TMDL |
-| **[Procurement & Financial Control Tower](./powerbi-procurement-financial-control-tower/)** | Pilotage achats, contrôle financier, fournisseurs, engagements et exceptions | Budget, achats, risque fournisseurs, OTIF, engagements ouverts, PBIP/TMDL |
+| **[Procurement & Financial Control Tower](./powerbi-procurement-financial-control-tower/)** | Performance achats, exécution budgétaire, fournisseurs, engagements et exceptions | KPI exécutifs, économies, OTIF, risque fournisseurs, exposition échue, PBIP/TMDL |
 
 ---
 
@@ -260,7 +260,7 @@ Le modèle utilise le format **PBIP / TMDL** et centralise les règles SLA dans 
 
 ## 05 — Procurement & Financial Control Tower
 
-**Objectif :** réunir exécution achats, contrôle budgétaire, performance fournisseurs et engagements ouverts dans une même Control Tower Power BI.
+**Objectif :** proposer une Control Tower Power BI exécutive réunissant performance achats, exécution budgétaire, suivi fournisseurs, engagements ouverts et exceptions opérationnelles.
 
 Le projet comprend cinq vues — Executive Overview, Financial Control, Procurement Analytics, Supplier Performance et Commitments & Exceptions — avec des données synthétiques 2023–2026, des filtres communs Année / Site / Catégorie, des KPI financiers et achats, le suivi du risque fournisseurs, l’OTIF, les commandes en retard et l’exposition des engagements échus.
 
