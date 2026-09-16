@@ -18,7 +18,7 @@
 
 ## Professional context
 
-This project is an **anonymized portfolio reconstruction inspired by procurement, subcontracting and financial-monitoring solutions I developed during my professional experience at ENGIE**.
+This project is an **anonymized portfolio adaptation of procurement, subcontracting, budget and invoicing monitoring work I carried out during my professional experience at ENGIE**. The public version was rebuilt with synthetic/anonymized data so the analytical approach can be presented without exposing confidential production information.
 
 It demonstrates business analysis, financial steering, KPI design, Power Query, DAX, semantic modeling and Power BI reporting while protecting confidential information.
 
@@ -41,77 +41,67 @@ It helps answer questions such as:
 
 ## Dashboard previews
 
-> Replacement screenshots are being prepared. The previous captures were intentionally removed so the repository does not display obsolete visuals.
+The final portfolio now contains **10 dashboard views**, covering the complete purchasing and subcontracting monitoring cycle from executive KPIs to detailed operational analysis.
 
+### 1. Subcontracting invoicing overview
 
-### 1. Subcontracting invoicing follow-up
+![Subcontracting invoicing overview](./assets/01-subcontracting-invoicing-overview.png)
 
+Executive monitoring of subcontracting commitments and invoicing progress: ordered vs. invoiced amounts, cumulative trends, invoicing gap and key portfolio indicators.
 
-- cumulative ordered vs. invoiced amounts;
-- invoicing gap by subcontractor;
-- gap distribution by order status;
-- cumulative invoicing rate;
-- year filter based on a shared calendar.
+### 2. Subcontracting budget consumption
 
-### 2. P2 subcontracting budget consumption
+![Subcontracting budget consumption](./assets/02-subcontracting-budget-consumption.png)
 
-
-- monthly subcontracting orders;
-- cumulative orders;
-- cumulative budget trajectory;
-- annual budget comparison;
-- remaining budget and consumption rate.
+Annual P2 subcontracting budget monitoring with monthly commitments, cumulative orders, budget trajectory, remaining budget and consumption rate.
 
 ### 3. Procurement budget consumption
 
+![Procurement budget consumption](./assets/03-procurement-budget-consumption.png)
 
-- annual procurement budget vs. ordered amount;
-- monthly purchasing activity;
-- cumulative procurement trajectory;
-- remaining annual budget;
-- budget-consumption ratio.
+Purchasing-budget steering view combining annual budget, ordered amount, monthly activity, cumulative trajectory and remaining purchasing capacity.
 
-### 4. Subcontractor portfolio view
+### 4. Subcontractor portfolio — overview
 
+![Subcontractor portfolio overview](./assets/04-subcontractor-portfolio-overview.png)
 
-- supplier-level invoicing gaps;
-- portfolio comparison;
-- contractual-period selector;
-- invoicing progress by subcontractor.
+Portfolio-level comparison of subcontractors with commitment and invoicing indicators designed to quickly identify the largest financial gaps.
 
-### 5. Invoicing focus
+### 5. Subcontractor portfolio — detailed analysis
 
+![Subcontractor portfolio detailed analysis](./assets/05-subcontractor-portfolio-detail.png)
 
-- ordered vs. invoiced ratio;
-- selected subcontractor analysis;
-- monthly ordered / invoiced comparison;
-- anomaly and root-cause breakdown.
+Complementary supplier-level analysis for comparing invoicing progress, outstanding exposure and performance across the subcontracting portfolio.
 
-### 6. Monthly and weekly purchasing review
+### 6. Invoicing focus
 
+![Invoicing focus](./assets/06-invoicing-focus.png)
 
-- current-month orders;
-- last-seven-days review;
-- current vs. previous period KPIs;
-- semester trend;
-- remaining annual purchasing capacity.
+Focused view for a selected subcontractor and period, including invoiced/ordered ratio, monthly evolution and operational analysis of the remaining gap.
 
-### 7. Consumables and parts analysis
+### 7. Monthly and recent-order review
 
+![Monthly orders review](./assets/07-monthly-orders-review.png)
 
-- amount, line count and average basket;
-- site distribution;
-- status distribution;
-- monthly trend;
-- purchasing-category analysis.
+Operational purchasing review covering current-month activity and recent orders, with transaction-level visibility and period KPIs.
 
-### 8. Small-purchase analysis — orders ≤ €350
+### 8. Comparable-period analysis
 
+![Comparable period analysis](./assets/08-period-comparison.png)
 
-- low-value purchasing analysis;
-- site and category distribution;
-- closure rate and average basket;
-- monthly trend with the same calendar logic.
+Period-over-period comparison used to distinguish real purchasing evolution from calendar effects and to keep current-versus-previous-period KPIs consistent.
+
+### 9. Parts and consumables analysis
+
+![Consumables analysis](./assets/09-consumables-analysis.png)
+
+Detailed analysis of parts and consumables by site, status and purchasing category, with amount, line count, average basket and monthly evolution.
+
+### 10. Small-purchase analysis
+
+![Small purchase analysis](./assets/10-small-purchases-analysis.png)
+
+Dedicated view for low-value orders (≤ €350), highlighting volume, spend, average basket, closure rate, site distribution and monthly trend.
 
 ## Financial and time logic
 
@@ -150,7 +140,7 @@ The synthetic snapshot is capped at **16 September 2026** so future demonstratio
 
 ```text
 powerbi-p2-consumables-financial-monitoring/
-├── assets/                 # dashboard screenshots
+├── assets/                 # 10 final dashboard screenshots
 ├── dashboard/
 │   ├── P2_Consumables_Financial_Monitoring.pbip
 │   ├── report/             # report definition, resources and custom visuals
@@ -213,11 +203,71 @@ This is a public portfolio version.
 
 ## Contexte professionnel
 
-Ce projet est une **reconstruction portfolio anonymisée inspirée de solutions de suivi achats, sous-traitance et pilotage financier que j'ai développées dans le cadre de mon expérience professionnelle chez ENGIE**.
+Ce projet est une **adaptation portfolio anonymisée de travaux de suivi achats, sous-traitance, budget et facturation que j'ai réalisés dans le cadre de mon expérience professionnelle chez ENGIE**. La version publique a été reconstruite avec des données synthétiques/anonymisées afin de présen## Aperçus du dashboard
 
-Il présente des compétences en analyse métier, pilotage financier, conception de KPI, Power Query, DAX, modélisation sémantique et reporting Power BI, tout en protégeant les informations confidentielles.
+Le portfolio final contient maintenant **10 vues de dashboard**, couvrant l'ensemble du cycle de pilotage achats et sous-traitance, depuis les KPI de synthèse jusqu'au détail opérationnel.
 
-> Il ne s'agit **pas d'un livrable officiel ENGIE**. Les fournisseurs, sites, identifiants, montants et informations opérationnelles ont été anonymisés, modifiés ou recréés pour une présentation publique. Les données portfolio sont synthétiques.
+### 1. Vue d'ensemble de la facturation sous-traitance
+
+![Vue d'ensemble facturation sous-traitance](./assets/01-subcontracting-invoicing-overview.png)
+
+Pilotage global des engagements de sous-traitance et de l'avancement de la facturation : commandé vs facturé, tendances cumulées, écart de facturation et principaux indicateurs du portefeuille.
+
+### 2. Consommation du budget sous-traitance
+
+![Consommation budget sous-traitance](./assets/02-subcontracting-budget-consumption.png)
+
+Suivi du budget annuel P2 sous-traitance avec engagements mensuels, cumul des commandes, trajectoire budgétaire, reste disponible et taux de consommation.
+
+### 3. Consommation du budget achats
+
+![Consommation budget achats](./assets/03-procurement-budget-consumption.png)
+
+Vue de pilotage du budget achats combinant budget annuel, montant commandé, activité mensuelle, trajectoire cumulée et capacité d'achat restante.
+
+### 4. Portefeuille sous-traitants — synthèse
+
+![Portefeuille sous-traitants synthèse](./assets/04-subcontractor-portfolio-overview.png)
+
+Comparaison du portefeuille de sous-traitants avec indicateurs d'engagement et de facturation afin d'identifier rapidement les écarts financiers les plus importants.
+
+### 5. Portefeuille sous-traitants — analyse détaillée
+
+![Portefeuille sous-traitants détail](./assets/05-subcontractor-portfolio-detail.png)
+
+Analyse complémentaire par fournisseur permettant de comparer l'avancement de la facturation, les montants restant à traiter et la situation de chaque sous-traitant.
+
+### 6. Focus facturation
+
+![Focus facturation](./assets/06-invoicing-focus.png)
+
+Vue ciblée sur un sous-traitant et une période sélectionnés : ratio facturé/commandé, évolution mensuelle et analyse opérationnelle de l'écart restant.
+
+### 7. Revue mensuelle et commandes récentes
+
+![Revue mensuelle des commandes](./assets/07-monthly-orders-review.png)
+
+Revue opérationnelle des achats couvrant l'activité du mois en cours et les commandes récentes, avec visibilité transactionnelle et KPI de période.
+
+### 8. Analyse des périodes comparables
+
+![Analyse périodes comparables](./assets/08-period-comparison.png)
+
+Comparaison période actuelle / période précédente destinée à distinguer l'évolution réelle des achats des effets calendaires et à conserver des KPI cohérents.
+
+### 9. Analyse pièces et consommables
+
+![Analyse pièces et consommables](./assets/09-consumables-analysis.png)
+
+Analyse détaillée des pièces et consommables par site, statut et catégorie d'achat, avec montant, nombre de lignes, panier moyen et évolution mensuelle.
+
+### 10. Analyse des petites commandes
+
+![Analyse petites commandes](./assets/10-small-purchases-analysis.png)
+
+Vue dédiée aux commandes de faible montant (≤ 350 €), avec volumétrie, montant, panier moyen, taux de clôture, répartition par site et tendance mensuelle.
+
+ données portfolio sont synthétiques.
 
 ## Objectif métier
 
@@ -300,7 +350,7 @@ Le snapshot synthétique est arrêté au **16 septembre 2026** afin de ne pas tr
 
 ```text
 powerbi-p2-consumables-financial-monitoring/
-├── assets/                 # captures du dashboard
+├── assets/                 # 10 captures finales du dashboard
 ├── dashboard/
 │   ├── P2_Consumables_Financial_Monitoring.pbip
 │   ├── report/             # définition du rapport, ressources et visuels
