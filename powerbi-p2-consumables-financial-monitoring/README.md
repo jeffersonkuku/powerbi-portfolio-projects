@@ -8,7 +8,7 @@
 
 # 🇬🇧 English
 
-> **Power BI portfolio project for P2 procurement, consumables, subcontracting commitments, budget consumption and invoicing monitoring.**
+> **Power BI portfolio project for procurement, consumables, subcontracting commitments, budget consumption and invoicing monitoring.**
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&logoColor=000)
 ![Power Query](https://img.shields.io/badge/Power%20Query-ETL-217346)
@@ -18,36 +18,37 @@
 
 ## Professional context
 
-This project is an **anonymized portfolio adaptation of procurement, subcontracting, budget and invoicing monitoring work I carried out during my professional experience at ENGIE**. The public version was rebuilt with synthetic/anonymized data so the analytical approach can be presented without exposing confidential production information.
+This project is an **anonymized portfolio adaptation of procurement, subcontracting, budget and invoicing monitoring work I carried out during my professional experience at ENGIE**.
 
-It demonstrates business analysis, financial steering, KPI design, Power Query, DAX, semantic modeling and Power BI reporting while protecting confidential information.
+The public version was rebuilt with synthetic/anonymized data so the analytical approach, KPI logic, dashboard structure and business use cases can be presented without exposing confidential production information.
 
-> This is **not an official ENGIE deliverable**. Supplier names, site names, identifiers, values and operational details have been anonymized, modified or recreated for public presentation. The portfolio dataset is synthetic.
+> This is **not an official ENGIE deliverable**. Supplier names, site names, identifiers, values and operational details have been anonymized, modified or recreated for public presentation.
 
 ## Business objective
 
-The dashboard connects purchasing activity, consumables, subcontracting commitments, annual budgets and invoicing progress in one decision-support model.
+The dashboard connects purchasing activity, consumables, subcontracting commitments, annual budgets and invoicing progress in a single decision-support model.
 
-It helps answer questions such as:
+It supports questions such as:
 
 - How much of the annual procurement or subcontracting budget has been consumed?
 - How much budget remains available?
-- How do monthly orders evolve across the selected year?
-- Are cumulative commitments aligned with the budget trajectory?
+- How do monthly commitments evolve?
+- Are cumulative orders aligned with the annual budget trajectory?
 - What proportion of subcontracting commitments has been invoiced?
 - Which subcontractors generate the largest invoicing gaps?
-- How are consumables distributed by site, status and category?
-- Do filters and measures remain coherent from 2020 through the current 2026 snapshot?
+- How are consumables distributed by site, status and purchasing category?
+- How do current periods compare with equivalent previous periods?
+- Which low-value orders require specific monitoring?
 
 ## Dashboard previews
 
-The final portfolio now contains **10 dashboard views**, covering the complete purchasing and subcontracting monitoring cycle from executive KPIs to detailed operational analysis.
+The final portfolio contains **10 dashboard views**, from executive financial steering to operational purchasing detail.
 
 ### 1. Subcontracting invoicing overview
 
 ![Subcontracting invoicing overview](./assets/01-subcontracting-invoicing-overview.png)
 
-Executive monitoring of subcontracting commitments and invoicing progress: ordered vs. invoiced amounts, cumulative trends, invoicing gap and key portfolio indicators.
+Executive monitoring of subcontracting commitments and invoicing progress: ordered vs. invoiced amounts, cumulative trends, invoicing gap and portfolio KPIs.
 
 ### 2. Subcontracting budget consumption
 
@@ -65,19 +66,19 @@ Purchasing-budget steering view combining annual budget, ordered amount, monthly
 
 ![Subcontractor portfolio overview](./assets/04-subcontractor-portfolio-overview.png)
 
-Portfolio-level comparison of subcontractors with commitment and invoicing indicators designed to quickly identify the largest financial gaps.
+Portfolio-level comparison of subcontractors using commitment and invoicing indicators to identify the largest financial gaps.
 
 ### 5. Subcontractor portfolio — detailed analysis
 
 ![Subcontractor portfolio detailed analysis](./assets/05-subcontractor-portfolio-detail.png)
 
-Complementary supplier-level analysis for comparing invoicing progress, outstanding exposure and performance across the subcontracting portfolio.
+Supplier-level analysis for comparing invoicing progress, outstanding exposure and financial position across the subcontracting portfolio.
 
 ### 6. Invoicing focus
 
 ![Invoicing focus](./assets/06-invoicing-focus.png)
 
-Focused view for a selected subcontractor and period, including invoiced/ordered ratio, monthly evolution and operational analysis of the remaining gap.
+Focused analysis of a selected subcontractor and period, including invoiced/ordered ratio, monthly evolution and the remaining invoicing gap.
 
 ### 7. Monthly and recent-order review
 
@@ -89,7 +90,7 @@ Operational purchasing review covering current-month activity and recent orders,
 
 ![Comparable period analysis](./assets/08-period-comparison.png)
 
-Period-over-period comparison used to distinguish real purchasing evolution from calendar effects and to keep current-versus-previous-period KPIs consistent.
+Period-over-period comparison designed to distinguish real purchasing evolution from calendar effects and keep current-versus-previous-period KPIs coherent.
 
 ### 9. Parts and consumables analysis
 
@@ -101,7 +102,7 @@ Detailed analysis of parts and consumables by site, status and purchasing catego
 
 ![Small purchase analysis](./assets/10-small-purchases-analysis.png)
 
-Dedicated view for low-value orders (≤ €350), highlighting volume, spend, average basket, closure rate, site distribution and monthly trend.
+Dedicated monitoring of low-value orders (≤ €350), highlighting volume, spend, average basket, closure rate, site distribution and monthly trend.
 
 ## Financial and time logic
 
@@ -136,6 +137,20 @@ The synthetic snapshot is capped at **16 September 2026** so future demonstratio
 | Subcontracting invoicing ratio | 77.36% |
 | Subcontracting remaining budget | €3.193M |
 
+## Key capabilities demonstrated
+
+| Area | Demonstrated capability |
+|---|---|
+| Data preparation | Power Query transformations and portable synthetic sources |
+| Data modeling | Shared calendar, suppliers, budgets and purchasing model |
+| DAX | Cumulative measures, budget ratios, invoicing ratios and period comparisons |
+| Financial monitoring | Budget consumption, remaining budget and commitment trajectory |
+| Procurement analytics | Orders, consumables, sites, categories and low-value purchases |
+| Subcontracting analytics | Commitment and invoicing monitoring by period and subcontractor |
+| Data quality | Multi-year reconciliation and consistency controls |
+| UX / reporting | Executive KPIs combined with operational drill-down |
+| Source control | PBIP / TMDL source organized for Git |
+
 ## Repository structure
 
 ```text
@@ -143,42 +158,38 @@ powerbi-p2-consumables-financial-monitoring/
 ├── assets/                 # 10 final dashboard screenshots
 ├── dashboard/
 │   ├── P2_Consumables_Financial_Monitoring.pbip
-│   ├── report/             # report definition, resources and custom visuals
-│   └── semantic-model/     # complete semantic-model source archive
+│   ├── report/
+│   └── semantic-model/
 ├── data/                   # 6 synthetic Excel source workbooks
 ├── docs/                   # methodology and reconciliation checks
 ├── model/                  # recruiter-readable TMDL extracts
-├── .gitattributes
-├── .gitignore
+├── setup-local.cmd
+├── setup-local.ps1
 ├── README.md
 └── SHA256SUMS.txt
 ```
 
-## Power BI source
+## Windows-safe local setup
 
-### Windows-safe local setup
+PBIP projects can contain deeply nested folders. To avoid Windows path-length errors, run:
 
-Because PBIP projects contain deeply nested report and custom-visual folders, extracting the reconstructed source inside a long `Downloads\\...` path can exceed the legacy Windows path limit.
+```text
+setup-local.cmd
+```
 
-For a clean local reconstruction, **double-click `setup-local.cmd`**. It rebuilds the PBIP source automatically in the short writable path `%USERPROFILE%\\P2`, preserving the original project structure while avoiding path-length errors.
+The script reconstructs the project in:
 
-See **[dashboard/README.md](./dashboard/README.md)** for the PBIP reconstruction instructions.
+```text
+%USERPROFILE%\P2
+```
 
-The public repository stores the PBIP source in several small archives so the folder remains readable and GitHub-friendly while preserving the report definition, semantic model, static resources and custom visuals.
+Then open:
 
-## Key capabilities demonstrated
+```text
+%USERPROFILE%\P2\P2_Consumables_Financial_Monitoring.pbip
+```
 
-| Area | Demonstrated capability |
-|---|---|
-| Data preparation | Power Query transformations and portable synthetic sources |
-| Data modeling | Shared calendar, supplier, budget and purchasing model |
-| DAX | Cumulative measures, budget ratios, invoicing ratios and period comparisons |
-| Financial monitoring | Budget consumption, remaining budget and commitment trajectory |
-| Procurement analytics | Orders, consumables, sites, categories and low-value purchases |
-| Subcontracting analytics | Commitment and invoicing follow-up by period and subcontractor |
-| Data quality | Multi-year reconciliation and consistency controls |
-| UX / reporting | Executive KPIs combined with operational drill-down |
-| Source control | PBIP / TMDL source organized for Git |
+See **[dashboard/README.md](./dashboard/README.md)** for the reconstruction details.
 
 ## Tech stack
 
@@ -186,12 +197,7 @@ The public repository stores the PBIP source in several small archives so the fo
 
 ## Data privacy
 
-This is a public portfolio version.
-
-- Supplier and site names are fictitious or anonymized.
-- Values and identifiers are synthetic or modified for public demonstration.
-- No confidential production dataset is intentionally published.
-- The project demonstrates analytical methods and business logic rather than reproducing a live production environment.
+This is a public portfolio version. Supplier names, sites, identifiers and values are fictitious, anonymized or modified. No confidential production dataset is intentionally published.
 
 ---
 
@@ -199,19 +205,39 @@ This is a public portfolio version.
 
 # 🇫🇷 Français
 
-> **Projet Power BI de suivi financier P2 couvrant les achats, les consommables, les engagements de sous-traitance, la consommation budgétaire et la facturation.**
+> **Projet Power BI de pilotage financier couvrant les achats, les consommables, les engagements de sous-traitance, la consommation budgétaire et le suivi de facturation.**
 
 ## Contexte professionnel
 
-Ce projet est une **adaptation portfolio anonymisée de travaux de suivi achats, sous-traitance, budget et facturation que j'ai réalisés dans le cadre de mon expérience professionnelle chez ENGIE**. La version publique a été reconstruite avec des données synthétiques/anonymisées afin de présen## Aperçus du dashboard
+Ce projet est une **adaptation portfolio anonymisée de travaux de suivi achats, sous-traitance, budget et facturation que j'ai réalisés dans le cadre de mon expérience professionnelle chez ENGIE**.
 
-Le portfolio final contient maintenant **10 vues de dashboard**, couvrant l'ensemble du cycle de pilotage achats et sous-traitance, depuis les KPI de synthèse jusqu'au détail opérationnel.
+La version publique a été reconstruite avec des données synthétiques/anonymisées afin de présenter l'approche analytique, la logique des KPI, la structure du dashboard et les cas d'usage métier sans exposer d'informations confidentielles de production.
+
+> Il ne s'agit **pas d'un livrable officiel ENGIE**. Les fournisseurs, sites, identifiants, montants et informations opérationnelles ont été anonymisés, modifiés ou recréés pour cette présentation publique.
+
+## Objectif métier
+
+Le dashboard relie dans un même modèle de pilotage :
+
+- l'activité achats ;
+- les pièces et consommables ;
+- les engagements de sous-traitance ;
+- les budgets annuels ;
+- l'avancement de la facturation ;
+- les comparaisons de périodes ;
+- le détail opérationnel des commandes.
+
+Il permet notamment de suivre la consommation des budgets, le reste disponible, les commandes mensuelles et cumulées, le taux de facturation, les écarts par sous-traitant, les consommables par site/catégorie et les petites commandes.
+
+## Aperçus du dashboard
+
+Le portfolio final contient **10 vues**, depuis le pilotage financier de synthèse jusqu'au détail opérationnel.
 
 ### 1. Vue d'ensemble de la facturation sous-traitance
 
 ![Vue d'ensemble facturation sous-traitance](./assets/01-subcontracting-invoicing-overview.png)
 
-Pilotage global des engagements de sous-traitance et de l'avancement de la facturation : commandé vs facturé, tendances cumulées, écart de facturation et principaux indicateurs du portefeuille.
+Pilotage global des engagements de sous-traitance et de l'avancement de la facturation : commandé vs facturé, tendances cumulées, écart de facturation et principaux KPI du portefeuille.
 
 ### 2. Consommation du budget sous-traitance
 
@@ -229,31 +255,31 @@ Vue de pilotage du budget achats combinant budget annuel, montant commandé, act
 
 ![Portefeuille sous-traitants synthèse](./assets/04-subcontractor-portfolio-overview.png)
 
-Comparaison du portefeuille de sous-traitants avec indicateurs d'engagement et de facturation afin d'identifier rapidement les écarts financiers les plus importants.
+Comparaison du portefeuille de sous-traitants avec indicateurs d'engagement et de facturation afin d'identifier rapidement les principaux écarts financiers.
 
 ### 5. Portefeuille sous-traitants — analyse détaillée
 
 ![Portefeuille sous-traitants détail](./assets/05-subcontractor-portfolio-detail.png)
 
-Analyse complémentaire par fournisseur permettant de comparer l'avancement de la facturation, les montants restant à traiter et la situation de chaque sous-traitant.
+Analyse par fournisseur permettant de comparer l'avancement de la facturation, les montants restant à traiter et la situation financière de chaque sous-traitant.
 
 ### 6. Focus facturation
 
 ![Focus facturation](./assets/06-invoicing-focus.png)
 
-Vue ciblée sur un sous-traitant et une période sélectionnés : ratio facturé/commandé, évolution mensuelle et analyse opérationnelle de l'écart restant.
+Vue ciblée sur un sous-traitant et une période sélectionnés : ratio facturé/commandé, évolution mensuelle et analyse de l'écart restant.
 
 ### 7. Revue mensuelle et commandes récentes
 
 ![Revue mensuelle des commandes](./assets/07-monthly-orders-review.png)
 
-Revue opérationnelle des achats couvrant l'activité du mois en cours et les commandes récentes, avec visibilité transactionnelle et KPI de période.
+Revue opérationnelle des achats couvrant l'activité du mois et les commandes récentes, avec visibilité transactionnelle et KPI de période.
 
 ### 8. Analyse des périodes comparables
 
 ![Analyse périodes comparables](./assets/08-period-comparison.png)
 
-Comparaison période actuelle / période précédente destinée à distinguer l'évolution réelle des achats des effets calendaires et à conserver des KPI cohérents.
+Comparaison période actuelle / période précédente afin de distinguer l'évolution réelle des achats des effets calendaires et de conserver des KPI cohérents.
 
 ### 9. Analyse pièces et consommables
 
@@ -266,52 +292,6 @@ Analyse détaillée des pièces et consommables par site, statut et catégorie d
 ![Analyse petites commandes](./assets/10-small-purchases-analysis.png)
 
 Vue dédiée aux commandes de faible montant (≤ 350 €), avec volumétrie, montant, panier moyen, taux de clôture, répartition par site et tendance mensuelle.
-
- données portfolio sont synthétiques.
-
-## Objectif métier
-
-Le dashboard relie l'activité achats, les consommables, les engagements de sous-traitance, les budgets annuels et l'avancement de la facturation dans un même modèle de pilotage.
-
-Il permet notamment de suivre :
-
-- la consommation du budget achats et sous-traitance ;
-- le budget restant disponible ;
-- les commandes mensuelles et leurs cumuls ;
-- la trajectoire budgétaire ;
-- le taux de facturation des engagements ;
-- les écarts de facturation par sous-traitant ;
-- les consommables par site, statut et catégorie ;
-- la cohérence des mesures et filtres de 2020 à 2026.
-
-## Aperçus du dashboard
-
-> Les captures de remplacement sont en préparation. Les anciennes images ont été volontairement supprimées afin de ne pas afficher de visuels obsolètes.
-
-
-### 1. Suivi de facturation sous-traitance
-
-
-### 2. Consommation du budget P2 ST
-
-
-### 3. Consommation du budget achats
-
-
-### 4. Portefeuille de sous-traitants
-
-
-### 5. Focus facturation
-
-
-### 6. Bilan mensuel et hebdomadaire des commandes
-
-
-### 7. Analyse pièces et consommables
-
-
-### 8. Petites commandes — ≤ 350 €
-
 
 ## Logique financière et temporelle
 
@@ -346,36 +326,6 @@ Le snapshot synthétique est arrêté au **16 septembre 2026** afin de ne pas tr
 | Taux de facturation ST | 77,36 % |
 | Reste ST | 3,193 M€ |
 
-## Structure du projet
-
-```text
-powerbi-p2-consumables-financial-monitoring/
-├── assets/                 # 10 captures finales du dashboard
-├── dashboard/
-│   ├── P2_Consumables_Financial_Monitoring.pbip
-│   ├── report/             # définition du rapport, ressources et visuels
-│   └── semantic-model/     # source complète du modèle sémantique
-├── data/                   # 6 classeurs Excel synthétiques
-├── docs/                   # méthodologie et contrôles de cohérence
-├── model/                  # extraits TMDL lisibles directement sur GitHub
-├── .gitattributes
-├── .gitignore
-├── README.md
-└── SHA256SUMS.txt
-```
-
-## Source Power BI
-
-### Installation locale Windows sans erreur de chemin
-
-Les projets PBIP contiennent des dossiers de rapport et de visuels personnalisés très imbriqués. Une reconstruction directement dans un long chemin `Téléchargements\\...` peut dépasser la limite de chemin Windows.
-
-Pour reconstruire le projet proprement, **double-cliquer sur `setup-local.cmd`**. Le script reconstruit automatiquement la source PBIP dans le chemin court et accessible `%USERPROFILE%\\P2`, sans modifier la structure Power BI.
-
-Consulter **[dashboard/README.md](./dashboard/README.md)** pour reconstruire le projet PBIP.
-
-Le dépôt public sépare les éléments PBIP en archives légères afin de conserver une structure GitHub claire tout en gardant la définition du rapport, le modèle sémantique, les ressources statiques et les visuels personnalisés.
-
 ## Compétences démontrées
 
 - Power Query et préparation des données
@@ -385,9 +335,50 @@ Le dépôt public sépare les éléments PBIP en archives légères afin de cons
 - pilotage budgétaire achats / sous-traitance
 - suivi commandé / facturé
 - analyse multi-sites et fournisseurs
+- analyse des consommables et petites commandes
 - contrôles de cohérence multi-années
 - PBIP / TMDL et organisation Git
 - datavisualisation orientée management
+
+## Structure du projet
+
+```text
+powerbi-p2-consumables-financial-monitoring/
+├── assets/                 # 10 captures finales du dashboard
+├── dashboard/
+│   ├── P2_Consumables_Financial_Monitoring.pbip
+│   ├── report/
+│   └── semantic-model/
+├── data/                   # 6 fichiers Excel synthétiques
+├── docs/
+├── model/
+├── setup-local.cmd
+├── setup-local.ps1
+├── README.md
+└── SHA256SUMS.txt
+```
+
+## Installation locale Windows
+
+Pour éviter les erreurs Windows liées aux chemins trop longs, exécuter :
+
+```text
+setup-local.cmd
+```
+
+Le projet est reconstruit automatiquement dans :
+
+```text
+%USERPROFILE%\P2
+```
+
+Puis ouvrir :
+
+```text
+%USERPROFILE%\P2\P2_Consumables_Financial_Monitoring.pbip
+```
+
+Voir **[dashboard/README.md](./dashboard/README.md)** pour le détail de la reconstruction.
 
 ## Stack technique
 
@@ -395,6 +386,4 @@ Le dépôt public sépare les éléments PBIP en archives légères afin de cons
 
 ## Confidentialité
 
-- Les fournisseurs et sites sont fictifs ou anonymisés.
-- Les montants et identifiants sont synthétiques ou adaptés à la démonstration publique.
-- Aucune donnée confidentielle de production n'est volontairement publiée.
+Cette version est destinée à un portfolio public. Les noms de fournisseurs, sites, identifiants et montants sont fictifs, anonymisés ou modifiés. Aucune donnée confidentielle de production n'est volontairement publiée.
