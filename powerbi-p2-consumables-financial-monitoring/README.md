@@ -41,9 +41,11 @@ It helps answer questions such as:
 
 ## Dashboard previews
 
+> Replacement screenshots are being prepared. The previous captures were intentionally removed so the repository does not display obsolete visuals.
+
+
 ### 1. Subcontracting invoicing follow-up
 
-![Subcontracting invoicing follow-up](./assets/p2-st-invoicing-follow-up.jpg)
 
 - cumulative ordered vs. invoiced amounts;
 - invoicing gap by subcontractor;
@@ -53,7 +55,6 @@ It helps answer questions such as:
 
 ### 2. P2 subcontracting budget consumption
 
-![P2 subcontracting budget consumption](./assets/p2-st-budget-consumption.jpg)
 
 - monthly subcontracting orders;
 - cumulative orders;
@@ -63,7 +64,6 @@ It helps answer questions such as:
 
 ### 3. Procurement budget consumption
 
-![Procurement budget consumption](./assets/p2-purchasing-budget-consumption.jpg)
 
 - annual procurement budget vs. ordered amount;
 - monthly purchasing activity;
@@ -73,7 +73,6 @@ It helps answer questions such as:
 
 ### 4. Subcontractor portfolio view
 
-![Subcontractor portfolio](./assets/p2-st-invoicing-portfolio.jpg)
 
 - supplier-level invoicing gaps;
 - portfolio comparison;
@@ -82,7 +81,6 @@ It helps answer questions such as:
 
 ### 5. Invoicing focus
 
-![Invoicing focus](./assets/p2-st-invoicing-focus.jpg)
 
 - ordered vs. invoiced ratio;
 - selected subcontractor analysis;
@@ -91,7 +89,6 @@ It helps answer questions such as:
 
 ### 6. Monthly and weekly purchasing review
 
-![Monthly orders overview](./assets/p2-monthly-orders-overview.jpg)
 
 - current-month orders;
 - last-seven-days review;
@@ -101,7 +98,6 @@ It helps answer questions such as:
 
 ### 7. Consumables and parts analysis
 
-![Consumables analysis](./assets/p2-consumables-analysis.jpg)
 
 - amount, line count and average basket;
 - site distribution;
@@ -111,7 +107,6 @@ It helps answer questions such as:
 
 ### 8. Small-purchase analysis — orders ≤ €350
 
-![Small purchases under 350 euros](./assets/p2-small-purchases-under-350.jpg)
 
 - low-value purchasing analysis;
 - site and category distribution;
@@ -155,7 +150,7 @@ The synthetic snapshot is capped at **16 September 2026** so future demonstratio
 
 ```text
 powerbi-p2-consumables-financial-monitoring/
-├── assets/                 # 8 dashboard screenshots
+├── assets/                 # dashboard screenshots
 ├── dashboard/
 │   ├── P2_Consumables_Financial_Monitoring.pbip
 │   ├── report/             # report definition, resources and custom visuals
@@ -170,6 +165,12 @@ powerbi-p2-consumables-financial-monitoring/
 ```
 
 ## Power BI source
+
+### Windows-safe local setup
+
+Because PBIP projects contain deeply nested report and custom-visual folders, extracting the reconstructed source inside a long `Downloads\\...` path can exceed the legacy Windows path limit.
+
+For a clean local reconstruction, **double-click `setup-local.cmd`**. It rebuilds the PBIP source automatically in the short writable path `%USERPROFILE%\\P2`, preserving the original project structure while avoiding path-length errors.
 
 See **[dashboard/README.md](./dashboard/README.md)** for the PBIP reconstruction instructions.
 
@@ -235,37 +236,32 @@ Il permet notamment de suivre :
 
 ## Aperçus du dashboard
 
+> Les captures de remplacement sont en préparation. Les anciennes images ont été volontairement supprimées afin de ne pas afficher de visuels obsolètes.
+
+
 ### 1. Suivi de facturation sous-traitance
 
-![Suivi de facturation sous-traitance](./assets/p2-st-invoicing-follow-up.jpg)
 
 ### 2. Consommation du budget P2 ST
 
-![Consommation du budget P2 ST](./assets/p2-st-budget-consumption.jpg)
 
 ### 3. Consommation du budget achats
 
-![Consommation du budget achats](./assets/p2-purchasing-budget-consumption.jpg)
 
 ### 4. Portefeuille de sous-traitants
 
-![Portefeuille de sous-traitants](./assets/p2-st-invoicing-portfolio.jpg)
 
 ### 5. Focus facturation
 
-![Focus facturation](./assets/p2-st-invoicing-focus.jpg)
 
 ### 6. Bilan mensuel et hebdomadaire des commandes
 
-![Bilan mensuel des commandes](./assets/p2-monthly-orders-overview.jpg)
 
 ### 7. Analyse pièces et consommables
 
-![Analyse pièces et consommables](./assets/p2-consumables-analysis.jpg)
 
 ### 8. Petites commandes — ≤ 350 €
 
-![Petites commandes](./assets/p2-small-purchases-under-350.jpg)
 
 ## Logique financière et temporelle
 
@@ -304,7 +300,7 @@ Le snapshot synthétique est arrêté au **16 septembre 2026** afin de ne pas tr
 
 ```text
 powerbi-p2-consumables-financial-monitoring/
-├── assets/                 # 8 captures du dashboard
+├── assets/                 # captures du dashboard
 ├── dashboard/
 │   ├── P2_Consumables_Financial_Monitoring.pbip
 │   ├── report/             # définition du rapport, ressources et visuels
@@ -319,6 +315,12 @@ powerbi-p2-consumables-financial-monitoring/
 ```
 
 ## Source Power BI
+
+### Installation locale Windows sans erreur de chemin
+
+Les projets PBIP contiennent des dossiers de rapport et de visuels personnalisés très imbriqués. Une reconstruction directement dans un long chemin `Téléchargements\\...` peut dépasser la limite de chemin Windows.
+
+Pour reconstruire le projet proprement, **double-cliquer sur `setup-local.cmd`**. Le script reconstruit automatiquement la source PBIP dans le chemin court et accessible `%USERPROFILE%\\P2`, sans modifier la structure Power BI.
 
 Consulter **[dashboard/README.md](./dashboard/README.md)** pour reconstruire le projet PBIP.
 

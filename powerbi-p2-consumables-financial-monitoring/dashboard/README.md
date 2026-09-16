@@ -1,36 +1,51 @@
-# Power BI source reconstruction
+# Power BI source reconstruction — Windows-safe
 
-The PBIP source is stored in small archives to keep the public GitHub repository readable and avoid a several-hundred-file visual-definition tree at the project root.
+The PBIP source is stored in small archives so the public GitHub repository stays readable.
 
-## Expected local structure
+## Recommended method on Windows
 
-After extraction, the `dashboard` folder should contain:
+Do **not** manually reconstruct the PBIP source inside a long `Downloads\\...` or deeply nested repository path.
+
+From the project root, double-click:
 
 ```text
-dashboard/
-├── P2_Consumables_Financial_Monitoring.pbip
-├── P2_Consumables_Financial_Monitoring.Report/
-│   ├── definition/
-│   ├── definition.pbir
-│   ├── .platform
-│   ├── StaticResources/
-│   └── CustomVisuals/
-└── P2_Consumables_Financial_Monitoring.SemanticModel/
-    ├── definition/
-    ├── definition.pbism
-    ├── DAXQueries/
-    └── diagramLayout.json
+setup-local.cmd
 ```
 
-## Reconstruction steps
+The script reconstructs the Power BI project under:
 
-1. Download this `dashboard` directory.
-2. Extract `report/P2_Report_Definition.zip` in the `dashboard` folder.
-3. Extract `report/P2_Report_StaticResources.zip` in the same `dashboard` folder.
-4. Create `P2_Consumables_Financial_Monitoring.Report/CustomVisuals/`.
-5. Extract each archive from `report/custom-visuals/` into that `CustomVisuals` folder.
-6. Extract `semantic-model/P2_SemanticModel_Source.zip` in the `dashboard` folder.
-7. Keep `P2_Consumables_Financial_Monitoring.pbip` beside the reconstructed Report and SemanticModel folders.
-8. Open the `.pbip` file with Power BI Desktop.
+```text
+%USERPROFILE%\P2
+```
 
-The `.pbi` local cache files are intentionally excluded from version control.
+This short destination avoids Windows path-length errors caused by deeply nested PBIP folders and custom visuals.
+
+After the script finishes, open:
+
+```text
+%USERPROFILE%\P2\P2_Consumables_Financial_Monitoring.pbip
+```
+
+## What the script does
+
+1. Creates a fresh short working folder under `%USERPROFILE%\P2`.
+2. Extracts the report definition.
+3. Extracts static report resources.
+4. Rebuilds the CustomVisuals folder.
+5. Extracts every packaged custom visual.
+6. Extracts the semantic model.
+7. Copies the PBIP entry file beside the reconstructed Report and SemanticModel folders.
+8. Leaves the GitHub checkout unchanged.
+
+If an older `%USERPROFILE%\P2` folder already exists, the script renames it to a timestamped backup instead of deleting it.
+
+## Expected result
+
+```text
+%USERPROFILE%\P2\
+├── P2_Consumables_Financial_Monitoring.pbip
+├── P2_Consumables_Financial_Monitoring.Report\
+└── P2_Consumables_Financial_Monitoring.SemanticModel\
+```
+
+The `.pbi` local cache files remain excluded from source control.
