@@ -1,22 +1,48 @@
 {
+  "public_repository_dataset": "deterministic synthetic Power Query generator",
   "rows": 5200,
-  "po_value": 119513702.91,
-  "invoiced_spend": 113101732.25,
-  "open_commitments": 4286639.54,
-  "late_open_pos": 248,
-  "overdue_value": 3201682.21,
-  "otif": 0.849916,
-  "invoice_coverage": 0.946349,
+  "po_value": 116949170,
+  "invoiced_spend": 109240815.47,
+  "open_commitments": 5394004.53,
+  "savings": 5146579.99,
   "status_counts": {
-    "Closed": 4764,
-    "Open": 192,
-    "Partial": 140,
+    "Closed": 4774,
+    "Open": 189,
+    "Partial": 133,
     "Cancelled": 104
   },
   "by_year": {
-    "2023": {"po_count":1087,"invoiced_spend":22759016.49,"open_commitments":616004.3,"open_pos":55,"late_open_pos":42,"overdue_value":400045.77,"otif":0.851485},
-    "2024": {"po_count":1251,"invoiced_spend":27072266.71,"open_commitments":1020544.91,"open_pos":63,"late_open_pos":47,"overdue_value":819689.63,"otif":0.862425},
-    "2025": {"po_count":1443,"invoiced_spend":32225561.6,"open_commitments":897900.03,"open_pos":72,"late_open_pos":58,"overdue_value":682438.21,"otif":0.831595},
-    "2026": {"po_count":1419,"invoiced_spend":31044887.45,"open_commitments":1752190.3,"open_pos":142,"late_open_pos":101,"overdue_value":1299508.6,"otif":0.856685}
+    "2023": {
+      "po_count": 1087,
+      "invoiced_spend": 22860131.92,
+      "open_commitments": 1113546.68,
+      "late_open_pos": 64,
+      "overdue_value": 1046181.18,
+      "otif": 0.856713
+    },
+    "2024": {
+      "po_count": 1251,
+      "invoiced_spend": 26309885.37,
+      "open_commitments": 1297252.73,
+      "late_open_pos": 66,
+      "overdue_value": 1127194.43,
+      "otif": 0.857267
+    },
+    "2025": {
+      "po_count": 1443,
+      "invoiced_spend": 30291333.88,
+      "open_commitments": 1491497.12,
+      "late_open_pos": 81,
+      "overdue_value": 1348711.72,
+      "otif": 0.857251
+    },
+    "2026": {
+      "po_count": 1419,
+      "invoiced_spend": 29779464.3,
+      "open_commitments": 1491708,
+      "late_open_pos": 52,
+      "overdue_value": 893531.94,
+      "otif": 0.85802
+    }
   }
 }
