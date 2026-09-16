@@ -1,0 +1,30 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Source_Portfolio_Commandes_Detaillees", "Source_Portfolio_Factures", "Source_Portfolio_SousTraitance", "Source_Portfolio_Commandes", "Source_Portfolio_Consommables", "Source_Portfolio_BDC", "Calendrier", "Budget P2 annuel", "Calendrier_budget_P2", "Commandes unitaires", "Commandes de durée", "Commandes de durée mensualisée", "Commandes de durée global", "Période Contrats", "Nom Fournisseur P2", "Portfolio_Commandes", "Portfolio_Consommables", "Data BDC BI", "Last refresh"]
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","TMDLView_Desktop","DevMode"]
+
+ref table 'Commandes unitaires'
+ref table 'Budget P2 annuel'
+ref table Calendrier
+ref table 'Commandes de durée'
+ref table Calendrier_budget_P2
+ref table 'Commandes de durée mensualisée'
+ref table 'Nom Fournisseur P2'
+ref table 'Période Contrats'
+ref table 'Commandes de durée global'
+ref table Portfolio_Commandes
+ref table Portfolio_Consommables
+ref table 'Data BDC BI'
+ref table Commandes_Unitaires_Mois_Actuel
+ref table 'Last refresh'
+
+ref cultureInfo fr-FR

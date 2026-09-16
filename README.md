@@ -18,7 +18,7 @@
 
 ## About this portfolio
 
-This repository showcases three end-to-end **Power BI portfolio projects** designed to transform operational and financial data into clear, actionable dashboards.
+This repository showcases four end-to-end **Power BI portfolio projects** designed to transform operational and financial data into clear, actionable dashboards.
 
 ### Professional context
 
@@ -36,6 +36,7 @@ They are presented here to demonstrate the business problems I worked on, the an
 |---|---|---|
 | **[Financial Pilotage Portfolio](./powerbi-financial-pilotage-portfolio/)** | Financial steering, budget execution, supplier commitments, purchase orders | Financial KPIs, budget tracking, supplier analysis, reconciliation controls |
 | **[Procurement & Budget Portfolio](./powerbi-procurement-budget-portfolio/)** | Procurement monitoring, consumables, budget consumption, purchase orders | Procurement analytics, purchasing follow-up, operational reporting, budget monitoring |
+| **[P2 Consumables Financial Monitoring](./powerbi-p2-consumables-financial-monitoring/)** | P2 procurement, subcontracting commitments, budget consumption and invoicing | Shared-calendar modeling, DAX, budget steering, invoicing follow-up, PBIP/TMDL |
 | **[SLA & Penalties Operations Portfolio](./powerbi-sla-penalties-portfolio/)** | Maintenance operations, SLA compliance, backlog, restoration performance, contractual risk | Advanced DAX, P95, SLA populations, penalty exposure, multi-site benchmarking, PBIP/TMDL |
 
 ---
@@ -60,7 +61,17 @@ Key topics include procurement activity, consumables monitoring, budget consumpt
 
 ---
 
-## 03 — SLA & Penalties Operations Portfolio
+## 03 — P2 Consumables Financial Monitoring
+
+**Objective:** connect procurement, consumables, subcontracting commitments, annual budgets and invoicing progress in a single Power BI decision-support model.
+
+The project includes coherent annual filtering from 2020 to 2026, monthly and cumulative subcontracting monitoring, procurement budget consumption, invoicing ratios, supplier-level gaps, consumables analysis and a public PBIP/TMDL source structure.
+
+**[Explore the P2 Consumables Financial Monitoring project →](./powerbi-p2-consumables-financial-monitoring/)**
+
+---
+
+## 04 — SLA & Penalties Operations Portfolio
 
 **Objective:** simulate the operational steering of a large multi-site maintenance contract with a strong focus on service-level commitments and contractual risk.
 
@@ -134,6 +145,7 @@ powerbi-portfolio-projects/
 │
 ├── powerbi-financial-pilotage-portfolio/
 ├── powerbi-procurement-budget-portfolio/
+├── powerbi-p2-consumables-financial-monitoring/
 ├── powerbi-sla-penalties-portfolio/
 │   ├── dashboard/
 │   ├── model/
@@ -160,7 +172,7 @@ These projects are portfolio versions created for public presentation.
 
 ## À propos de ce portfolio
 
-Ce dépôt présente trois projets **Power BI de bout en bout** conçus pour transformer des données opérationnelles et financières en tableaux de bord clairs, exploitables et orientés décision.
+Ce dépôt présente quatre projets **Power BI de bout en bout** conçus pour transformer des données opérationnelles et financières en tableaux de bord clairs, exploitables et orientés décision.
 
 ### Contexte professionnel
 
@@ -178,6 +190,7 @@ Ils ont pour objectif de présenter les problématiques métier sur lesquelles j
 |---|---|---|
 | **[Portfolio Pilotage Financier](./powerbi-financial-pilotage-portfolio/)** | Pilotage financier, exécution budgétaire, engagements fournisseurs | KPI financiers, suivi budgétaire, analyse fournisseurs, contrôles de cohérence |
 | **[Portfolio Achats & Budget](./powerbi-procurement-budget-portfolio/)** | Achats, consommables, budget, commandes | Analyse achats, reporting opérationnel, pilotage budgétaire |
+| **[P2 Consumables Financial Monitoring](./powerbi-p2-consumables-financial-monitoring/)** | Achats P2, sous-traitance, budget et facturation | Calendrier commun, DAX, pilotage budgétaire, suivi facturation, PBIP/TMDL |
 | **[Portfolio SLA & Pénalités](./powerbi-sla-penalties-portfolio/)** | Maintenance, respect des SLA, backlog, remise en état, risque contractuel | DAX avancé, P95, populations SLA, exposition pénalités, benchmark multi-sites, PBIP/TMDL |
 
 ---
@@ -198,7 +211,17 @@ Ils ont pour objectif de présenter les problématiques métier sur lesquelles j
 
 ---
 
-## 03 — Portfolio SLA & Pénalités
+## 03 — P2 Consumables Financial Monitoring
+
+**Objectif :** réunir achats, consommables, engagements de sous-traitance, budgets annuels et avancement de la facturation dans un même modèle Power BI.
+
+Le projet présente un filtrage annuel cohérent de 2020 à 2026, le suivi mensuel et cumulé de la sous-traitance, la consommation du budget achats, les ratios de facturation, les écarts fournisseurs, l'analyse des consommables et une structure source publique PBIP/TMDL.
+
+**[Découvrir le projet P2 Consumables Financial Monitoring →](./powerbi-p2-consumables-financial-monitoring/)**
+
+---
+
+## 04 — Portfolio SLA & Pénalités
 
 **Objectif :** simuler le pilotage d'une exploitation de maintenance multi-sites à forte volumétrie, avec un focus sur les engagements de service et le risque contractuel.
 

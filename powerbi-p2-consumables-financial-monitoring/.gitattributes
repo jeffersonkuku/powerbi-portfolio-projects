@@ -1,0 +1,6 @@
+*.xlsx binary
+*.zip binary
+*.jpg binary
+*.png binary
+*.pbip text
+*.tmdl text

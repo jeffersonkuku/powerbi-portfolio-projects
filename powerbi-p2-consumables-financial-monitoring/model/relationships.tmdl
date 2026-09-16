@@ -1,0 +1,29 @@
+relationship b2c12b07-9f22-44a7-9e4c-d70c6163e95e
+	fromColumn: 'Commandes unitaires'.'Date de Création'
+	toColumn: Calendrier.Date
+
+relationship ae8a5559-3aed-49d9-9e73-d58526edc10c
+	fromColumn: 'Commandes de durée'.'Liste Dates'
+	toColumn: Calendrier.Date
+
+relationship 8deda1a1-97bd-4edc-9172-4195903abfba
+	fromColumn: 'Commandes de durée mensualisée'.'Nom Fournisseur'
+	toColumn: 'Nom Fournisseur P2'.'Nom Fournisseur'
+
+relationship c69291e1-2d9b-48c9-8ee8-391948d27171
+	fromColumn: 'Commandes de durée global'.'Clé Période'
+	toColumn: 'Période Contrats'.'Clé Période'
+
+relationship b7ea3fd9-5a22-4283-9c82-466d62923446
+	fromColumn: 'Commandes de durée global'.'Nom Fournisseur'
+	toColumn: 'Nom Fournisseur P2'.'Nom Fournisseur'
+
+relationship c8604a77-f49e-4864-9e3b-76dbc25202c0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Portfolio_Consommables.'Date De La Commande'
+	toColumn: Calendrier.Date
+
+relationship 15c93ee3-7b34-41b0-b8a2-a00cbbbef399
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Data BDC BI'.'Date De La Commande'
+	toColumn: Calendrier.Date
