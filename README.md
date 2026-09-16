@@ -18,7 +18,7 @@
 
 ## About this portfolio
 
-This repository showcases four end-to-end **Power BI portfolio projects** designed to transform operational and financial data into clear, actionable dashboards.
+This repository showcases five end-to-end **Power BI portfolio projects** designed to transform operational and financial data into clear, actionable dashboards.
 
 ### Professional context
 
@@ -38,6 +38,7 @@ They are presented here to demonstrate the business problems I worked on, the an
 | **[Procurement & Budget Portfolio](./powerbi-procurement-budget-portfolio/)** | Procurement monitoring, consumables, budget consumption, purchase orders | Procurement analytics, purchasing follow-up, operational reporting, budget monitoring |
 | **[P2 Consumables Financial Monitoring](./powerbi-p2-consumables-financial-monitoring/)** | P2 procurement, subcontracting commitments, budget consumption and invoicing | Shared-calendar modeling, DAX, budget steering, invoicing follow-up, PBIP/TMDL |
 | **[SLA & Penalties Operations Portfolio](./powerbi-sla-penalties-portfolio/)** | Maintenance operations, SLA compliance, backlog, restoration performance, contractual risk | Advanced DAX, P95, SLA populations, penalty exposure, multi-site benchmarking, PBIP/TMDL |
+| **[Procurement & Financial Control Tower](./powerbi-procurement-financial-control-tower/)** | Procurement, financial control, supplier performance, commitments & exceptions | Budget steering, procurement analytics, supplier risk, OTIF, open commitments, PBIP/TMDL |
 
 ---
 
@@ -90,6 +91,18 @@ The project covers:
 The report was engineered in **PBIP / TMDL** format and includes a centralized SLA parameter table so business thresholds are not scattered across measures.
 
 **[Explore the SLA & Penalties project →](./powerbi-sla-penalties-portfolio/)**
+
+---
+
+## 05 — Procurement & Financial Control Tower
+
+**Objective:** connect procurement execution, budget control, supplier performance and open commitments in one executive Power BI control tower.
+
+The project includes five pages — Executive Overview, Financial Control, Procurement Analytics, Supplier Performance and Commitments & Exceptions — with synthetic 2023–2026 data, shared Year / Site / Category filtering, financial and procurement KPIs, supplier risk analysis, OTIF, late purchase orders and overdue commitment exposure.
+
+The public source is provided in **PBIP / PBIR / TMDL** format with an embedded synthetic semantic model.
+
+**[Explore the Procurement & Financial Control Tower project →](./powerbi-procurement-financial-control-tower/)**
 
 ---
 
@@ -147,6 +160,7 @@ powerbi-portfolio-projects/
 ├── powerbi-procurement-budget-portfolio/
 ├── powerbi-p2-consumables-financial-monitoring/
 ├── powerbi-sla-penalties-portfolio/
+├── powerbi-procurement-financial-control-tower/
 │   ├── dashboard/
 │   ├── model/
 │   ├── docs/
@@ -172,7 +186,7 @@ These projects are portfolio versions created for public presentation.
 
 ## À propos de ce portfolio
 
-Ce dépôt présente quatre projets **Power BI de bout en bout** conçus pour transformer des données opérationnelles et financières en tableaux de bord clairs, exploitables et orientés décision.
+Ce dépôt présente cinq projets **Power BI de bout en bout** conçus pour transformer des données opérationnelles et financières en tableaux de bord clairs, exploitables et orientés décision.
 
 ### Contexte professionnel
 
@@ -192,6 +206,7 @@ Ils ont pour objectif de présenter les problématiques métier sur lesquelles j
 | **[Portfolio Achats & Budget](./powerbi-procurement-budget-portfolio/)** | Achats, consommables, budget, commandes | Analyse achats, reporting opérationnel, pilotage budgétaire |
 | **[P2 Consumables Financial Monitoring](./powerbi-p2-consumables-financial-monitoring/)** | Achats P2, sous-traitance, budget et facturation | Calendrier commun, DAX, pilotage budgétaire, suivi facturation, PBIP/TMDL |
 | **[Portfolio SLA & Pénalités](./powerbi-sla-penalties-portfolio/)** | Maintenance, respect des SLA, backlog, remise en état, risque contractuel | DAX avancé, P95, populations SLA, exposition pénalités, benchmark multi-sites, PBIP/TMDL |
+| **[Procurement & Financial Control Tower](./powerbi-procurement-financial-control-tower/)** | Pilotage achats, contrôle financier, fournisseurs, engagements et exceptions | Budget, achats, risque fournisseurs, OTIF, engagements ouverts, PBIP/TMDL |
 
 ---
 
@@ -240,6 +255,18 @@ Le projet couvre notamment :
 Le modèle utilise le format **PBIP / TMDL** et centralise les règles SLA dans une table de paramètres dédiée.
 
 **[Découvrir le projet SLA & Pénalités →](./powerbi-sla-penalties-portfolio/)**
+
+---
+
+## 05 — Procurement & Financial Control Tower
+
+**Objectif :** réunir exécution achats, contrôle budgétaire, performance fournisseurs et engagements ouverts dans une même Control Tower Power BI.
+
+Le projet comprend cinq vues — Executive Overview, Financial Control, Procurement Analytics, Supplier Performance et Commitments & Exceptions — avec des données synthétiques 2023–2026, des filtres communs Année / Site / Catégorie, des KPI financiers et achats, le suivi du risque fournisseurs, l’OTIF, les commandes en retard et l’exposition des engagements échus.
+
+La source publique est fournie au format **PBIP / PBIR / TMDL** avec un modèle sémantique synthétique intégré.
+
+**[Découvrir Procurement & Financial Control Tower →](./powerbi-procurement-financial-control-tower/)**
 
 ---
 
