@@ -1,20 +1,25 @@
-# Méthodologie des données Portfolio
+# Méthodologie des données — version simple
 
-Les données du projet sont entièrement synthétiques : aucun enregistrement fournisseur réel n'est reproduit.
+[← P2 Financial Monitoring](../README.md)
 
-## Principes de conception
+## L’objectif
 
-- Les fournisseurs, sites et identifiants métier sont fictifs ou anonymisés.
-- Les montants sont calibrés pour produire un comportement achats / sous-traitance réaliste sans reproduire de données confidentielles.
-- Les engagements mensuels de sous-traitance utilisent une saisonnalité modérée pour éviter une série artificiellement plate tout en conservant les totaux contractuels.
-- Le calendrier commun assure un filtrage annuel cohérent de 2020 jusqu'au snapshot 2026.
-- Le snapshot public est arrêté au 16 septembre 2026 afin que les lignes futures ne soient pas traitées comme réalisées.
+Les données publiques doivent se comporter comme de vraies données achats / sous-traitance **sans reproduire les enregistrements réels**.
 
-## Saisonnalité ST
+\`\`\`mermaid
+flowchart LR
+    A[Questions métier réelles] --> B[Créer des données sûres]
+    B --> C[Conserver des relations réalistes]
+    C --> D[Test des mêmes KPI]
+    D --> E[Publier sans données confidentielles]
+\`\`\`
 
-Les coefficients mensuels sont centrés sur 1 et totalisent 12 sur une année complète. Ils font varier la trajectoire mensuelle sans modifier le total contractuel annuel. La première période, plus courte, est normalisée spécifiquement afin de conserver son total.
+## Principes
 
-## Fichiers de validation
+- fournisseurs, sites et identifiants sont fictifs ou anonymisés ;
+- les montants sont calibrés pour créer un comportement réaliste ;
+- les engagements mensuels varient de façon crédible ;
+- un calendrier commun garantit la cohérence des filtres ;
+- l’instantané public s’arrête à une date définie pour ne pas traiter le futur comme réalisé.
 
-- `VALIDATION_YEARS_2020_2026.csv` : rapprochement annuel.
-- `VALIDATION_MONTHLY_ST_2026.csv` : validation mensuelle ST 2026.
+Des fichiers de validation permettent de rapprocher les totaux annuels et mensuels.

@@ -1,14 +1,11 @@
-# Synthetic portfolio data
+# Data
 
-The project uses six portable Excel workbooks. All records are synthetic or anonymized for public demonstration.
+[← P2 Financial Monitoring](../README.md)
 
-| File | Purpose |
-|---|---|
-| Portfolio_Commandes_Detaillees.xlsx | Detailed procurement transactions and order-line analysis |
-| Portfolio_Commandes.xlsx | Procurement orders and monthly / weekly monitoring |
-| Portfolio_SousTraitance.xlsx | Subcontracting commitments and contractual periods |
-| Portfolio_Consommables.xlsx | Consumables and parts purchasing analysis |
-| Portfolio_Factures.xlsx | Invoicing follow-up for subcontracting commitments |
-| Portfolio_BDC.xlsx | Supporting purchasing / order data used by the report |
+The public portfolio uses anonymised / synthetic source data so the business logic can be demonstrated without publishing confidential production information.
 
-The public snapshot is designed for consistent analysis from 2020 through 16 September 2026.
+The data is structured to reproduce realistic relationships between:
+
+**orders → suppliers → subcontracting → invoices → annual budgets → time periods**
+
+The goal is not to recreate real company records; it is to preserve the analytical problem safely.

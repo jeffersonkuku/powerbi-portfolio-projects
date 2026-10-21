@@ -1,9 +1,9 @@
-# Documentation and validation
+# Documentation — choose what you need
 
-- `DATA_METHODOLOGY_EN.md` — English data methodology
-- `DATA_METHODOLOGY_FR.md` — French data methodology
-- `VALIDATION_YEARS_2020_2026.csv` — annual reconciliation controls
-- `VALIDATION_MONTHLY_ST_2026.csv` — monthly subcontracting reconciliation
-- `VALIDATION.md` — portfolio validation summary
+[← P2 Financial Monitoring](../README.md)
 
-These checks document the portfolio logic; a final Power BI Desktop runtime refresh remains the authoritative execution test.
+- **[Data methodology — English](./DATA_METHODOLOGY_EN.md)** — how the public dataset was made realistic without copying production data.
+- **[Méthodologie des données — Français](./DATA_METHODOLOGY_FR.md)** — même explication en français.
+- **[Validation](./VALIDATION.md)** — checks used to verify the report and reconciliations.
+
+If you are not reviewing the technical implementation, the [main project page](../README.md) is enough.

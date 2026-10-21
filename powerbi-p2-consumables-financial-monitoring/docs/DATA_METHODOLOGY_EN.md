@@ -1,16 +1,25 @@
-# Data methodology
+# Data methodology — explained simply
 
-The public portfolio dataset is synthetic and does not reproduce real supplier records.
+[← P2 Financial Monitoring](../README.md)
 
-## Design principles
+## The goal
 
-- Supplier, site and business identifiers are fictitious or anonymized.
-- Transaction amounts are calibrated to produce realistic procurement and subcontracting behavior without reproducing confidential operational data.
-- Monthly subcontracting commitments use moderate seasonality so the series is not artificially flat while preserving annual / contractual totals.
-- The common calendar supports consistent year filtering from 2020 through the 2026 snapshot.
-- The delivered snapshot is capped at 16 September 2026 so future demonstration rows are not treated as completed activity.
+The public data should behave like realistic procurement and subcontracting data **without reproducing real supplier records**.
 
-## Validation files
+\`\`\`mermaid
+flowchart LR
+    A[Real business questions] --> B[Create safe synthetic / anonymised data]
+    B --> C[Preserve realistic relationships]
+    C --> D[Test the same KPIs]
+    D --> E[Publish without confidential records]
+\`\`\`
 
-- `VALIDATION_YEARS_2020_2026.csv` contains annual reconciliation checks.
-- `VALIDATION_MONTHLY_ST_2026.csv` contains monthly subcontracting validation for 2026.
+## Main principles
+
+- supplier, site and business identifiers are fictitious or anonymised;
+- amounts are calibrated to create realistic purchasing and subcontracting behaviour;
+- monthly commitments include moderate variation instead of an artificially flat series;
+- one common calendar keeps year filtering consistent;
+- the public snapshot stops at a defined date so future demonstration rows are not treated as completed activity.
+
+Validation files are kept in the repository so yearly and monthly totals can be reconciled.

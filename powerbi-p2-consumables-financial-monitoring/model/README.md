@@ -1,11 +1,17 @@
-# Semantic model extracts
+# Semantic model
 
-This folder exposes the most useful PBIP / TMDL files directly in GitHub for quick review.
+[← P2 Financial Monitoring](../README.md)
 
-- `model.tmdl` — model configuration and table references
-- `relationships.tmdl` — semantic-model relationships
-- `database.tmdl` — compatibility level
+The semantic model connects the different business topics so one filter or period can be understood consistently across the report.
 
-The complete semantic model, including all table definitions, measures, expressions and DAX queries, is available in:
+\`\`\`mermaid
+flowchart LR
+    A[Calendar] --> E[Shared model]
+    B[Procurement] --> E
+    C[Subcontracting] --> E
+    D[Budgets / suppliers] --> E
+    E --> F[Measures]
+    F --> G[Dashboard views]
+\`\`\`
 
-`dashboard/semantic-model/P2_SemanticModel_Source.zip`
+This folder exposes the model structure for technical review. The main project page explains the business use case without requiring model knowledge.

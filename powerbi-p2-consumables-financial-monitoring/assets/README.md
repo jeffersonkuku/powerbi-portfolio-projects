@@ -1,16 +1,18 @@
-# Dashboard assets
+# Dashboard screenshots
 
-Final portfolio screenshots used by the bilingual project README.
+[← P2 Financial Monitoring](../README.md)
 
-| File | Dashboard view |
-|---|---|
-| `01-subcontracting-invoicing-overview.png` | Subcontracting invoicing overview |
-| `02-subcontracting-budget-consumption.png` | P2 subcontracting budget consumption |
-| `03-procurement-budget-consumption.png` | Procurement budget consumption |
-| `04-subcontractor-portfolio-overview.png` | Subcontractor portfolio overview |
-| `05-subcontractor-portfolio-detail.png` | Subcontractor portfolio detailed analysis |
-| `06-invoicing-focus.png` | Invoicing focus |
-| `07-monthly-orders-review.png` | Monthly and recent-order review |
-| `08-period-comparison.png` | Comparable-period analysis |
-| `09-consumables-analysis.png` | Parts and consumables analysis |
-| `10-small-purchases-analysis.png` | Small-purchase analysis |
+The images follow the report from high-level financial steering to detailed purchasing analysis.
+
+1. Subcontracting invoicing
+2. Subcontracting budget
+3. Procurement budget
+4. Subcontractor portfolio
+5. Subcontractor detail
+6. Invoicing focus
+7. Monthly orders
+8. Period comparison
+9. Consumables
+10. Small purchases
+
+For the guided explanation, open the [main project page](../README.md).
