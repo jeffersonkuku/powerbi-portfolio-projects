@@ -1,9 +1,18 @@
-# Power BI project
+# Power BI project files
 
-Open the project with Power BI Desktop:
+[← Control Tower project](../README.md)
 
-`Asterion_Procurement_Control_Tower.pbip`
+This folder contains the files Power BI Desktop needs to open the project.
 
-The PBIP manifest, PBIR report definition and TMDL semantic model are kept together in this folder so all relative references remain valid.
+**Main file:** \`Asterion_Procurement_Control_Tower.pbip\`
 
-If Power BI Desktop requests an initial refresh, use **Refresh now** once. The project generates its synthetic source data deterministically in Power Query and does not depend on a local Excel/CSV path.
+In simple terms:
+
+\`\`\`mermaid
+flowchart LR
+    A[PBIP project] --> B[Report pages]
+    A --> C[Semantic model]
+    C --> D[Measures / relationships / synthetic data]
+\`\`\`
+
+The project is designed to be portable and does not depend on a private local production file path.

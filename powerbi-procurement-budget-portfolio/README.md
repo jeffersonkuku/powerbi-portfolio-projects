@@ -1,248 +1,54 @@
-# Power BI Procurement & Budget Dashboard
+# Procurement & Budget
 
-[English](#english) · [Français](#francais)
+[← Power BI portfolio](../README.md)
 
----
+> **A simple purchasing dashboard for seeing how orders consume the available budget over time.**
 
-<a id="english"></a>
+## Understand it in 30 seconds
 
-# 🇬🇧 English
+**Problem:** it is difficult to manage purchasing if budget, monthly orders and recurring commitments are read separately.
 
-> **Procurement and budget monitoring dashboard designed to make purchasing activity, budget consumption and recurring orders easy to understand at a glance.**
+**What I built:** one report that compares purchasing activity with the available budget and shows recent / recurring orders.
 
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&logoColor=000)
-![Power Query](https://img.shields.io/badge/Power%20Query-ETL-217346)
-![DAX](https://img.shields.io/badge/DAX-KPIs-0078D4)
-![Portfolio](https://img.shields.io/badge/Data-Anonymized-6C63FF)
+[![Budget consumption](./assets/procurement-budget-consumables.jpg)](./assets/procurement-budget-consumables.jpg)
 
-## Professional context
+## The logic
 
-This project is an **anonymized portfolio reconstruction inspired by procurement and budget-monitoring solutions I developed during my professional experience at ENGIE**.
+\`\`\`mermaid
+flowchart LR
+    A[Annual budget] --> D[Dashboard]
+    B[Purchase orders] --> D
+    C[Time periods] --> D
+    D --> E[Consumed budget]
+    D --> F[Remaining budget]
+    D --> G[Recent / recurring orders]
+\`\`\`
 
-It is designed to demonstrate real-world business analysis, KPI design and Power BI reporting skills while protecting confidential information.
+## Three views
 
-> This is **not an official ENGIE deliverable**. Supplier names, business identifiers, datasets and sensitive operational details have been anonymized, modified or recreated for public presentation.
+### Is the annual budget under control?
 
-## Project
+[![Consumables budget](./assets/procurement-budget-consumables.jpg)](./assets/procurement-budget-consumables.jpg)
 
-➡️ **[Open the Power BI project](./dashboard/Procurement_Budget_Dashboard.pbix)**
+### What was ordered recently?
 
-## Dashboard preview
+[![Monthly and weekly review](./assets/procurement-monthly-weekly-summary.jpg)](./assets/procurement-monthly-weekly-summary.jpg)
 
-<p align="center">
-  <img src="./assets/procurement-budget-consumables.jpg" alt="Procurement & Budget Dashboard preview" width="100%">
-</p>
+### How are recurring commitments consuming the budget?
 
-> **Main view:** monthly procurement activity, annual budget comparison, remaining budget and budget consumption ratio.
+[![Recurring orders](./assets/procurement-duration-orders.jpg)](./assets/procurement-duration-orders.jpg)
 
----
+<details>
+<summary><strong>Technical details</strong></summary>
 
-## Business objective
+The project demonstrates Power Query, DAX, budget ratios, period comparisons and supplier/order analysis.
 
-The goal of this project is to transform purchasing data into a practical management tool for operational and budget decision-making.
+Power BI report: [Procurement_Budget_Dashboard.pbix](./dashboard/Procurement_Budget_Dashboard.pbix)
 
-The dashboard helps answer questions such as:
+The public version uses anonymised portfolio data and is not an official company deliverable.
 
-- How much of the annual budget has already been committed?
-- How much budget is still available?
-- Which months generate the highest purchasing activity?
-- What was ordered during the current month and the previous week?
-- How are recurring / duration-based purchase orders consuming their budget?
+</details>
 
-## Dashboard preview
+## 🇫🇷 Résumé rapide
 
-### 1. Consumables budget consumption
-
-![Consumables budget dashboard](./assets/procurement-budget-consumables.jpg)
-
-**What a recruiter should notice**
-
-- Monthly purchasing trend with a visible budget reference line
-- Comparison between total ordered amount and annual budget
-- Remaining budget displayed as a clear management KPI
-- Budget consumption ratio for immediate executive reading
-- Year filter enabling period-based analysis
-
-This page is designed for fast budget monitoring: a manager can immediately identify whether spending is on track and which months require attention.
-
----
-
-### 2. Weekly & monthly purchasing review
-
-![Weekly and monthly purchasing review](./assets/procurement-monthly-weekly-summary.jpg)
-
-**What a recruiter should notice**
-
-- Detailed supplier-level purchase-order tracking
-- Current-month orders and previous-week orders
-- Current vs. previous period comparisons
-- Remaining monthly purchasing capacity
-- Combination of detailed operational data and high-level KPIs
-
-This page bridges **operational follow-up and management reporting**. It allows users to move from the overall purchasing position to the individual supplier/order level.
-
----
-
-### 3. Recurring / duration-based orders
-
-![Recurring purchase orders budget dashboard](./assets/procurement-duration-orders.jpg)
-
-**What a recruiter should notice**
-
-- Monitoring of longer-term or recurring purchase commitments
-- Monthly ordered amounts against a yearly budget
-- Remaining budget and consumption rate
-- Clear identification of months with significant spending
-- Consistent KPI logic across different purchasing categories
-
-This view demonstrates how the same analytical model can be adapted to another procurement category while keeping a consistent user experience.
-
----
-
-## Key capabilities demonstrated
-
-| Area | Demonstrated capability |
-|---|---|
-| **Data preparation** | Structuring and transforming purchasing data with Power Query |
-| **Data modeling** | Building a model suitable for time, supplier and budget analysis |
-| **DAX** | Budget ratios, period comparisons and KPI calculations |
-| **Procurement analytics** | Monitoring orders, suppliers and purchasing commitments |
-| **Budget management** | Budget consumption, remaining budget and monthly trends |
-| **UX / reporting** | Combining executive KPIs with detailed operational tables |
-| **Data privacy** | Portfolio-safe anonymized supplier and business data |
-
-## Files
-
-- **Power BI report:** `dashboard/Procurement_Budget_Dashboard.pbix`
-- **Anonymized dataset:** `data/Portfolio_Commandes_Anonymise.xlsx`
-- **Dashboard screenshots:** `assets/`
-- **Integrity checks:** `SHA256SUMS.txt`
-
-## Tech stack
-
-**Power BI Desktop · Power Query · DAX · Microsoft Excel**
-
-## Data privacy
-
-This repository is a public portfolio version. Supplier names and business identifiers shown in the dashboard are fictitious or anonymized.
-
----
-
-<a id="francais"></a>
-
-# 🇫🇷 Français
-
-> **Tableau de bord Achats & Budget conçu pour rendre le suivi des commandes, de la consommation budgétaire et des achats récurrents immédiatement compréhensible.**
-
-## Contexte professionnel
-
-Ce projet est une **reconstruction portfolio anonymisée inspirée de solutions de suivi achats et budgétaire que j'ai développées dans le cadre de mon expérience professionnelle chez ENGIE**.
-
-Il permet de démontrer des compétences réellement mobilisées en environnement professionnel : analyse métier, conception de KPI et reporting Power BI, tout en préservant la confidentialité des données.
-
-> Il ne s'agit **pas d'un livrable officiel ENGIE**. Les noms de fournisseurs, identifiants, jeux de données et informations opérationnelles sensibles ont été anonymisés, modifiés ou recréés pour une présentation publique.
-
-## Projet
-
-➡️ **[Ouvrir le projet Power BI](./dashboard/Procurement_Budget_Dashboard.pbix)**
-
-## Aperçu du dashboard
-
-<p align="center">
-  <img src="./assets/procurement-budget-consumables.jpg" alt="Aperçu du dashboard Achats et Budget" width="100%">
-</p>
-
-> **Vue principale :** activité achats mensuelle, comparaison au budget annuel, budget restant et taux de consommation.
-
----
-
-## Objectif métier
-
-L'objectif de ce projet est de transformer les données achats en un véritable outil de pilotage opérationnel et budgétaire.
-
-Le tableau de bord permet notamment de répondre rapidement aux questions suivantes :
-
-- Quelle part du budget annuel est déjà engagée ?
-- Quel budget reste disponible ?
-- Quels mois concentrent le plus de dépenses ?
-- Quelles commandes ont été passées sur le mois actuel et la semaine précédente ?
-- Comment les commandes récurrentes ou de durée consomment-elles leur budget ?
-
-## Aperçu du dashboard
-
-### 1. Consommation du budget Consommables
-
-![Dashboard consommation budget consommables](./assets/procurement-budget-consumables.jpg)
-
-**Ce qu'un recruteur peut identifier immédiatement**
-
-- Évolution mensuelle des montants commandés
-- Ligne de référence correspondant au budget mensuel
-- Comparaison entre total commandé et budget annuel
-- KPI clair du budget restant à consommer
-- Ratio de consommation du budget
-- Filtre annuel pour analyser différentes périodes
-
-Cette page permet à un responsable de savoir immédiatement si la consommation budgétaire est maîtrisée et quels mois nécessitent une attention particulière.
-
----
-
-### 2. Bilan hebdomadaire et mensuel
-
-![Bilan hebdomadaire et mensuel](./assets/procurement-monthly-weekly-summary.jpg)
-
-**Ce qu'un recruteur peut identifier immédiatement**
-
-- Suivi détaillé des commandes par fournisseur
-- Commandes du mois actuel
-- Commandes de la semaine précédente
-- Comparaisons entre période actuelle et période précédente
-- Capacité d'achat restante sur le mois
-- Association entre données opérationnelles détaillées et KPI de pilotage
-
-Cette page relie **le suivi terrain et le reporting management**, avec la possibilité de passer d'une vision synthétique au détail fournisseur / commande.
-
----
-
-### 3. Commandes de durée / achats récurrents
-
-![Dashboard commandes de durée](./assets/procurement-duration-orders.jpg)
-
-**Ce qu'un recruteur peut identifier immédiatement**
-
-- Pilotage des engagements récurrents ou de longue durée
-- Comparaison des commandes mensuelles au budget annuel
-- Budget restant et taux de consommation
-- Identification rapide des mois à forte dépense
-- Réutilisation d'une logique KPI cohérente sur plusieurs catégories d'achats
-
-Cette vue montre la capacité à décliner un même modèle analytique sur plusieurs besoins métier tout en conservant une expérience utilisateur homogène.
-
----
-
-## Compétences démontrées
-
-| Domaine | Compétence démontrée |
-|---|---|
-| **Préparation des données** | Structuration et transformation des données avec Power Query |
-| **Modélisation** | Modèle adapté aux analyses temporelles, fournisseurs et budgets |
-| **DAX** | Ratios budgétaires, comparaisons temporelles et KPI |
-| **Analyse achats** | Suivi des commandes, fournisseurs et engagements |
-| **Pilotage budgétaire** | Consommation, reste à engager et tendances mensuelles |
-| **UX / Reporting** | Association de KPI exécutifs et de tableaux opérationnels |
-| **Confidentialité** | Données fournisseurs et métier anonymisées pour le portfolio |
-
-## Fichiers
-
-- **Rapport Power BI :** `dashboard/Procurement_Budget_Dashboard.pbix`
-- **Jeu de données anonymisé :** `data/Portfolio_Commandes_Anonymise.xlsx`
-- **Captures du dashboard :** `assets/`
-- **Contrôles d'intégrité :** `SHA256SUMS.txt`
-
-## Stack technique
-
-**Power BI Desktop · Power Query · DAX · Microsoft Excel**
-
-## Confidentialité
-
-Ce dépôt est une version portfolio publique. Les noms de fournisseurs et les identifiants métier affichés sont fictifs ou anonymisés.
+Le rapport permet de voir rapidement **combien du budget a été consommé, combien reste disponible et quelles commandes expliquent la consommation**.

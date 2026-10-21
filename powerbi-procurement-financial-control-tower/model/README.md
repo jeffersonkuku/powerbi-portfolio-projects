@@ -1,10 +1,14 @@
 # Semantic model
 
-Browsable TMDL extracts from the Power BI semantic model.
+[← Control Tower project](../README.md)
 
-- `database.tmdl` — database compatibility settings
-- `model.tmdl` — semantic-model table references and global settings
-- `relationships.tmdl` — model relationships
-- `tables/_Measures.tmdl` — portfolio KPI measure definitions
+The semantic model is the layer that gives business meaning to the raw data.
 
-The complete operational TMDL model, including embedded synthetic datasets, is stored under `dashboard/Asterion Procurement Control Tower.SemanticModel/`.
+\`\`\`mermaid
+flowchart LR
+    A[Raw tables] --> B[Relationships]
+    B --> C[Business measures]
+    C --> D[Dashboard visuals]
+\`\`\`
+
+This folder exposes readable TMDL extracts for the database settings, model, relationships and measures. The complete operational model is kept with the PBIP project under the dashboard folder.

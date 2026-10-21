@@ -1,25 +1,21 @@
-# Static validation — V9
+# Validation — SLA portfolio
 
-Checks completed before portfolio packaging:
+[← SLA project](../README.md)
 
-- JSON valid: **553 / 553**
-- Invalid JSON: **0**
-- Report pages: **37**
-- Visible business pages: **11**
-- Hidden / tooltip / drill-through pages: **26**
-- Visuals: **500**
-- Report references to missing fields / measures: **0**
-- Bookmarks: **9**
-- Orphan bookmark references: **0**
-- Missing declared image resources: **0**
-- Unclosed TMDL code blocks: **0**
-- Invalid literal-tab TMDL issues: **0**
-- Targeted obsolete date filters remaining: **0**
-- `File.Contents`: **0**
-- `Web.Contents`: **0**
-- User-specific local paths: **0**
-- Targeted sensitive organization references: **0**
+## What was checked
+
+The report was checked for structural consistency before packaging:
+
+- all JSON files valid;
+- no report references to missing fields or measures;
+- no orphan bookmark references;
+- no missing image resources;
+- no external web/file source references;
+- no user-specific local paths;
+- no targeted sensitive organisation references.
 
 ## Important limitation
 
-This is a static structural validation. The final dynamic validation is opening and refreshing the report in Power BI Desktop.
+This is a **static structural validation**. The final dynamic check is still opening and refreshing the report in Power BI Desktop.
+
+The point of this page is simple: the portfolio should not only look good; its published structure should also be internally consistent.

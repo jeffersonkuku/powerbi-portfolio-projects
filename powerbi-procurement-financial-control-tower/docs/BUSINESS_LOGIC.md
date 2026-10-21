@@ -1,22 +1,29 @@
-# Business logic — Procurement & Financial Control Tower
+# Business logic — in plain English
 
-## Scope
+[← Control Tower project](../README.md)
 
-The report combines procurement activity, budget execution, supplier performance and open commitment monitoring in one decision-support model.
+## What the report is trying to answer
 
-## Main business rules
+\`\`\`mermaid
+flowchart LR
+    A[Orders] --> D[How much is committed?]
+    B[Invoices] --> E[How much is already spent?]
+    C[Budget] --> F[How much room remains?]
+    D --> G[Management decision]
+    E --> G
+    F --> G
+\`\`\`
 
-- **PO Value** represents the total purchase-order value.
-- **Invoiced Spend** represents the invoiced amount attached to purchase orders.
-- **Open Commitments** only remain on `Open` and `Partial` purchase orders.
-- `Closed` and `Cancelled` purchase orders carry no remaining open commitment.
-- **Committed Utilisation %** compares invoiced spend plus open commitments with the available budget.
-- **Savings** compare baseline value with final PO value.
-- **OTIF %** measures deliveries completed on time and in full.
-- **Late Open POs** only counts unresolved purchase orders past due date.
-- **Overdue Value** is calculated only from genuinely open/partial overdue commitments.
-- Year, Site and Category filters are designed to propagate consistently across procurement and budget visuals.
+## Main rules
 
-## Portfolio positioning
+- **PO Value** = total value of purchase orders.
+- **Invoiced Spend** = amount already invoiced.
+- **Open Commitments** = value still expected on open or partial orders.
+- **Closed / Cancelled orders** = no remaining open commitment.
+- **Committed Utilisation %** = invoiced spend + open commitments compared with budget.
+- **Savings** = baseline value compared with final PO value.
+- **OTIF** = deliveries completed on time and in full.
+- **Late Open POs** = open orders that are past their due date.
+- **Overdue Value** = overdue amount that is still genuinely open.
 
-This project is an anonymized, synthetic portfolio reconstruction inspired by financial steering, procurement and operational reporting work performed in a professional environment. It is not an official company deliverable and contains no intentionally published confidential production data.
+The key idea is to distinguish **money already spent** from **money not yet invoiced but still committed**.

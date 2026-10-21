@@ -1,5 +1,16 @@
 # Data
 
-This public portfolio version uses **synthetic data embedded directly in the Power BI semantic model**.
+[← Control Tower project](../README.md)
 
-There is no external production dataset and no local Excel/CSV path required to open the PBIP project. The synthetic dataset covers 2023–2026 and was designed to preserve coherent procurement, budget, supplier, commitment and delivery behavior for demonstration purposes.
+The public portfolio uses **synthetic data**.
+
+That means the behaviour is designed to look realistic for procurement, budget, suppliers, commitments and deliveries, but it does not publish a production dataset.
+
+\`\`\`mermaid
+flowchart LR
+    A[Synthetic portfolio data] --> B[Same business questions]
+    B --> C[Same KPI logic]
+    C --> D[No confidential production records]
+\`\`\`
+
+The demonstration period covers 2023–2026.

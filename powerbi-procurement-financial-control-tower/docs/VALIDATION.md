@@ -1,24 +1,35 @@
-# Validation
+# Validation — what was checked?
 
-## Power BI Desktop test
+[← Control Tower project](../README.md)
 
-The portfolio report design and measure corrections were validated in Power BI Desktop before publication.
+## Why this page exists
 
-The public GitHub source keeps the same PBIP / PBIR / TMDL structure and uses deterministic synthetic Power Query generators so the project remains portable and does not depend on local Excel/CSV paths.
+A dashboard can look correct while a measure or reference is wrong. Validation is used to check that the public portfolio behaves consistently.
 
-Validated points:
+\`\`\`mermaid
+flowchart LR
+    A[Data] --> B[Measures]
+    B --> C[Visuals]
+    C --> D[Filters]
+    D --> E[Expected results]
+\`\`\`
+
+## Main checks
 
 - five report pages are defined;
-- Year / Site / Category slicers are available;
-- KPI measures use zero-safe logic where appropriate;
-- financial display units avoid duplicated `MM` formatting;
-- `Late Open POs`, `Overdue Value`, `Prior Year Spend` and `Spend YoY %` use corrected logic;
-- Closed / Cancelled purchase orders carry no open commitment;
-- Open / Partial purchase orders exist across 2023–2026;
-- all 62 visual field references resolve to the published semantic model;
-- the public source contains no external production file path.
+- Year / Site / Category filters are available;
+- KPI measures use safe zero handling where appropriate;
+- open commitment logic excludes Closed / Cancelled POs;
+- late and overdue measures use corrected open-order logic;
+- all published visual field references resolve to the semantic model;
+- no external production file path is required.
 
-## Public synthetic dataset — reference values
+## Reference values
+
+The published yearly values are **synthetic portfolio checks**, not company figures. Their purpose is to make regressions visible when the report changes.
+
+<details>
+<summary><strong>Technical reference table</strong></summary>
 
 | Year | POs | Invoiced spend | Budget | Open commitments | Committed utilisation | Late open POs | Overdue value | OTIF |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -27,4 +38,4 @@ Validated points:
 | 2025 | 1,443 | $30.3M | $36.7M | $1.5M | 86.6% | 81 | $1.3M | 85.7% |
 | 2026 | 1,419 | $29.8M | $34.7M | $1.5M | 90.0% | 52 | $0.9M | 85.8% |
 
-All figures are synthetic and intended only for portfolio demonstration.
+</details>

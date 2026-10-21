@@ -1,6 +1,10 @@
-# Documentation
+# Documentation — choose what you need
 
-- `BUSINESS_LOGIC.md` — KPI definitions and core procurement / finance rules.
-- `VALIDATION.md` — Power BI Desktop validation and expected yearly headline values.
-- `QA_DATA_V2.json` — synthetic-data QA output.
-- `QA_REPORT.json` — report/model reference QA output.
+[← Control Tower project](../README.md)
+
+- **[Business logic](./BUSINESS_LOGIC.md)** — what each important KPI means in business language.
+- **[Validation](./VALIDATION.md)** — what was checked before publishing.
+- \`QA_DATA_V2.json\` — automated data checks.
+- \`QA_REPORT.json\` — automated report/model reference checks.
+
+If you are not reviewing the technical implementation, the [main project page](../README.md) is enough.

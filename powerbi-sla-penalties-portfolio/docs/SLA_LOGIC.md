@@ -1,39 +1,27 @@
-# SLA / DI business logic
+# SLA logic — explained simply
 
-## Population rules
+[← SLA project](../README.md)
 
-- Intervention performance only includes DI / work orders that have actually started.
-- Restoration / resolution performance only includes DI / work orders that are actually resolved.
-- Open items remain in backlog and open-risk indicators.
-- Cancelled work orders are excluded from SLA operational populations.
-- Compliance, average, median, P95 and distributions use consistent evaluable populations.
+## The most important distinction
 
-## Investigation cases
+**Open work is not the same as completed work.**
 
-An SLA overrun is not automatically considered chargeable.
+A work order that has not started or has not been resolved should stay visible in backlog / risk, but it should not distort historical performance as if it were a completed case.
 
-Cases involving:
-- suspension,
-- quotation workflow,
-- waiting for parts,
+\`\`\`mermaid
+flowchart LR
+    A[Work order] --> B{Completed enough to measure?}
+    B -->|No| C[Backlog / open risk]
+    B -->|Yes| D[Historical SLA performance]
+    D --> E{Outside SLA?}
+    E -->|Yes| F[Investigate cause]
+    E -->|No| G[Compliant]
+\`\`\`
 
-are flagged **for investigation** so that operational delay and contractual imputability remain separate concepts.
+## Investigation before penalty
 
-## Benchmark rules
+A delay is not automatically considered chargeable. Cases such as suspension, quotation workflow or waiting for parts are flagged for investigation so operational delay and contractual responsibility remain separate.
 
-Benchmark gauges represent a real compliance rate:
-- minimum: 0%
-- maximum: 100%
-- target: 95%
+## Public demonstration thresholds
 
-## SLA parameterization
-
-The public portfolio uses fictitious thresholds:
-
-| Criticality | INT | RED / resolution | Acknowledgement | Potential INT penalty |
-|---|---:|---:|---:|---:|
-| C1 | 30 min | 2 business days | 60 min | €1,500 |
-| VIP | 30 min | 2 business days | 30 min | €1,500 |
-| C2 | 120 min | 8 business days | 120 min | €500 |
-
-These values are demonstration assumptions only.
+The portfolio uses fictitious thresholds for C1, VIP and C2 cases. They demonstrate parameterised SLA logic and do not publish confidential contractual values.
