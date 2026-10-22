@@ -1,13 +1,23 @@
-# Dashboard screenshots
+# Dashboard Screenshots
 
-[← Control Tower project](../README.md)
+[← Project](../README.md)
 
-These five images follow the management journey:
+---
 
-1. **Executive overview** — overall position.
-2. **Financial control** — budget, spend and commitments.
-3. **Procurement analytics** — orders, savings and buyers.
-4. **Supplier performance** — delivery reliability and risk.
-5. **Exceptions** — overdue exposure and open POs.
+## 🇬🇧 English
 
-For the guided explanation, open the [main project page](../README.md).
+The five screenshots follow the management journey:
+
+**Overall position → Budget → Procurement → Suppliers → Exceptions**
+
+Return to the [project page](../README.md) for the guided explanation.
+
+---
+
+## 🇫🇷 Français
+
+Les cinq captures suivent le parcours de pilotage :
+
+**Position globale → Budget → Achats → Fournisseurs → Exceptions**
+
+Revenez à la [page projet](../README.md) pour l’explication guidée.

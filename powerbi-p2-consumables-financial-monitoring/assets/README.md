@@ -1,18 +1,23 @@
-# Dashboard screenshots
+# Dashboard Screenshots — P2
 
-[← P2 Financial Monitoring](../README.md)
+[← Project](../README.md)
 
-The images follow the report from high-level financial steering to detailed purchasing analysis.
+---
 
-1. Subcontracting invoicing
-2. Subcontracting budget
-3. Procurement budget
-4. Subcontractor portfolio
-5. Subcontractor detail
-6. Invoicing focus
-7. Monthly orders
-8. Period comparison
-9. Consumables
-10. Small purchases
+## 🇬🇧 English
 
-For the guided explanation, open the [main project page](../README.md).
+The images follow the analysis from high-level financial monitoring to detailed purchasing:
+
+**Invoicing → Budget → Supplier portfolio → Period analysis → Consumables / small purchases**
+
+Return to the [project page](../README.md) for the guided explanation.
+
+---
+
+## 🇫🇷 Français
+
+Les images suivent l’analyse depuis le pilotage financier global jusqu’au détail achats :
+
+**Facturation → Budget → Portefeuille fournisseurs → Analyse de période → Consommables / petits achats**
+
+Revenez à la [page projet](../README.md) pour l’explication guidée.
