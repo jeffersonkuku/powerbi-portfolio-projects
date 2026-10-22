@@ -1,16 +1,29 @@
-# Power BI project files
+# Power BI Project Files — P2
 
-[← P2 Financial Monitoring](../README.md)
+[← Project](../README.md)
 
-This folder contains the Power BI project.
+---
 
-**Main file:** \`P2_Consumables_Financial_Monitoring.pbip\`
+## 🇬🇧 English
 
-\`\`\`mermaid
+**Main file:** `P2_Consumables_Financial_Monitoring.pbip`
+
+```mermaid
 flowchart LR
     A[PBIP project] --> B[Report pages]
     A --> C[Semantic model]
     C --> D[Measures / relationships]
-\`\`\`
+```
 
-Open the main project page first if you only want to understand the business solution.
+---
+
+## 🇫🇷 Français
+
+**Fichier principal :** `P2_Consumables_Financial_Monitoring.pbip`
+
+```mermaid
+flowchart LR
+    A[Projet PBIP] --> B[Pages du rapport]
+    A --> C[Modèle sémantique]
+    C --> D[Mesures / relations]
+```

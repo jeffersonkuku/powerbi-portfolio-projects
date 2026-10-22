@@ -1,11 +1,19 @@
-# Data
+# Data — P2 Financial Monitoring
 
-[← P2 Financial Monitoring](../README.md)
+[← Project](../README.md)
 
-The public portfolio uses anonymised / synthetic source data so the business logic can be demonstrated without publishing confidential production information.
+---
 
-The data is structured to reproduce realistic relationships between:
+## 🇬🇧 English
 
-**orders → suppliers → subcontracting → invoices → annual budgets → time periods**
+The public data is synthetic / anonymised.
 
-The goal is not to recreate real company records; it is to preserve the analytical problem safely.
+It reproduces the relationships needed to analyse **orders, suppliers, subcontracting, invoices, budgets and time periods** without publishing production records.
+
+---
+
+## 🇫🇷 Français
+
+Les données publiques sont synthétiques / anonymisées.
+
+Elles reproduisent les relations nécessaires pour analyser **commandes, fournisseurs, sous-traitance, factures, budgets et périodes** sans publier les données de production.

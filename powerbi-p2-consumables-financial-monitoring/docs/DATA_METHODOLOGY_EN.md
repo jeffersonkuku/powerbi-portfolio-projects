@@ -1,25 +1,49 @@
-# Data methodology — explained simply
+# Data Methodology — P2 Financial Monitoring
 
-[← P2 Financial Monitoring](../README.md)
+[← Project](../README.md)
 
-## The goal
+---
 
-The public data should behave like realistic procurement and subcontracting data **without reproducing real supplier records**.
+## 🇬🇧 English
 
-\`\`\`mermaid
+### Goal
+
+Keep the business behaviour realistic without reproducing real supplier records.
+
+```mermaid
 flowchart LR
-    A[Real business questions] --> B[Create safe synthetic / anonymised data]
-    B --> C[Preserve realistic relationships]
-    C --> D[Test the same KPIs]
-    D --> E[Publish without confidential records]
-\`\`\`
+    A[Real business questions] --> B[Safe synthetic / anonymised data]
+    B --> C[Realistic relationships]
+    C --> D[Same KPIs]
+    D --> E[Public portfolio]
+```
 
-## Main principles
+Main principles:
 
-- supplier, site and business identifiers are fictitious or anonymised;
-- amounts are calibrated to create realistic purchasing and subcontracting behaviour;
-- monthly commitments include moderate variation instead of an artificially flat series;
-- one common calendar keeps year filtering consistent;
-- the public snapshot stops at a defined date so future demonstration rows are not treated as completed activity.
+- supplier and site names are fictitious or anonymised;
+- amounts are calibrated to create realistic purchasing behaviour;
+- one common calendar keeps periods consistent;
+- the snapshot stops at a defined date so future rows are not treated as completed activity.
 
-Validation files are kept in the repository so yearly and monthly totals can be reconciled.
+---
+
+## 🇫🇷 Français
+
+### Objectif
+
+Conserver un comportement métier réaliste sans reproduire les vrais enregistrements fournisseurs.
+
+```mermaid
+flowchart LR
+    A[Questions métier réelles] --> B[Données sûres]
+    B --> C[Relations réalistes]
+    C --> D[Mêmes KPI]
+    D --> E[Portfolio public]
+```
+
+Principes :
+
+- fournisseurs et sites fictifs ou anonymisés ;
+- montants calibrés pour un comportement crédible ;
+- calendrier commun pour garder les périodes cohérentes ;
+- date de coupure définie pour ne pas traiter le futur comme réalisé.

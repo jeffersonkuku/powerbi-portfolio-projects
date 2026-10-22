@@ -1,17 +1,35 @@
-# Semantic model
+# Semantic Model — P2 Financial Monitoring
 
-[← P2 Financial Monitoring](../README.md)
+[← Project](../README.md)
 
-The semantic model connects the different business topics so one filter or period can be understood consistently across the report.
+---
 
-\`\`\`mermaid
+## 🇬🇧 English
+
+```mermaid
 flowchart LR
     A[Calendar] --> E[Shared model]
     B[Procurement] --> E
     C[Subcontracting] --> E
     D[Budgets / suppliers] --> E
     E --> F[Measures]
-    F --> G[Dashboard views]
-\`\`\`
+    F --> G[Dashboard]
+```
 
-This folder exposes the model structure for technical review. The main project page explains the business use case without requiring model knowledge.
+The model connects the different business topics so one filter can be understood consistently across the report.
+
+---
+
+## 🇫🇷 Français
+
+```mermaid
+flowchart LR
+    A[Calendrier] --> E[Modèle commun]
+    B[Achats] --> E
+    C[Sous-traitance] --> E
+    D[Budgets / fournisseurs] --> E
+    E --> F[Mesures]
+    F --> G[Tableau de bord]
+```
+
+Le modèle relie les différents sujets métier afin qu’un même filtre soit cohérent dans tout le rapport.

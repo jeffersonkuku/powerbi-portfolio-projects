@@ -1,25 +1,29 @@
-# Méthodologie des données — version simple
+# Data Methodology / Méthodologie des données
 
-[← P2 Financial Monitoring](../README.md)
+[← Project](../README.md)
 
-## L’objectif
+---
 
-Les données publiques doivent se comporter comme de vraies données achats / sous-traitance **sans reproduire les enregistrements réels**.
+## 🇬🇧 English
 
-\`\`\`mermaid
+The public dataset is synthetic or anonymised so the analytical logic can be demonstrated without exposing production data.
+
+```mermaid
 flowchart LR
-    A[Questions métier réelles] --> B[Créer des données sûres]
-    B --> C[Conserver des relations réalistes]
-    C --> D[Test des mêmes KPI]
-    D --> E[Publier sans données confidentielles]
-\`\`\`
+    A[Business logic] --> B[Safe public data]
+    B --> C[Same calculations]
+    C --> D[Same dashboard behaviour]
+```
 
-## Principes
+---
 
-- fournisseurs, sites et identifiants sont fictifs ou anonymisés ;
-- les montants sont calibrés pour créer un comportement réaliste ;
-- les engagements mensuels varient de façon crédible ;
-- un calendrier commun garantit la cohérence des filtres ;
-- l’instantané public s’arrête à une date définie pour ne pas traiter le futur comme réalisé.
+## 🇫🇷 Français
 
-Des fichiers de validation permettent de rapprocher les totaux annuels et mensuels.
+Les données publiques sont synthétiques ou anonymisées afin de démontrer la logique analytique sans exposer les données de production.
+
+```mermaid
+flowchart LR
+    A[Logique métier] --> B[Données publiques sûres]
+    B --> C[Mêmes calculs]
+    C --> D[Même comportement du dashboard]
+```
