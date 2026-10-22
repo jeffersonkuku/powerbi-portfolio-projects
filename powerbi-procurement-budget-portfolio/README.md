@@ -2,53 +2,52 @@
 
 [← Power BI portfolio](../README.md)
 
-> **A simple purchasing dashboard for seeing how orders consume the available budget over time.**
+---
 
-## Understand it in 30 seconds
+## 🇬🇧 English
 
-**Problem:** it is difficult to manage purchasing if budget, monthly orders and recurring commitments are read separately.
+### Understand it in 30 seconds
 
-**What I built:** one report that compares purchasing activity with the available budget and shows recent / recurring orders.
+**Problem:** purchasing activity and budget consumption are hard to control when monthly and recurring orders are viewed separately.
 
-[![Budget consumption](./assets/procurement-budget-consumables.jpg)](./assets/procurement-budget-consumables.jpg)
+**Solution:** one dashboard that shows consumed budget, remaining budget and the orders behind it.
 
-## The logic
+[![Budget](./assets/procurement-budget-consumables.jpg)](./assets/procurement-budget-consumables.jpg)
 
-\`\`\`mermaid
+```mermaid
 flowchart LR
     A[Annual budget] --> D[Dashboard]
-    B[Purchase orders] --> D
+    B[Orders] --> D
     C[Time periods] --> D
-    D --> E[Consumed budget]
-    D --> F[Remaining budget]
+    D --> E[Consumed]
+    D --> F[Remaining]
     D --> G[Recent / recurring orders]
-\`\`\`
+```
 
-## Three views
+### Main views
 
-### Is the annual budget under control?
+[![Consumables](./assets/procurement-budget-consumables.jpg)](./assets/procurement-budget-consumables.jpg)
 
-[![Consumables budget](./assets/procurement-budget-consumables.jpg)](./assets/procurement-budget-consumables.jpg)
+[![Monthly review](./assets/procurement-monthly-weekly-summary.jpg)](./assets/procurement-monthly-weekly-summary.jpg)
 
-### What was ordered recently?
+[![Recurring](./assets/procurement-duration-orders.jpg)](./assets/procurement-duration-orders.jpg)
 
-[![Monthly and weekly review](./assets/procurement-monthly-weekly-summary.jpg)](./assets/procurement-monthly-weekly-summary.jpg)
+---
 
-### How are recurring commitments consuming the budget?
+## 🇫🇷 Français
 
-[![Recurring orders](./assets/procurement-duration-orders.jpg)](./assets/procurement-duration-orders.jpg)
+### Comprendre le projet en 30 secondes
 
-<details>
-<summary><strong>Technical details</strong></summary>
+**Problème :** l’activité achats et la consommation du budget sont difficiles à piloter lorsque les commandes mensuelles et récurrentes sont vues séparément.
 
-The project demonstrates Power Query, DAX, budget ratios, period comparisons and supplier/order analysis.
+**Solution :** un seul tableau de bord qui montre le budget consommé, le budget restant et les commandes qui l’expliquent.
 
-Power BI report: [Procurement_Budget_Dashboard.pbix](./dashboard/Procurement_Budget_Dashboard.pbix)
-
-The public version uses anonymised portfolio data and is not an official company deliverable.
-
-</details>
-
-## 🇫🇷 Résumé rapide
-
-Le rapport permet de voir rapidement **combien du budget a été consommé, combien reste disponible et quelles commandes expliquent la consommation**.
+```mermaid
+flowchart LR
+    A[Budget annuel] --> D[Tableau de bord]
+    B[Commandes] --> D
+    C[Périodes] --> D
+    D --> E[Consommé]
+    D --> F[Restant]
+    D --> G[Commandes récentes / récurrentes]
+```

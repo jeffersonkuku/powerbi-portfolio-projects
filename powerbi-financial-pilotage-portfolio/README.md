@@ -2,19 +2,19 @@
 
 [← Power BI portfolio](../README.md)
 
-> **A financial steering dashboard for understanding budget, commitments, suppliers and purchase-order detail.**
+---
 
-## Understand it in 30 seconds
+## 🇬🇧 English
 
-**Problem:** a manager can see totals in different files but still struggle to understand what is ordered, received, invoiced or still outstanding.
+### Understand it in 30 seconds
 
-**What I built:** a four-page report that goes from the overall financial position down to individual purchase orders.
+**Problem:** financial totals are difficult to explain without linking them to suppliers and individual purchase orders.
 
-[![Financial overview](./assets/pilotage-financier.png)](./assets/pilotage-financier.png)
+**Solution:** a report that goes from the overall financial position down to the transaction that explains it.
 
-## The logic
+[![Financial](./assets/pilotage-financier.png)](./assets/pilotage-financier.png)
 
-\`\`\`mermaid
+```mermaid
 flowchart LR
     A[Budget] --> E[Financial cockpit]
     B[Orders] --> E
@@ -22,37 +22,34 @@ flowchart LR
     D[Invoices] --> E
     E --> F[Supplier analysis]
     F --> G[Order detail]
-\`\`\`
+```
 
-## Four views, four questions
+### Main views
 
-### What is the financial position?
+[![Overview](./assets/pilotage-financier.png)](./assets/pilotage-financier.png)
 
-[![Financial overview](./assets/pilotage-financier.png)](./assets/pilotage-financier.png)
-
-### Is the budget being consumed as expected?
-
-[![Budget execution](./assets/execution-budgetaire.png)](./assets/execution-budgetaire.png)
-
-### Which suppliers and commitments need attention?
+[![Budget](./assets/execution-budgetaire.png)](./assets/execution-budgetaire.png)
 
 [![Suppliers](./assets/fournisseurs-engagements.png)](./assets/fournisseurs-engagements.png)
 
-### Which transactions explain the result?
+[![Orders](./assets/details-commandes.png)](./assets/details-commandes.png)
 
-[![Order detail](./assets/details-commandes.png)](./assets/details-commandes.png)
+---
 
-<details>
-<summary><strong>Technical details</strong></summary>
+## 🇫🇷 Français
 
-The project demonstrates Power Query, DAX, time analysis, supplier analysis, drill-through and financial KPI design.
+### Comprendre le projet en 30 secondes
 
-Power BI report: [Portfolio_Pilotage_Financier.pbix](./dashboard/Portfolio_Pilotage_Financier.pbix)
+**Problème :** les totaux financiers sont difficiles à expliquer sans les relier aux fournisseurs et aux commandes individuelles.
 
-The public version is anonymised / recreated for portfolio use and is not an official company deliverable.
+**Solution :** un rapport qui part de la vision financière globale et descend jusqu’à la transaction qui explique l’écart.
 
-</details>
-
-## 🇫🇷 Résumé rapide
-
-Un tableau de bord qui permet de passer de **la vision budget globale** jusqu’au **détail de la commande qui explique l’écart**.
+```mermaid
+flowchart LR
+    A[Budget] --> E[Cockpit financier]
+    B[Commandes] --> E
+    C[Réceptions] --> E
+    D[Factures] --> E
+    E --> F[Analyse fournisseurs]
+    F --> G[Détail commande]
+```

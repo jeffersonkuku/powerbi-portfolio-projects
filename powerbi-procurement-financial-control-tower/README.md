@@ -2,90 +2,88 @@
 
 [← Power BI portfolio](../README.md)
 
-> **A management cockpit that brings budget, spend, open commitments and supplier performance into one view.**
+---
 
-## Understand it in 30 seconds
+## 🇬🇧 English
 
-**Problem:** finance and procurement information is often split across several files and views.
+### Understand it in 30 seconds
 
-**What I built:** one Power BI report that connects budget, invoiced spend, open commitments, savings, supplier delivery performance and overdue exposure.
+**Problem:** budget, spend, purchase orders, commitments and supplier performance are often split across several files or views.
 
-**Why it matters:** a manager can see both **what has already happened** and **what is still financially committed or at risk**.
-
-[![Executive Procurement Control Tower](./assets/executive-procurement-control-tower.png)](./assets/executive-procurement-control-tower.png)
-
-## The management logic
-
-\`\`\`mermaid
-flowchart LR
-    A[Budget] --> E[Management view]
-    B[Orders] --> E
-    C[Invoices] --> E
-    D[Supplier delivery] --> E
-    E --> F[What is spent?]
-    E --> G[What is still committed?]
-    E --> H[What is late or risky?]
-\`\`\`
-
-## Five questions, five views
-
-### 1. What is the overall position?
+**Solution:** one management cockpit that connects finance and procurement.
 
 [![Executive view](./assets/executive-procurement-control-tower.png)](./assets/executive-procurement-control-tower.png)
 
-Budget, invoiced spend, commitments, savings and OTIF in one executive view.
+### How it works
 
-### 2. Is the budget under control?
+```mermaid
+flowchart LR
+    A[Budget] --> E[Management cockpit]
+    B[Orders] --> E
+    C[Invoices] --> E
+    D[Supplier delivery] --> E
+    E --> F[Spent]
+    E --> G[Committed]
+    E --> H[Late / risky]
+```
+
+### Main views
+
+#### Overall position
+
+[![Executive](./assets/executive-procurement-control-tower.png)](./assets/executive-procurement-control-tower.png)
+
+#### Budget, spend and commitments
 
 [![Financial control](./assets/financial-control-budget-commitments.png)](./assets/financial-control-budget-commitments.png)
 
-Compare actual spend and open commitments with the available budget.
+#### Orders, savings and buyers
 
-### 3. What is happening in purchasing?
+[![Procurement](./assets/procurement-analytics-orders-savings.png)](./assets/procurement-analytics-orders-savings.png)
 
-[![Procurement analytics](./assets/procurement-analytics-orders-savings.png)](./assets/procurement-analytics-orders-savings.png)
+#### Supplier reliability and risk
 
-Orders, savings, buyers, categories and active suppliers.
+[![Suppliers](./assets/supplier-performance-otif-risk.png)](./assets/supplier-performance-otif-risk.png)
 
-### 4. Which suppliers need attention?
+#### Overdue exposure and exceptions
 
-[![Supplier performance](./assets/supplier-performance-otif-risk.png)](./assets/supplier-performance-otif-risk.png)
+[![Exceptions](./assets/commitments-exceptions-overdue-exposure.png)](./assets/commitments-exceptions-overdue-exposure.png)
 
-Combine supplier spend with OTIF, lead time and risk.
+### Technical detail
 
-### 5. What is late or still open?
+- **[Business logic →](./docs/BUSINESS_LOGIC.md)**
+- **[Validation →](./docs/VALIDATION.md)**
+- **[Power BI project →](./dashboard/Asterion_Procurement_Control_Tower.pbip)**
 
-[![Commitments and exceptions](./assets/commitments-exceptions-overdue-exposure.png)](./assets/commitments-exceptions-overdue-exposure.png)
+---
 
-Open commitments, overdue exposure and late purchase orders.
+## 🇫🇷 Français
 
-## From data to decision
+### Comprendre le projet en 30 secondes
 
-\`\`\`mermaid
+**Problème :** budget, dépenses, commandes, engagements et performance fournisseurs sont souvent séparés dans plusieurs fichiers ou vues.
+
+**Solution :** un cockpit unique qui relie finance et achats.
+
+### Fonctionnement
+
+```mermaid
 flowchart LR
-    A[Purchasing + finance data] --> B[Clean model]
-    B --> C[Business KPIs]
-    C --> D[Executive view]
-    D --> E[Identify exception]
-    E --> F[Investigate supplier / category / order]
-\`\`\`
+    A[Budget] --> E[Cockpit de pilotage]
+    B[Commandes] --> E
+    C[Factures] --> E
+    D[Livraisons fournisseurs] --> E
+    E --> F[Dépensé]
+    E --> G[Engagé]
+    E --> H[En retard / à risque]
+```
 
-<details>
-<summary><strong>Technical details</strong></summary>
+### Vues principales
 
-The public project demonstrates Power Query, DAX, semantic modelling, PBIP/PBIR/TMDL and validation controls.
+Les cinq captures ci-dessus répondent à cinq questions : position globale, budget, activité achats, performance fournisseurs et exceptions.
 
-Technical documentation:
-- [Business logic](./docs/BUSINESS_LOGIC.md)
-- [Validation](./docs/VALIDATION.md)
-- [Documentation index](./docs/README.md)
+### Détail technique
 
-Project file: [Asterion_Procurement_Control_Tower.pbip](./dashboard/Asterion_Procurement_Control_Tower.pbip)
-
-The public dataset is synthetic. This is a portfolio reconstruction, not an official company deliverable.
-
-</details>
-
-## 🇫🇷 Résumé rapide
-
-Un seul cockpit pour répondre à trois questions : **combien est dépensé, combien reste engagé, et où se trouve le risque fournisseur ou le retard ?**
+- **[Logique métier →](./docs/BUSINESS_LOGIC.md)**
+- **[Validation →](./docs/VALIDATION.md)**
+- **[Projet Power BI →](./dashboard/Asterion_Procurement_Control_Tower.pbip)**
