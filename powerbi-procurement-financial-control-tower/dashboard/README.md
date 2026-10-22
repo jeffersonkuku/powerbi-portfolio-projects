@@ -1,29 +1,16 @@
-# Power BI Project Files
+# Fichiers Power BI / Power BI Project Files
 
-[← Project](../README.md)
+[← Projet / Project](../README.md)
 
----
-
-## 🇬🇧 English
-
-**Main file:** `Asterion_Procurement_Control_Tower.pbip`
+**🇫🇷 Fichier principal :** `Asterion_Procurement_Control_Tower.pbip`  
+*🇬🇧 Main file: `Asterion_Procurement_Control_Tower.pbip`*
 
 ```mermaid
 flowchart LR
-    A[PBIP project] --> B[Report]
-    A --> C[Semantic model]
-    C --> D[Measures / relationships / synthetic data]
+    A[Projet PBIP<br/>PBIP project] --> B[Rapport PBIR<br/>PBIR report]
+    A --> C[Modèle TMDL<br/>TMDL model]
+    C --> D[Mesures / relations / données synthétiques<br/>Measures / relationships / synthetic data]
 ```
 
----
-
-## 🇫🇷 Français
-
-**Fichier principal :** `Asterion_Procurement_Control_Tower.pbip`
-
-```mermaid
-flowchart LR
-    A[Projet PBIP] --> B[Rapport]
-    A --> C[Modèle sémantique]
-    C --> D[Mesures / relations / données synthétiques]
-```
+🇫🇷 Le projet est portable et ne dépend pas d’un chemin local privé de production.  
+*🇬🇧 The project is portable and does not depend on a private local production path.*

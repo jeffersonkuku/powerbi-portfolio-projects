@@ -1,33 +1,16 @@
-# Semantic Model
+# Modèle sémantique / Semantic Model
 
-[← Project](../README.md)
-
----
-
-## 🇬🇧 English
-
-The semantic model is the layer that connects raw tables to business meaning.
+[← Projet / Project](../README.md)
 
 ```mermaid
 flowchart LR
-    A[Raw tables] --> B[Relationships]
-    B --> C[Business measures]
-    C --> D[Dashboard]
+    A[Tables brutes<br/>Raw tables] --> B[Relations<br/>Relationships]
+    B --> C[Mesures métier<br/>Business measures]
+    C --> D[Visuels Power BI<br/>Power BI visuals]
 ```
 
-Technical TMDL files are available here for deeper review.
+🇫🇷 Le modèle sémantique donne un sens métier commun aux données avant qu’elles soient utilisées dans les visuels.  
+*🇬🇧 The semantic model gives raw data a shared business meaning before it is used in visuals.*
 
----
-
-## 🇫🇷 Français
-
-Le modèle sémantique est la couche qui transforme les tables brutes en logique métier.
-
-```mermaid
-flowchart LR
-    A[Tables brutes] --> B[Relations]
-    B --> C[Mesures métier]
-    C --> D[Tableau de bord]
-```
-
-Les fichiers TMDL restent disponibles ici pour une analyse technique plus poussée.
+🇫🇷 Les extraits TMDL restent disponibles pour une revue technique plus poussée.  
+*🇬🇧 TMDL extracts remain available for deeper technical review.*

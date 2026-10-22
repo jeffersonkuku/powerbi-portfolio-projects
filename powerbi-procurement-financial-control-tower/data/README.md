@@ -1,33 +1,13 @@
-# Data
+# Données / Data
 
-[← Project](../README.md)
+[← Projet / Project](../README.md)
 
----
-
-## 🇬🇧 English
-
-The public portfolio uses **synthetic data**.
+🇫🇷 La version publique utilise des **données synthétiques** pour reproduire des comportements achats, budgets, engagements et fournisseurs réalistes sans publier les données de production.  
+*🇬🇧 The public version uses **synthetic data** to reproduce realistic procurement, budget, commitment and supplier behaviour without publishing production data.*
 
 ```mermaid
 flowchart LR
-    A[Real business questions] --> B[Synthetic data]
-    B --> C[Same KPI logic]
-    C --> D[No confidential records]
+    A[Questions métier réelles<br/>Real business questions] --> B[Données synthétiques<br/>Synthetic data]
+    B --> C[Mêmes règles KPI<br/>Same KPI rules]
+    C --> D[Portfolio public sûr<br/>Safe public portfolio]
 ```
-
-The goal is to preserve realistic procurement and financial behaviour without publishing production data.
-
----
-
-## 🇫🇷 Français
-
-Le portfolio public utilise des **données synthétiques**.
-
-```mermaid
-flowchart LR
-    A[Questions métier réelles] --> B[Données synthétiques]
-    B --> C[Même logique KPI]
-    C --> D[Aucune donnée confidentielle]
-```
-
-Le but est de conserver un comportement achats / finance réaliste sans publier de données de production.
