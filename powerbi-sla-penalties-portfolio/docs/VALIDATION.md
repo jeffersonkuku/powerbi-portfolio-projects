@@ -1,21 +1,31 @@
-# Validation — SLA portfolio
+# Validation — SLA Portfolio
 
-[← SLA project](../README.md)
+[← Project](../README.md)
 
-## What was checked
+---
 
-The report was checked for structural consistency before packaging:
+## 🇬🇧 English
 
-- all JSON files valid;
-- no report references to missing fields or measures;
-- no orphan bookmark references;
-- no missing image resources;
-- no external web/file source references;
-- no user-specific local paths;
-- no targeted sensitive organisation references.
+### What was checked?
 
-## Important limitation
+- report references point to existing fields and measures;
+- bookmarks are consistent;
+- images are present;
+- no private local paths are required;
+- no targeted sensitive organisation references remain.
 
-This is a **static structural validation**. The final dynamic check is still opening and refreshing the report in Power BI Desktop.
+This is a **static structural validation**. The final dynamic check is opening and refreshing the report in Power BI Desktop.
 
-The point of this page is simple: the portfolio should not only look good; its published structure should also be internally consistent.
+---
+
+## 🇫🇷 Français
+
+### Qu’est-ce qui a été vérifié ?
+
+- les références du rapport pointent vers des champs et mesures existants ;
+- les bookmarks sont cohérents ;
+- les images sont présentes ;
+- aucun chemin local privé n’est nécessaire ;
+- aucune référence sensible ciblée ne reste dans la version publique.
+
+Il s’agit d’une **validation structurelle statique**. Le contrôle dynamique final reste l’ouverture et le rafraîchissement dans Power BI Desktop.

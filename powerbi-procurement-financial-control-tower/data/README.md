@@ -1,16 +1,33 @@
 # Data
 
-[← Control Tower project](../README.md)
+[← Project](../README.md)
+
+---
+
+## 🇬🇧 English
 
 The public portfolio uses **synthetic data**.
 
-That means the behaviour is designed to look realistic for procurement, budget, suppliers, commitments and deliveries, but it does not publish a production dataset.
-
-\`\`\`mermaid
+```mermaid
 flowchart LR
-    A[Synthetic portfolio data] --> B[Same business questions]
+    A[Real business questions] --> B[Synthetic data]
     B --> C[Same KPI logic]
-    C --> D[No confidential production records]
-\`\`\`
+    C --> D[No confidential records]
+```
 
-The demonstration period covers 2023–2026.
+The goal is to preserve realistic procurement and financial behaviour without publishing production data.
+
+---
+
+## 🇫🇷 Français
+
+Le portfolio public utilise des **données synthétiques**.
+
+```mermaid
+flowchart LR
+    A[Questions métier réelles] --> B[Données synthétiques]
+    B --> C[Même logique KPI]
+    C --> D[Aucune donnée confidentielle]
+```
+
+Le but est de conserver un comportement achats / finance réaliste sans publier de données de production.

@@ -1,10 +1,25 @@
-# Documentation — choose what you need
+# Documentation
 
-[← Control Tower project](../README.md)
+[← Project](../README.md)
 
-- **[Business logic](./BUSINESS_LOGIC.md)** — what each important KPI means in business language.
-- **[Validation](./VALIDATION.md)** — what was checked before publishing.
-- \`QA_DATA_V2.json\` — automated data checks.
-- \`QA_REPORT.json\` — automated report/model reference checks.
+---
 
-If you are not reviewing the technical implementation, the [main project page](../README.md) is enough.
+## 🇬🇧 English
+
+Choose only what you need:
+
+- **[Business logic](./BUSINESS_LOGIC.md)** — what the KPIs mean.
+- **[Validation](./VALIDATION.md)** — what was checked before publication.
+
+For a non-technical overview, return to the [project page](../README.md).
+
+---
+
+## 🇫🇷 Français
+
+Choisissez uniquement ce dont vous avez besoin :
+
+- **[Logique métier](./BUSINESS_LOGIC.md)** — signification des KPI.
+- **[Validation](./VALIDATION.md)** — contrôles réalisés avant publication.
+
+Pour une lecture non technique, revenez à la [page projet](../README.md).

@@ -1,41 +1,55 @@
-# Validation — what was checked?
+# Validation — Procurement & Financial Control Tower
 
-[← Control Tower project](../README.md)
+[← Project](../README.md)
 
-## Why this page exists
+---
 
-A dashboard can look correct while a measure or reference is wrong. Validation is used to check that the public portfolio behaves consistently.
+## 🇬🇧 English
 
-\`\`\`mermaid
+### Why validate?
+
+A dashboard can look correct while a formula or reference is wrong.
+
+```mermaid
 flowchart LR
     A[Data] --> B[Measures]
     B --> C[Visuals]
     C --> D[Filters]
-    D --> E[Expected results]
-\`\`\`
+    D --> E[Expected result]
+```
 
-## Main checks
+### Main checks
 
-- five report pages are defined;
-- Year / Site / Category filters are available;
-- KPI measures use safe zero handling where appropriate;
-- open commitment logic excludes Closed / Cancelled POs;
-- late and overdue measures use corrected open-order logic;
-- all published visual field references resolve to the semantic model;
-- no external production file path is required.
+- report pages and filters are present;
+- open commitments exclude closed / cancelled orders;
+- late and overdue logic only uses genuinely open items;
+- visual fields resolve to the semantic model;
+- no private production file path is required.
 
-## Reference values
+The reference values in this repository are synthetic portfolio checks.
 
-The published yearly values are **synthetic portfolio checks**, not company figures. Their purpose is to make regressions visible when the report changes.
+---
 
-<details>
-<summary><strong>Technical reference table</strong></summary>
+## 🇫🇷 Français
 
-| Year | POs | Invoiced spend | Budget | Open commitments | Committed utilisation | Late open POs | Overdue value | OTIF |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2023 | 1,087 | $22.9M | $27.4M | $1.1M | 87.6% | 64 | $1.0M | 85.7% |
-| 2024 | 1,251 | $26.3M | $31.8M | $1.3M | 86.8% | 66 | $1.1M | 85.7% |
-| 2025 | 1,443 | $30.3M | $36.7M | $1.5M | 86.6% | 81 | $1.3M | 85.7% |
-| 2026 | 1,419 | $29.8M | $34.7M | $1.5M | 90.0% | 52 | $0.9M | 85.8% |
+### Pourquoi valider ?
 
-</details>
+Un tableau de bord peut sembler correct alors qu’une formule ou une référence est fausse.
+
+```mermaid
+flowchart LR
+    A[Données] --> B[Mesures]
+    B --> C[Visuels]
+    C --> D[Filtres]
+    D --> E[Résultat attendu]
+```
+
+### Contrôles principaux
+
+- les pages et filtres attendus existent ;
+- les engagements ouverts excluent les commandes clôturées / annulées ;
+- les retards concernent uniquement les éléments réellement ouverts ;
+- les champs des visuels existent dans le modèle ;
+- aucun chemin de production privé n’est nécessaire.
+
+Les valeurs de référence sont des contrôles synthétiques de portfolio.

@@ -1,14 +1,33 @@
-# Semantic model
+# Semantic Model
 
-[← Control Tower project](../README.md)
+[← Project](../README.md)
 
-The semantic model is the layer that gives business meaning to the raw data.
+---
 
-\`\`\`mermaid
+## 🇬🇧 English
+
+The semantic model is the layer that connects raw tables to business meaning.
+
+```mermaid
 flowchart LR
     A[Raw tables] --> B[Relationships]
     B --> C[Business measures]
-    C --> D[Dashboard visuals]
-\`\`\`
+    C --> D[Dashboard]
+```
 
-This folder exposes readable TMDL extracts for the database settings, model, relationships and measures. The complete operational model is kept with the PBIP project under the dashboard folder.
+Technical TMDL files are available here for deeper review.
+
+---
+
+## 🇫🇷 Français
+
+Le modèle sémantique est la couche qui transforme les tables brutes en logique métier.
+
+```mermaid
+flowchart LR
+    A[Tables brutes] --> B[Relations]
+    B --> C[Mesures métier]
+    C --> D[Tableau de bord]
+```
+
+Les fichiers TMDL restent disponibles ici pour une analyse technique plus poussée.
