@@ -8,13 +8,9 @@
 
 ### Understand it in 30 seconds
 
-**Problem:** budget, spend, purchase orders, commitments and supplier performance are often split across several files or views.
+**Problem:** finance and procurement information is split across several views.
 
-**Solution:** one management cockpit that connects finance and procurement.
-
-[![Executive view](./assets/executive-procurement-control-tower.png)](./assets/executive-procurement-control-tower.png)
-
-### How it works
+**Solution:** one management cockpit for budget, spend, commitments and supplier risk.
 
 ```mermaid
 flowchart LR
@@ -22,32 +18,23 @@ flowchart LR
     B[Orders] --> E
     C[Invoices] --> E
     D[Supplier delivery] --> E
-    E --> F[Spent]
-    E --> G[Committed]
-    E --> H[Late / risky]
+    E --> F[Spent / committed / late / risky]
 ```
 
-### Main views
+### Visual gallery — click to enlarge
 
-#### Overall position
-
-[![Executive](./assets/executive-procurement-control-tower.png)](./assets/executive-procurement-control-tower.png)
-
-#### Budget, spend and commitments
-
-[![Financial control](./assets/financial-control-budget-commitments.png)](./assets/financial-control-budget-commitments.png)
-
-#### Orders, savings and buyers
-
-[![Procurement](./assets/procurement-analytics-orders-savings.png)](./assets/procurement-analytics-orders-savings.png)
-
-#### Supplier reliability and risk
-
-[![Suppliers](./assets/supplier-performance-otif-risk.png)](./assets/supplier-performance-otif-risk.png)
-
-#### Overdue exposure and exceptions
-
-[![Exceptions](./assets/commitments-exceptions-overdue-exposure.png)](./assets/commitments-exceptions-overdue-exposure.png)
+<table>
+<tr>
+<td width="33%"><a href="./assets/executive-procurement-control-tower.png"><img src="./assets/executive-procurement-control-tower.png" width="100%"></a><br><b>Executive view</b></td>
+<td width="33%"><a href="./assets/financial-control-budget-commitments.png"><img src="./assets/financial-control-budget-commitments.png" width="100%"></a><br><b>Budget control</b></td>
+<td width="33%"><a href="./assets/procurement-analytics-orders-savings.png"><img src="./assets/procurement-analytics-orders-savings.png" width="100%"></a><br><b>Procurement</b></td>
+</tr>
+<tr>
+<td><a href="./assets/supplier-performance-otif-risk.png"><img src="./assets/supplier-performance-otif-risk.png" width="100%"></a><br><b>Supplier risk</b></td>
+<td><a href="./assets/commitments-exceptions-overdue-exposure.png"><img src="./assets/commitments-exceptions-overdue-exposure.png" width="100%"></a><br><b>Exceptions</b></td>
+<td></td>
+</tr>
+</table>
 
 ### Technical detail
 
@@ -61,11 +48,9 @@ flowchart LR
 
 ### Comprendre le projet en 30 secondes
 
-**Problème :** budget, dépenses, commandes, engagements et performance fournisseurs sont souvent séparés dans plusieurs fichiers ou vues.
+**Problème :** les informations finance et achats sont réparties dans plusieurs vues.
 
-**Solution :** un cockpit unique qui relie finance et achats.
-
-### Fonctionnement
+**Solution :** un cockpit unique pour budget, dépenses, engagements et risques fournisseurs.
 
 ```mermaid
 flowchart LR
@@ -73,14 +58,10 @@ flowchart LR
     B[Commandes] --> E
     C[Factures] --> E
     D[Livraisons fournisseurs] --> E
-    E --> F[Dépensé]
-    E --> G[Engagé]
-    E --> H[En retard / à risque]
+    E --> F[Dépensé / engagé / retard / risque]
 ```
 
-### Vues principales
-
-Les cinq captures ci-dessus répondent à cinq questions : position globale, budget, activité achats, performance fournisseurs et exceptions.
+Les **5 captures ci-dessus** sont cliquables pour être ouvertes en grand.
 
 ### Détail technique
 

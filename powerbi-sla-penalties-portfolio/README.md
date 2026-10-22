@@ -10,42 +10,41 @@
 
 **Problem:** averages can hide serious delays, and open work can be mixed with completed work.
 
-**Solution:** a dashboard that separates completed performance, backlog, site/team comparison and potential contractual exposure.
-
-[![SLA](./assets/performance-sla-intervention-red.jpg)](./assets/performance-sla-intervention-red.jpg)
-
-### How it works
+**Solution:** separate historical performance, backlog, site/team comparison and potential contractual exposure.
 
 ```mermaid
 flowchart LR
     A[Work orders] --> B[Open or completed?]
-    B --> C[Measure intervention / restoration]
+    B --> C[Measure delays]
     C --> D[Compare with SLA]
-    D --> E[Locate site / team / criticality]
+    D --> E[Locate problem]
     E --> F[Backlog / risk / investigation]
 ```
 
-### Main views
+### Visual gallery — click to enlarge
 
-[![Performance](./assets/performance-sla-intervention-red.jpg)](./assets/performance-sla-intervention-red.jpg)
-
-[![Exposure](./assets/exposition-sla-intervention-red.jpg)](./assets/exposition-sla-intervention-red.jpg)
-
-[![Intervention distribution](./assets/distribution-delais-intervention.jpg)](./assets/distribution-delais-intervention.jpg)
-
-[![Restoration distribution](./assets/distribution-delais-red.jpg)](./assets/distribution-delais-red.jpg)
-
-[![Benchmark](./assets/benchmark-sla-sites-equipes.jpg)](./assets/benchmark-sla-sites-equipes.jpg)
-
-[![Volume](./assets/volumetrie-di-par-site.jpg)](./assets/volumetrie-di-par-site.jpg)
-
-[![Trend](./assets/evolution-temps-intervention.jpg)](./assets/evolution-temps-intervention.jpg)
+<table>
+<tr>
+<td width="33%"><a href="./assets/performance-sla-intervention-red.jpg"><img src="./assets/performance-sla-intervention-red.jpg" width="100%"></a><br><b>SLA performance</b></td>
+<td width="33%"><a href="./assets/exposition-sla-intervention-red.jpg"><img src="./assets/exposition-sla-intervention-red.jpg" width="100%"></a><br><b>Exposure</b></td>
+<td width="33%"><a href="./assets/distribution-delais-intervention.jpg"><img src="./assets/distribution-delais-intervention.jpg" width="100%"></a><br><b>Intervention delays</b></td>
+</tr>
+<tr>
+<td><a href="./assets/distribution-delais-red.jpg"><img src="./assets/distribution-delais-red.jpg" width="100%"></a><br><b>Restoration delays</b></td>
+<td><a href="./assets/benchmark-sla-sites-equipes.jpg"><img src="./assets/benchmark-sla-sites-equipes.jpg" width="100%"></a><br><b>Site / team benchmark</b></td>
+<td><a href="./assets/volumetrie-di-par-site.jpg"><img src="./assets/volumetrie-di-par-site.jpg" width="100%"></a><br><b>Workload</b></td>
+</tr>
+<tr>
+<td><a href="./assets/suivi-preventif-par-site.jpg"><img src="./assets/suivi-preventif-par-site.jpg" width="100%"></a><br><b>Preventive</b></td>
+<td><a href="./assets/evolution-temps-intervention.jpg"><img src="./assets/evolution-temps-intervention.jpg" width="100%"></a><br><b>Trend</b></td>
+<td></td>
+</tr>
+</table>
 
 ### Technical detail
 
 - **[SLA logic →](./docs/SLA_LOGIC.md)**
 - **[Validation →](./docs/VALIDATION.md)**
-- **[Power BI project →](./dashboard/Portfolio_Penalites.pbip)**
 
 ---
 
@@ -53,23 +52,22 @@ flowchart LR
 
 ### Comprendre le projet en 30 secondes
 
-**Problème :** une moyenne peut cacher des retards importants et mélanger les dossiers ouverts avec les dossiers réellement terminés.
+**Problème :** une moyenne peut cacher des retards importants et mélanger les dossiers ouverts avec les dossiers terminés.
 
-**Solution :** un tableau de bord qui sépare la performance terminée, le backlog, les comparaisons sites/équipes et l’exposition contractuelle potentielle.
-
-### Fonctionnement
+**Solution :** séparer performance historique, backlog, comparaison sites/équipes et exposition contractuelle potentielle.
 
 ```mermaid
 flowchart LR
     A[Interventions] --> B[Ouvertes ou terminées ?]
-    B --> C[Mesurer intervention / remise en état]
+    B --> C[Mesurer les délais]
     C --> D[Comparer au SLA]
-    D --> E[Identifier site / équipe / criticité]
+    D --> E[Localiser le problème]
     E --> F[Backlog / risque / investigation]
 ```
+
+Les captures ci-dessus sont cliquables.
 
 ### Détail technique
 
 - **[Logique SLA →](./docs/SLA_LOGIC.md)**
 - **[Validation →](./docs/VALIDATION.md)**
-- **[Projet Power BI →](./dashboard/Portfolio_Penalites.pbip)**
