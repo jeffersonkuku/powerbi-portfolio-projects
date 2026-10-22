@@ -1,23 +1,12 @@
-# Dashboard Screenshots — P2
+# Captures P2 / P2 Screenshots
 
-[← Project](../README.md)
+[← Projet / Project](../README.md)
 
----
+🇫🇷 Les dix vues suivent l’analyse depuis le pilotage financier global jusqu’au détail achats et petits montants.  
+*🇬🇧 The ten views follow the analysis from high-level financial monitoring to procurement detail and small purchases.*
 
-## 🇬🇧 English
+**Facturation → Budget → Portefeuille fournisseurs → Périodes → Consommables / petits achats**  
+*Invoicing → Budget → Supplier portfolio → Periods → Consumables / small purchases*
 
-The images follow the analysis from high-level financial monitoring to detailed purchasing:
-
-**Invoicing → Budget → Supplier portfolio → Period analysis → Consumables / small purchases**
-
-Return to the [project page](../README.md) for the guided explanation.
-
----
-
-## 🇫🇷 Français
-
-Les images suivent l’analyse depuis le pilotage financier global jusqu’au détail achats :
-
-**Facturation → Budget → Portefeuille fournisseurs → Analyse de période → Consommables / petits achats**
-
-Revenez à la [page projet](../README.md) pour l’explication guidée.
+🇫🇷 Pour l’explication écran par écran, revenir à la [page projet](../README.md).  
+*🇬🇧 For the screen-by-screen explanation, return to the [project page](../README.md).*

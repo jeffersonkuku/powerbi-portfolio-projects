@@ -1,29 +1,13 @@
-# Power BI Project Files — P2
+# Fichiers Power BI P2 / P2 Power BI Files
 
-[← Project](../README.md)
+[← Projet / Project](../README.md)
 
----
-
-## 🇬🇧 English
-
-**Main file:** `P2_Consumables_Financial_Monitoring.pbip`
+**🇫🇷 Fichier principal :** `P2_Consumables_Financial_Monitoring.pbip`  
+*🇬🇧 Main file: `P2_Consumables_Financial_Monitoring.pbip`*
 
 ```mermaid
 flowchart LR
-    A[PBIP project] --> B[Report pages]
-    A --> C[Semantic model]
-    C --> D[Measures / relationships]
-```
-
----
-
-## 🇫🇷 Français
-
-**Fichier principal :** `P2_Consumables_Financial_Monitoring.pbip`
-
-```mermaid
-flowchart LR
-    A[Projet PBIP] --> B[Pages du rapport]
-    A --> C[Modèle sémantique]
-    C --> D[Mesures / relations]
+    A[Projet PBIP<br/>PBIP project] --> B[Pages rapport<br/>Report pages]
+    A --> C[Modèle sémantique<br/>Semantic model]
+    C --> D[Mesures / relations<br/>Measures / relationships]
 ```

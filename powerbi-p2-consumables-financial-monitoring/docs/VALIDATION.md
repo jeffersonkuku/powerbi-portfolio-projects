@@ -1,35 +1,25 @@
-# Validation — P2 Financial Monitoring
+# Validation P2
 
-[← Project](../README.md)
-
----
-
-## 🇬🇧 English
-
-### What is checked?
+[← Projet / Project](../README.md)
 
 ```mermaid
 flowchart LR
-    A[Source data] --> B[Year / month totals]
-    B --> C[Measures]
+    A[Données source<br/>Source data] --> B[Totaux année / mois<br/>Year / month totals]
+    B --> C[Mesures<br/>Measures]
     C --> D[Dashboard]
-    D --> E[Reconciliation]
+    D --> E[Rapprochement<br/>Reconciliation]
 ```
 
-Checks cover yearly totals, invoicing vs orders, budget consumption, remaining budget, shared-calendar filtering and comparable-period logic.
+- 🇫🇷 Rapprochement des totaux achats annuels.  
+  *🇬🇧 Reconcile yearly procurement totals.*
+- 🇫🇷 Rapprochement sous-traitance commandé / facturé.  
+  *🇬🇧 Reconcile subcontracting ordered vs invoiced.*
+- 🇫🇷 Vérification consommation et reste budgétaire.  
+  *🇬🇧 Check budget consumption and remaining budget.*
+- 🇫🇷 Vérification du calendrier commun et des comparaisons de périodes.  
+  *🇬🇧 Check the shared calendar and period comparisons.*
+- 🇫🇷 Contrôles mensuels sur les séries de sous-traitance.  
+  *🇬🇧 Monthly checks on subcontracting series.*
 
----
-
-## 🇫🇷 Français
-
-### Qu’est-ce qui est contrôlé ?
-
-```mermaid
-flowchart LR
-    A[Données source] --> B[Totaux année / mois]
-    B --> C[Mesures]
-    C --> D[Tableau de bord]
-    D --> E[Rapprochement]
-```
-
-Les contrôles couvrent les totaux annuels, facturation vs commandes, consommation budgétaire, budget restant, filtres calendaires et comparaisons de périodes.
+🇫🇷 Les chiffres publics servent à la démonstration et aux tests, pas à représenter des valeurs confidentielles.  
+*🇬🇧 Public figures are used for demonstration and testing, not to represent confidential values.*

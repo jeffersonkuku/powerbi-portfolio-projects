@@ -125,7 +125,7 @@ flowchart TB
 
 ## 🔎 Détails techniques / Technical deep dive
 
-- [Méthodologie des données / Data methodology](./docs/DATA_METHODOLOGY_FR.md)
+- [Méthodologie des données / Data methodology](./docs/DATA_METHODOLOGY.md)
 - [Validation](./docs/VALIDATION.md)
 - [Projet PBIP / PBIP project](./dashboard/P2_Consumables_Financial_Monitoring.pbip)
 

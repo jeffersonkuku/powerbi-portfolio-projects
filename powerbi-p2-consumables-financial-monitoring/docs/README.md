@@ -1,17 +1,8 @@
-# Documentation — P2 Financial Monitoring
+# Documentation P2
 
-[← Project](../README.md)
+[← Projet / Project](../README.md)
 
----
-
-## 🇬🇧 English
-
-- **[Data methodology](./DATA_METHODOLOGY_EN.md)** — how the public dataset was made safe.
-- **[Validation](./VALIDATION.md)** — what was checked before publication.
-
----
-
-## 🇫🇷 Français
-
-- **[Méthodologie des données](./DATA_METHODOLOGY_FR.md)** — comment les données publiques ont été rendues sûres.
-- **[Validation](./VALIDATION.md)** — contrôles réalisés avant publication.
+- 🇫🇷 **[Méthodologie des données](./DATA_METHODOLOGY.md)** — comprendre comment les données publiques restent réalistes sans reproduire la production.  
+  *🇬🇧 **[Data methodology](./DATA_METHODOLOGY.md)** — understand how public data remains realistic without reproducing production.*
+- 🇫🇷 **[Validation](./VALIDATION.md)** — comprendre les contrôles et rapprochements.  
+  *🇬🇧 **[Validation](./VALIDATION.md)** — understand checks and reconciliations.*
